@@ -1,3 +1,5 @@
+/*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
+
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -440,15 +442,18 @@ textarea {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input::placeholder,
 textarea::placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
@@ -544,6 +549,45 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+.purple-to-green-header{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #5b21b6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(91, 33, 182, 0));
+  --tw-gradient-to: #065f46;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+.blue-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+.blue-btn {
+  --tw-border-opacity: 1;
+  border-color: rgba(59, 130, 246, var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  border-width: 1px;
+  cursor: pointer;
+  height: 2.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-top: 0.75rem;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-text-opacity: 1;
+  color: rgba(59, 130, 246, var(--tw-text-opacity));
+}
+
+.blue-btn:hover {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.blue-btn {
+  transition-duration: 300ms;
 }
 
 .container {
@@ -10780,6 +10824,10 @@ video {
 
 .cursor-move {
   cursor: move;
+}
+
+.cursor-help {
+  cursor: help;
 }
 
 .cursor-not-allowed {
@@ -41403,6 +41451,10 @@ video {
     cursor: move;
   }
 
+  .sm\:cursor-help {
+    cursor: help;
+  }
+
   .sm\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -71944,6 +71996,10 @@ video {
 
   .md\:cursor-move {
     cursor: move;
+  }
+
+  .md\:cursor-help {
+    cursor: help;
   }
 
   .md\:cursor-not-allowed {
@@ -102489,6 +102545,10 @@ video {
     cursor: move;
   }
 
+  .lg\:cursor-help {
+    cursor: help;
+  }
+
   .lg\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -133030,6 +133090,10 @@ video {
 
   .xl\:cursor-move {
     cursor: move;
+  }
+
+  .xl\:cursor-help {
+    cursor: help;
   }
 
   .xl\:cursor-not-allowed {
@@ -163575,6 +163639,10 @@ video {
     cursor: move;
   }
 
+  .\32xl\:cursor-help {
+    cursor: help;
+  }
+
   .\32xl\:cursor-not-allowed {
     cursor: not-allowed;
   }
@@ -183879,4 +183947,4 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
-} 
+}
