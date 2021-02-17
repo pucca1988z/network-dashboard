@@ -10,8 +10,15 @@
         </svg>
         <div 
           id="zoomOutBtn"
-          class="cursor-pointer underline">
+          class="cursor-pointer underline"
+          @click="zoomOut">
           全縣市
+        </div>
+        <div v-if="this.selectedCounty">
+          / 
+        </div>
+        <div v-if="this.selectedCounty">
+          {{ this.selectedCounty }} 
         </div>
       </div>
       <div class="flex space-x-2">
@@ -30,15 +37,31 @@
     <main>
       <MapCore></MapCore>
     </main>
-    <footer></footer>
+    <footer>
+      <ColorHint></ColorHint>
+    </footer>
   </div>
 </template>
 
 <script>
 import MapCore from '@/components/Dashboard/Map/MapCore'
+import ColorHint from '@/components/Dashboard/Map/ColorHint'
 export default {
   components:{
-    MapCore
+    MapCore, 
+    ColorHint
+  },
+  computed:{
+    selectedCounty(){
+      return this.$store.state.selectedCountyName
+    }
+  },
+  methods:{
+    zoomOut(){
+      this.$store.dispatch('setSelectedCountyName', {
+        selectedCountyName: null
+      })
+    }
   }
 }
 </script>

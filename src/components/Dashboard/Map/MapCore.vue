@@ -1,15 +1,16 @@
 <template>
   <div>
     <svg id="geo-map"></svg>
+    
   </div>
 </template>
 
 <script>
-import Abnormal from '@/components/Dashboard/Abnormal/Abnormal'
 import * as d3 from 'd3'
+import { mapState } from "vuex";
 export default {
   components:{
-    Abnormal
+
   },
   data(){
     return {
@@ -26,10 +27,10 @@ export default {
       
     }
   },
-  watch:{
-    selectedCounty:function(newV, oldV){
-      console.log(newV, oldV)
-    }
+  computed:{
+    ...mapState({
+      hintColor: state => state.hintColor
+    })
   },
   methods:{
     selectMap:function(geojson,location){
@@ -40,7 +41,22 @@ export default {
         g.style("stroke-width", 1 / d3.event.transform.k + "px");
         g.attr("transform", d3.event.transform); // updated for d3 v4
       })
-    } 
+    },
+    setSelectedCountyName:function(){
+      this.$store.dispatch('setSelectedCountyName', {
+        selectedCountyName: this.selectedCountyName
+      })
+    },
+    testt:function(){
+      alert('ff')
+      // let area = d3.select(event.currentTarget)
+      // this.originColor = area.attr('fill')
+      // area.transition()
+      // .duration(500)
+      // .attr("fill", this.hintColor.get('selected'))
+      // .attr('stroke','gray').attr('stroke-opacity', 0.3)
+      // .attr("stroke-width", 1)
+    }
   },
   mounted(){
     //Zoom
@@ -58,29 +74,34 @@ export default {
       .attr('class','boundary')
       .attr("stroke-width", 0.2)
       .attr("stroke", "#000000")
-      .attr("fill", "gray")
-      .attr('fill-opacity',0.3)
+      .attr("fill", this.hintColor.get('noData'))//.attr('fill-opacity',0.3)
  
       path
-      .on('mouseover', (d) => {
+      // .on('mouseover', (d) => {
+      //   let area = d3.select(event.currentTarget)
+      //   this.originColor = area.attr('fill')
+      //   area.transition()
+      //   .duration(500)
+      //   .attr("fill", this.hintColor.get('selected'))
+      //   .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+        
+      // })
+      .attr(':v-on:mouseover',(d) => {
         let area = d3.select(event.currentTarget)
         this.originColor = area.attr('fill')
         area.transition()
         .duration(500)
-        .attr("fill", "#8BACF7")
-        .attr('stroke','gray').attr('stroke-opacity', 0.3)
-        .attr("stroke-width", 1)
-        
+        .attr("fill", this.hintColor.get('selected'))
+        .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
       })
       .on('mouseout', (d) => {
         let area = d3.select(event.currentTarget)
         
         area.transition()
         .duration(500)
-        .attr("fill", "gray").attr('fill-opacity',0.3)
-        .attr('stroke','black')
-        .attr('stroke-opacity', 1)
-        .attr("stroke-width", 0.2)
+        // .attr("fill", this.hintColor.get('noData'))//.attr('fill-opacity',0.3)
+        .attr("fill", this.originColor)//.attr('fill-opacity',0.3)
+        .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
       })
       // .append('title')
       // .text( d => d.properties.county)
@@ -94,29 +115,32 @@ export default {
 
       `)
 
-
-      
-
-
       path.on('click',clicked)
 
       path.nodes().forEach( (d,i) => {
         setTimeout(()=>{
           let p = d3.select(d)
           repeat(p)
-        // },i * 100)
         },i * 3500)
       });
       
       let repeat = (p) => {
         p
-        .transition().duration(500).attr('fill', 'green').attr('fill-opacity',0.3)
-        .transition().duration(500).attr('fill', 'gray').attr('fill-opacity',0.3)
-        .transition().duration(500).attr('fill', 'green').attr('fill-opacity',0.5)
-        .transition().duration(500).attr('fill', 'gray').attr('fill-opacity',0.3)
-        .transition().duration(500).attr('fill', 'green').attr('fill-opacity',0.7)
-        .transition().duration(500).attr('fill', 'gray').attr('fill-opacity',0.3)
-        .transition().duration(500).attr('fill', 'green').attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3)
+        .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.4)
+        .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.5)
+        .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.6)
+        .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.7)
+        .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.8)
+        .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.9)
+        .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',1)
       }
 
     }
@@ -139,36 +163,36 @@ export default {
     const clicked = d =>{
       d3.json('twTown.json').then(projectGeoJSON =>{
       let projectgeojson = projectGeoJSON.features;
-        console.log(d);
         zoomToBoundingBox(d);
         let selectedBlock = d.properties.county_id;
         this.selectedCounty = selectedBlock
+        this.selectedCountyName = d.properties.county 
+        this.setSelectedCountyName()
         let selectedjson = this.selectMap(projectgeojson,selectedBlock);
         g.selectAll("*").remove();
         makemap(selectedjson)
       })
     }
 
-    setTimeout(()=>{
-      d3.json('twCountry.json').then(json =>{
-        makemap(json.features)
-        d3.select('#zoomOutBtn').on('click',function(){
-          g.selectAll("*").remove();
-          svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
-          makemap(json.features);
-        })
+    d3.json('twCountry.json').then(json =>{
+      makemap(json.features)
+      d3.select('#zoomOutBtn')
+      .on('click',function(){
+        g.selectAll("*").remove();
+        svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
+        makemap(json.features);
       })
+    })
 
-    }, 1000);
 
     const svg = d3.select('#geo-map')
     const g = svg.append('g')
     svg.attr('width', this.width).attr('height', this.height)
 
     const mercator = d3.geoMercator()
-    .scale(6000)
+    .scale(8000)
     .translate([this.width/2, this.height/2])
-    .center([120.5,23]);
+    .center([120.5,23.5]);
 
     const pathGenerator = d3.geoPath().projection(mercator);
   }
