@@ -553,8 +553,8 @@ video {
 
 .purple-to-green-header{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #5b21b6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(91, 33, 182, 0));
+  --tw-gradient-from: #7c3aed;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(124, 58, 237, 0));
   --tw-gradient-to: #065f46;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity))
