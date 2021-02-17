@@ -5,20 +5,24 @@
 </template>
 
 <script>
-// import { select, geoMercator, geoPath, zoom } from 'd3';
+import Abnormal from '@/components/Dashboard/Abnormal/Abnormal'
 import * as d3 from 'd3'
 export default {
-    data(){
+  components:{
+    Abnormal
+  },
+  data(){
     return {
       svg: null,
       xScale: null,
       selectedCounty:null,
-      width:600,
+      width:400,
       height:600,
       transitionDuration: 500,
       path:null,
       g:null, 
       svg:null,
+      originColor:null
       
     }
   },
@@ -56,12 +60,12 @@ export default {
       .attr("stroke", "#000000")
       .attr("fill", "gray")
       .attr('fill-opacity',0.3)
-      
  
       path
       .on('mouseover', (d) => {
-        d3.select(event.currentTarget)
-        .transition()
+        let area = d3.select(event.currentTarget)
+        this.originColor = area.attr('fill')
+        area.transition()
         .duration(500)
         .attr("fill", "#8BACF7")
         .attr('stroke','gray').attr('stroke-opacity', 0.3)
@@ -69,16 +73,27 @@ export default {
         
       })
       .on('mouseout', (d) => {
-        d3.select(event.currentTarget)
-        .transition()
+        let area = d3.select(event.currentTarget)
+        
+        area.transition()
         .duration(500)
         .attr("fill", "gray").attr('fill-opacity',0.3)
         .attr('stroke','black')
         .attr('stroke-opacity', 1)
         .attr("stroke-width", 0.2)
       })
+      // .append('title')
+      // .text( d => d.properties.county)
       .append('title')
-      .text( d => d.properties.county)
+      .html( d => `
+      <div style="color:blue">
+      ${d.properties.county}
+      data1
+      data2
+      </div>
+
+      `)
+
 
       
 
@@ -89,7 +104,8 @@ export default {
         setTimeout(()=>{
           let p = d3.select(d)
           repeat(p)
-        },i * 800)
+        // },i * 100)
+        },i * 3500)
       });
       
       let repeat = (p) => {
@@ -150,9 +166,9 @@ export default {
     svg.attr('width', this.width).attr('height', this.height)
 
     const mercator = d3.geoMercator()
-    .scale(5000)
+    .scale(6000)
     .translate([this.width/2, this.height/2])
-    .center([121.5,24]);
+    .center([120.5,23]);
 
     const pathGenerator = d3.geoPath().projection(mercator);
   }

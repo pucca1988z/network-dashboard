@@ -30,6 +30,7 @@
     <main>
       <MapCore></MapCore>
     </main>
+    <footer></footer>
   </div>
 </template>
 
