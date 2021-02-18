@@ -1,23 +1,27 @@
 <template>
-  <div class=" grid md:grid-cols-6 md:grid-rows-3 gap-3">
+  <div class=" grid md:grid-cols-6 md:grid-rows-3 gap-5">
     <Map 
       data-aos="flip-left" 
       data-aos-duration="1300"
+      data-aos-once="true"
       class=" md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-4 shadow-lg rounded-lg ">
     </Map>
     <Static 
       :data-aos="fadeDownLeft"
       data-aos-duration="1300"
+      data-aos-once="true"
       class="md:col-span-4 shadow-lg rounded-lg">
     </Static>
     <Abnormal 
       :data-aos="fadeLeft" 
       data-aos-duration="1300"
+      data-aos-once="true"
       class="md:col-span-4 shadow-lg rounded-lg">
     </Abnormal>
     <DownloadStatic 
       :data-aos="fadeUpLeft"
       data-aos-duration="1300"
+      data-aos-once="true"
       class="md:col-span-4 shadow-lg rounded-lg">
     </DownloadStatic>
   </div>

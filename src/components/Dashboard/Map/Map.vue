@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <header 
       class="border rounded-t-lg h-12 purple-to-green-header flex items-center flex-row px-4">
       <div class="flex-1 flex space-x-2">
