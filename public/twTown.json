@@ -8,7 +8,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北區",
+        "district": "北區",
         "county": "新竹市",
         "town_id": "10018020",
         "county_id": "10018",
@@ -230,7 +230,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北區",
+        "district": "北區",
         "county": "臺中市",
         "town_id": "66000050",
         "county_id": "66000",
@@ -364,7 +364,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北區",
+        "district": "北區",
         "county": "臺南市",
         "town_id": "67000340",
         "county_id": "67000",
@@ -470,7 +470,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北屯區",
+        "district": "北屯區",
         "county": "臺中市",
         "town_id": "66000080",
         "county_id": "66000",
@@ -792,7 +792,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北門區",
+        "district": "北門區",
         "county": "臺南市",
         "town_id": "67000170",
         "county_id": "67000",
@@ -1062,7 +1062,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "卓溪鄉",
+        "district": "卓溪鄉",
         "county": "花蓮縣",
         "town_id": "10015130",
         "county_id": "10015",
@@ -2148,7 +2148,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "卓蘭鎮",
+        "district": "卓蘭鎮",
         "county": "苗栗縣",
         "town_id": "10005070",
         "county_id": "10005",
@@ -2438,7 +2438,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南化區",
+        "district": "南化區",
         "county": "臺南市",
         "town_id": "67000250",
         "county_id": "67000",
@@ -2984,7 +2984,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南區",
+        "district": "南區",
         "county": "臺中市",
         "town_id": "66000030",
         "county_id": "66000",
@@ -3114,7 +3114,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南區",
+        "district": "南區",
         "county": "臺南市",
         "town_id": "67000330",
         "county_id": "67000",
@@ -3240,7 +3240,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南屯區",
+        "district": "南屯區",
         "county": "臺中市",
         "town_id": "66000070",
         "county_id": "66000",
@@ -3430,7 +3430,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南州鄉",
+        "district": "南州鄉",
         "county": "屏東縣",
         "town_id": "10013200",
         "county_id": "10013",
@@ -3592,7 +3592,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南庄鄉",
+        "district": "南庄鄉",
         "county": "苗栗縣",
         "town_id": "10005110",
         "county_id": "10005",
@@ -3986,7 +3986,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南投市",
+        "district": "南投市",
         "county": "南投縣",
         "town_id": "10008010",
         "county_id": "10008",
@@ -4404,7 +4404,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南港區",
+        "district": "南港區",
         "county": "臺北市",
         "town_id": "63000090",
         "county_id": "63000",
@@ -4590,7 +4590,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南澳鄉",
+        "district": "南澳鄉",
         "county": "宜蘭縣",
         "town_id": "10002120",
         "county_id": "10002",
@@ -5508,7 +5508,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "名間鄉",
+        "district": "名間鄉",
         "county": "南投縣",
         "town_id": "10008060",
         "county_id": "10008",
@@ -5958,7 +5958,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "員林鎮",
+        "district": "員林鎮",
         "county": "彰化縣",
         "town_id": "10007100",
         "county_id": "10007",
@@ -6248,7 +6248,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "古坑鄉",
+        "district": "古坑鄉",
         "county": "雲林縣",
         "town_id": "10009070",
         "county_id": "10009",
@@ -6782,7 +6782,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "吉安鄉",
+        "district": "吉安鄉",
         "county": "花蓮縣",
         "town_id": "10015050",
         "county_id": "10015",
@@ -6952,7 +6952,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "后里區",
+        "district": "后里區",
         "county": "臺中市",
         "town_id": "66000150",
         "county_id": "66000",
@@ -7126,7 +7126,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "員山鄉",
+        "district": "員山鄉",
         "county": "宜蘭縣",
         "town_id": "10002070",
         "county_id": "10002",
@@ -7444,7 +7444,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "四湖鄉",
+        "district": "四湖鄉",
         "county": "雲林縣",
         "town_id": "10009180",
         "county_id": "10009",
@@ -7750,7 +7750,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "土城區",
+        "district": "土城區",
         "county": "新北市",
         "town_id": "65000130",
         "county_id": "65000",
@@ -7948,7 +7948,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "土庫鎮",
+        "district": "土庫鎮",
         "county": "雲林縣",
         "town_id": "10009050",
         "county_id": "10009",
@@ -8234,7 +8234,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "埔里鎮",
+        "district": "埔里鎮",
         "county": "南投縣",
         "town_id": "10008020",
         "county_id": "10008",
@@ -8896,7 +8896,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "埔鹽鄉",
+        "district": "埔鹽鄉",
         "county": "彰化縣",
         "town_id": "10007140",
         "county_id": "10007",
@@ -9122,7 +9122,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "士林區",
+        "district": "士林區",
         "county": "臺北市",
         "town_id": "63000110",
         "county_id": "63000",
@@ -9436,7 +9436,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "壯圍鄉",
+        "district": "壯圍鄉",
         "county": "宜蘭縣",
         "town_id": "10002060",
         "county_id": "10002",
@@ -9638,7 +9638,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大同區",
+        "district": "大同區",
         "county": "臺北市",
         "town_id": "63000060",
         "county_id": "63000",
@@ -9720,7 +9720,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大園鄉",
+        "district": "大園鄉",
         "county": "桃園縣",
         "town_id": "10003060",
         "county_id": "10003",
@@ -10146,7 +10146,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大城鄉",
+        "district": "大城鄉",
         "county": "彰化縣",
         "town_id": "10007240",
         "county_id": "10007",
@@ -10360,7 +10360,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大埤鄉",
+        "district": "大埤鄉",
         "county": "雲林縣",
         "town_id": "10009080",
         "county_id": "10009",
@@ -10606,7 +10606,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大安區",
+        "district": "大安區",
         "county": "臺中市",
         "town_id": "66000220",
         "county_id": "66000",
@@ -10900,7 +10900,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大湖鄉",
+        "district": "大湖鄉",
         "county": "苗栗縣",
         "town_id": "10005080",
         "county_id": "10005",
@@ -11282,7 +11282,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大社區",
+        "district": "大社區",
         "county": "高雄市",
         "town_id": "64000160",
         "county_id": "64000",
@@ -11528,7 +11528,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "太保市",
+        "district": "太保市",
         "county": "嘉義縣",
         "town_id": "10010010",
         "county_id": "10010",
@@ -11846,7 +11846,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "西螺鎮",
+        "district": "西螺鎮",
         "county": "雲林縣",
         "town_id": "10009040",
         "county_id": "10009",
@@ -12048,7 +12048,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "觀音鄉",
+        "district": "觀音鄉",
         "county": "桃園縣",
         "town_id": "10003120",
         "county_id": "10003",
@@ -12342,7 +12342,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "豐濱鄉",
+        "district": "豐濱鄉",
         "county": "花蓮縣",
         "town_id": "10015080",
         "county_id": "10015",
@@ -13040,7 +13040,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "路竹區",
+        "district": "路竹區",
         "county": "高雄市",
         "town_id": "64000240",
         "county_id": "64000",
@@ -13306,7 +13306,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "車城鄉",
+        "district": "車城鄉",
         "county": "屏東縣",
         "town_id": "10013230",
         "county_id": "10013",
@@ -13696,7 +13696,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "通霄鎮",
+        "district": "通霄鎮",
         "county": "苗栗縣",
         "town_id": "10005030",
         "county_id": "10005",
@@ -14046,7 +14046,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "達仁鄉",
+        "district": "達仁鄉",
         "county": "臺東縣",
         "town_id": "10014150",
         "county_id": "10014",
@@ -14680,7 +14680,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "里港鄉",
+        "district": "里港鄉",
         "county": "屏東縣",
         "town_id": "10013090",
         "county_id": "10013",
@@ -14946,7 +14946,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "金峰鄉",
+        "district": "金峰鄉",
         "county": "臺東縣",
         "town_id": "10014140",
         "county_id": "10014",
@@ -15600,7 +15600,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "長治鄉",
+        "district": "長治鄉",
         "county": "屏東縣",
         "town_id": "10013060",
         "county_id": "10013",
@@ -15844,7 +15844,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "關山鎮",
+        "district": "關山鎮",
         "county": "臺東縣",
         "town_id": "10014030",
         "county_id": "10014",
@@ -16138,7 +16138,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "關西鎮",
+        "district": "關西鎮",
         "county": "新竹縣",
         "town_id": "10004040",
         "county_id": "10004",
@@ -16512,7 +16512,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "集集鎮",
+        "district": "集集鎮",
         "county": "南投縣",
         "town_id": "10008050",
         "county_id": "10008",
@@ -16734,7 +16734,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "雙溪區",
+        "district": "雙溪區",
         "county": "新北市",
         "town_id": "65000250",
         "county_id": "65000",
@@ -17120,7 +17120,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "頭份鎮",
+        "district": "頭份鎮",
         "county": "苗栗縣",
         "town_id": "10005050",
         "county_id": "10005",
@@ -17462,7 +17462,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "頭城鎮",
+        "district": "頭城鎮",
         "county": "宜蘭縣",
         "town_id": "10002040",
         "county_id": "10002",
@@ -17992,7 +17992,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "高樹鄉",
+        "district": "高樹鄉",
         "county": "屏東縣",
         "town_id": "10013110",
         "county_id": "10013",
@@ -18266,7 +18266,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "魚池鄉",
+        "district": "魚池鄉",
         "county": "南投縣",
         "town_id": "10008090",
         "county_id": "10008",
@@ -18656,7 +18656,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鶯歌區",
+        "district": "鶯歌區",
         "county": "新北市",
         "town_id": "65000080",
         "county_id": "65000",
@@ -18838,7 +18838,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鹽埕區",
+        "district": "鹽埕區",
         "county": "高雄市",
         "town_id": "64000010",
         "county_id": "64000",
@@ -18880,7 +18880,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鹿港鎮",
+        "district": "鹿港鎮",
         "county": "彰化縣",
         "town_id": "10007020",
         "county_id": "10007",
@@ -19194,7 +19194,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鹿草鄉",
+        "district": "鹿草鄉",
         "county": "嘉義縣",
         "town_id": "10010110",
         "county_id": "10010",
@@ -19516,7 +19516,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "麟洛鄉",
+        "district": "麟洛鄉",
         "county": "屏東縣",
         "town_id": "10013070",
         "county_id": "10013",
@@ -19694,7 +19694,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "麻豆區",
+        "district": "麻豆區",
         "county": "臺南市",
         "town_id": "67000070",
         "county_id": "67000",
@@ -19920,7 +19920,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鼓山區(海)",
+        "district": "鼓山區(海)",
         "county": "高雄市",
         "town_id": "64000020",
         "county_id": "64000",
@@ -20050,7 +20050,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "富里鄉",
+        "district": "富里鄉",
         "county": "花蓮縣",
         "town_id": "10015100",
         "county_id": "10015",
@@ -20504,7 +20504,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "將軍區",
+        "district": "將軍區",
         "county": "臺南市",
         "town_id": "67000160",
         "county_id": "67000",
@@ -20754,7 +20754,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "尖石鄉",
+        "district": "尖石鄉",
         "county": "新竹縣",
         "town_id": "10004120",
         "county_id": "10004",
@@ -21364,7 +21364,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "峨眉鄉",
+        "district": "峨眉鄉",
         "county": "新竹縣",
         "town_id": "10004110",
         "county_id": "10004",
@@ -21662,7 +21662,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "崁頂鄉",
+        "district": "崁頂鄉",
         "county": "屏東縣",
         "town_id": "10013180",
         "county_id": "10013",
@@ -21856,7 +21856,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "左營區",
+        "district": "左營區",
         "county": "高雄市",
         "town_id": "64000030",
         "county_id": "64000",
@@ -22090,7 +22090,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "布袋鎮",
+        "district": "布袋鎮",
         "county": "嘉義縣",
         "town_id": "10010030",
         "county_id": "10010",
@@ -22604,7 +22604,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "平鎮市",
+        "district": "平鎮市",
         "county": "桃園縣",
         "town_id": "10003100",
         "county_id": "10003",
@@ -22866,7 +22866,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "後龍鎮",
+        "district": "後龍鎮",
         "county": "苗栗縣",
         "town_id": "10005060",
         "county_id": "10005",
@@ -23184,7 +23184,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "復興鄉",
+        "district": "復興鄉",
         "county": "桃園縣",
         "town_id": "10003130",
         "county_id": "10003",
@@ -23774,7 +23774,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "太麻里鄉",
+        "district": "太麻里鄉",
         "county": "臺東縣",
         "town_id": "10014090",
         "county_id": "10014",
@@ -24212,7 +24212,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "安南區",
+        "district": "安南區",
         "county": "臺南市",
         "town_id": "67000350",
         "county_id": "67000",
@@ -24422,7 +24422,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "安定區",
+        "district": "安定區",
         "county": "臺南市",
         "town_id": "67000210",
         "county_id": "67000",
@@ -24608,7 +24608,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "安平區",
+        "district": "安平區",
         "county": "臺南市",
         "town_id": "67000360",
         "county_id": "67000",
@@ -24718,7 +24718,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "線西鄉",
+        "district": "線西鄉",
         "county": "彰化縣",
         "town_id": "10007040",
         "county_id": "10007",
@@ -24860,7 +24860,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "羅東鎮",
+        "district": "羅東鎮",
         "county": "宜蘭縣",
         "town_id": "10002020",
         "county_id": "10002",
@@ -25030,7 +25030,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "義竹鄉",
+        "district": "義竹鄉",
         "county": "嘉義縣",
         "town_id": "10010100",
         "county_id": "10010",
@@ -25320,7 +25320,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "臺東市",
+        "district": "臺東市",
         "county": "臺東縣",
         "town_id": "10014010",
         "county_id": "10014",
@@ -25638,7 +25638,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "臺西鄉",
+        "district": "臺西鄉",
         "county": "雲林縣",
         "town_id": "10009160",
         "county_id": "10009",
@@ -26016,7 +26016,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "花蓮市",
+        "district": "花蓮市",
         "county": "花蓮縣",
         "town_id": "10015010",
         "county_id": "10015",
@@ -26278,7 +26278,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "芳苑鄉",
+        "district": "芳苑鄉",
         "county": "彰化縣",
         "town_id": "10007230",
         "county_id": "10007",
@@ -26604,7 +26604,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "苗栗市",
+        "district": "苗栗市",
         "county": "苗栗縣",
         "town_id": "10005010",
         "county_id": "10005",
@@ -26802,7 +26802,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "茂林區",
+        "district": "茂林區",
         "county": "高雄市",
         "town_id": "64000360",
         "county_id": "64000",
@@ -27228,7 +27228,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "萬丹鄉",
+        "district": "萬丹鄉",
         "county": "屏東縣",
         "town_id": "10013050",
         "county_id": "10013",
@@ -27478,7 +27478,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "萬巒鄉",
+        "district": "萬巒鄉",
         "county": "屏東縣",
         "town_id": "10013120",
         "county_id": "10013",
@@ -27980,7 +27980,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "萬華區",
+        "district": "萬華區",
         "county": "臺北市",
         "town_id": "63000070",
         "county_id": "63000",
@@ -28062,7 +28062,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "萬里區",
+        "district": "萬里區",
         "county": "新北市",
         "town_id": "65000280",
         "county_id": "65000",
@@ -28436,7 +28436,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "蘆竹鄉",
+        "district": "蘆竹鄉",
         "county": "桃園縣",
         "town_id": "10003050",
         "county_id": "10003",
@@ -28862,7 +28862,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "西區",
+        "district": "西區",
         "county": "嘉義市",
         "town_id": "10020020",
         "county_id": "10020",
@@ -29064,7 +29064,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三灣鄉",
+        "district": "三灣鄉",
         "county": "苗栗縣",
         "town_id": "10005160",
         "county_id": "10005",
@@ -29482,7 +29482,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三重區",
+        "district": "三重區",
         "county": "新北市",
         "town_id": "65000020",
         "county_id": "65000",
@@ -29596,7 +29596,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "下營區",
+        "district": "下營區",
         "county": "臺南市",
         "town_id": "67000080",
         "county_id": "67000",
@@ -29858,7 +29858,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中和區",
+        "district": "中和區",
         "county": "新北市",
         "town_id": "65000030",
         "county_id": "65000",
@@ -30060,7 +30060,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中埔鄉",
+        "district": "中埔鄉",
         "county": "嘉義縣",
         "town_id": "10010130",
         "county_id": "10010",
@@ -30462,7 +30462,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中壢市",
+        "district": "中壢市",
         "county": "桃園縣",
         "town_id": "10003020",
         "county_id": "10003",
@@ -30808,7 +30808,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中寮鄉",
+        "district": "中寮鄉",
         "county": "南投縣",
         "town_id": "10008080",
         "county_id": "10008",
@@ -31298,7 +31298,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中山區",
+        "district": "中山區",
         "county": "臺北市",
         "town_id": "63000040",
         "county_id": "63000",
@@ -31448,7 +31448,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中正區",
+        "district": "中正區",
         "county": "基隆市",
         "town_id": "10017010",
         "county_id": "10017",
@@ -31778,7 +31778,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中正區",
+        "district": "中正區",
         "county": "臺北市",
         "town_id": "63000050",
         "county_id": "63000",
@@ -31864,7 +31864,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中西區",
+        "district": "中西區",
         "county": "臺南市",
         "town_id": "67000370",
         "county_id": "67000",
@@ -31958,7 +31958,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "九如鄉",
+        "district": "九如鄉",
         "county": "屏東縣",
         "town_id": "10013080",
         "county_id": "10013",
@@ -32172,7 +32172,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "二崙鄉",
+        "district": "二崙鄉",
         "county": "雲林縣",
         "town_id": "10009110",
         "county_id": "10009",
@@ -32382,7 +32382,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "二林鎮",
+        "district": "二林鎮",
         "county": "彰化縣",
         "town_id": "10007200",
         "county_id": "10007",
@@ -32764,7 +32764,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "二水鄉",
+        "district": "二水鄉",
         "county": "彰化縣",
         "town_id": "10007180",
         "county_id": "10007",
@@ -33058,7 +33058,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "五結鄉",
+        "district": "五結鄉",
         "county": "宜蘭縣",
         "town_id": "10002090",
         "county_id": "10002",
@@ -33296,7 +33296,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "仁武區",
+        "district": "仁武區",
         "county": "高雄市",
         "town_id": "64000170",
         "county_id": "64000",
@@ -33554,7 +33554,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "伸港鄉",
+        "district": "伸港鄉",
         "county": "彰化縣",
         "town_id": "10007050",
         "county_id": "10007",
@@ -33736,7 +33736,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "佳冬鄉",
+        "district": "佳冬鄉",
         "county": "屏東縣",
         "town_id": "10013210",
         "county_id": "10013",
@@ -33878,7 +33878,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "來義鄉",
+        "district": "來義鄉",
         "county": "屏東縣",
         "town_id": "10013300",
         "county_id": "10013",
@@ -34332,7 +34332,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "信義區",
+        "district": "信義區",
         "county": "臺北市",
         "town_id": "63000020",
         "county_id": "63000",
@@ -34422,7 +34422,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "信義鄉",
+        "district": "信義鄉",
         "county": "南投縣",
         "town_id": "10008120",
         "county_id": "10008",
@@ -35504,7 +35504,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "元長鄉",
+        "district": "元長鄉",
         "county": "雲林縣",
         "town_id": "10009170",
         "county_id": "10009",
@@ -35758,7 +35758,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "內埔鄉",
+        "district": "內埔鄉",
         "county": "屏東縣",
         "town_id": "10013130",
         "county_id": "10013",
@@ -36044,7 +36044,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "內湖區",
+        "district": "內湖區",
         "county": "臺北市",
         "town_id": "63000100",
         "county_id": "63000",
@@ -36234,7 +36234,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "八德市",
+        "district": "八德市",
         "county": "桃園縣",
         "town_id": "10003080",
         "county_id": "10003",
@@ -36492,7 +36492,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "八里區",
+        "district": "八里區",
         "county": "新北市",
         "town_id": "65000230",
         "county_id": "65000",
@@ -36790,7 +36790,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "六甲區",
+        "district": "六甲區",
         "county": "臺南市",
         "town_id": "67000090",
         "county_id": "67000",
@@ -37228,7 +37228,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "六腳鄉",
+        "district": "六腳鄉",
         "county": "嘉義縣",
         "town_id": "10010080",
         "county_id": "10010",
@@ -37542,7 +37542,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "前鎮區",
+        "district": "前鎮區",
         "county": "高雄市",
         "town_id": "64000090",
         "county_id": "64000",
@@ -37744,7 +37744,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新市區",
+        "district": "新市區",
         "county": "臺南市",
         "town_id": "67000200",
         "county_id": "67000",
@@ -38026,7 +38026,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "枋山鄉",
+        "district": "枋山鄉",
         "county": "屏東縣",
         "town_id": "10013250",
         "county_id": "10013",
@@ -38396,7 +38396,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中山區",
+        "district": "中山區",
         "county": "基隆市",
         "town_id": "10017050",
         "county_id": "10017",
@@ -38566,7 +38566,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "埔心鄉",
+        "district": "埔心鄉",
         "county": "彰化縣",
         "town_id": "10007150",
         "county_id": "10007",
@@ -38752,7 +38752,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "蘆洲區",
+        "district": "蘆洲區",
         "county": "新北市",
         "town_id": "65000140",
         "county_id": "65000",
@@ -38838,7 +38838,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "麥寮鄉",
+        "district": "麥寮鄉",
         "county": "雲林縣",
         "town_id": "10009130",
         "county_id": "10009",
@@ -39340,7 +39340,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "左鎮區",
+        "district": "左鎮區",
         "county": "臺南市",
         "town_id": "67000260",
         "county_id": "67000",
@@ -39786,7 +39786,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "林邊鄉",
+        "district": "林邊鄉",
         "county": "屏東縣",
         "town_id": "10013190",
         "county_id": "10013",
@@ -39944,7 +39944,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "仁愛區",
+        "district": "仁愛區",
         "county": "基隆市",
         "town_id": "10017040",
         "county_id": "10017",
@@ -40038,7 +40038,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "和平區",
+        "district": "和平區",
         "county": "臺中市",
         "town_id": "66000290",
         "county_id": "66000",
@@ -41124,7 +41124,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "綠島鄉",
+        "district": "綠島鄉",
         "county": "臺東縣",
         "town_id": "10014110",
         "county_id": "10014",
@@ -41514,7 +41514,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "梓官區",
+        "district": "梓官區",
         "county": "高雄市",
         "town_id": "64000290",
         "county_id": "64000",
@@ -41664,7 +41664,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "滿州鄉",
+        "district": "滿州鄉",
         "county": "屏東縣",
         "town_id": "10013240",
         "county_id": "10013",
@@ -42098,7 +42098,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大雅區",
+        "district": "大雅區",
         "county": "臺中市",
         "town_id": "66000180",
         "county_id": "66000",
@@ -42300,7 +42300,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "花壇鄉",
+        "district": "花壇鄉",
         "county": "彰化縣",
         "town_id": "10007080",
         "county_id": "10007",
@@ -42482,7 +42482,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "西港區",
+        "district": "西港區",
         "county": "臺南市",
         "town_id": "67000140",
         "county_id": "67000",
@@ -42644,7 +42644,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新埤鄉",
+        "district": "新埤鄉",
         "county": "屏東縣",
         "town_id": "10013150",
         "county_id": "10013",
@@ -42974,7 +42974,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東區",
+        "district": "東區",
         "county": "新竹市",
         "town_id": "10018010",
         "county_id": "10018",
@@ -43240,7 +43240,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "橋頭區",
+        "district": "橋頭區",
         "county": "高雄市",
         "town_id": "64000200",
         "county_id": "64000",
@@ -43474,7 +43474,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "龍崎區",
+        "district": "龍崎區",
         "county": "臺南市",
         "town_id": "67000300",
         "county_id": "67000",
@@ -43816,7 +43816,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "龍潭鄉",
+        "district": "龍潭鄉",
         "county": "桃園縣",
         "town_id": "10003090",
         "county_id": "10003",
@@ -44110,7 +44110,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "龜山鄉",
+        "district": "龜山鄉",
         "county": "桃園縣",
         "town_id": "10003070",
         "county_id": "10003",
@@ -44520,7 +44520,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三義鄉",
+        "district": "三義鄉",
         "county": "苗栗縣",
         "town_id": "10005130",
         "county_id": "10005",
@@ -44742,7 +44742,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北斗鎮",
+        "district": "北斗鎮",
         "county": "彰化縣",
         "town_id": "10007190",
         "county_id": "10007",
@@ -44924,7 +44924,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "壽豐鄉",
+        "district": "壽豐鄉",
         "county": "花蓮縣",
         "town_id": "10015060",
         "county_id": "10015",
@@ -45294,7 +45294,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "草屯鎮",
+        "district": "草屯鎮",
         "county": "南投縣",
         "town_id": "10008030",
         "county_id": "10008",
@@ -45680,7 +45680,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "銅鑼鄉",
+        "district": "銅鑼鄉",
         "county": "苗栗縣",
         "town_id": "10005100",
         "county_id": "10005",
@@ -45990,7 +45990,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鼓山區",
+        "district": "鼓山區",
         "county": "高雄市",
         "town_id": "64000020",
         "county_id": "64000",
@@ -46176,7 +46176,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "後壁區",
+        "district": "後壁區",
         "county": "臺南市",
         "town_id": "67000050",
         "county_id": "67000",
@@ -46478,7 +46478,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "潭子區",
+        "district": "潭子區",
         "county": "臺中市",
         "town_id": "66000170",
         "county_id": "66000",
@@ -46756,7 +46756,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "獅子鄉",
+        "district": "獅子鄉",
         "county": "屏東縣",
         "town_id": "10013320",
         "county_id": "10013",
@@ -47370,7 +47370,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "七股區",
+        "district": "七股區",
         "county": "臺南市",
         "town_id": "67000150",
         "county_id": "67000",
@@ -47728,7 +47728,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北投區",
+        "district": "北投區",
         "county": "臺北市",
         "town_id": "63000120",
         "county_id": "63000",
@@ -47970,7 +47970,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大林鎮",
+        "district": "大林鎮",
         "county": "嘉義縣",
         "town_id": "10010040",
         "county_id": "10010",
@@ -48340,7 +48340,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "文山區",
+        "district": "文山區",
         "county": "臺北市",
         "town_id": "63000080",
         "county_id": "63000",
@@ -48566,7 +48566,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "斗南鎮",
+        "district": "斗南鎮",
         "county": "雲林縣",
         "town_id": "10009020",
         "county_id": "10009",
@@ -48932,7 +48932,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新化區",
+        "district": "新化區",
         "county": "臺南市",
         "town_id": "67000180",
         "county_id": "67000",
@@ -49366,7 +49366,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新城鄉",
+        "district": "新城鄉",
         "county": "花蓮縣",
         "town_id": "10015040",
         "county_id": "10015",
@@ -49544,7 +49544,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新埔鎮",
+        "district": "新埔鎮",
         "county": "新竹縣",
         "town_id": "10004030",
         "county_id": "10004",
@@ -49902,7 +49902,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新屋鄉",
+        "district": "新屋鄉",
         "county": "桃園縣",
         "town_id": "10003110",
         "county_id": "10003",
@@ -50268,7 +50268,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新營區",
+        "district": "新營區",
         "county": "臺南市",
         "town_id": "67000010",
         "county_id": "67000",
@@ -50610,7 +50610,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新社區",
+        "district": "新社區",
         "county": "臺中市",
         "town_id": "66000190",
         "county_id": "66000",
@@ -51044,7 +51044,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "旗山區",
+        "district": "旗山區",
         "county": "高雄市",
         "town_id": "64000300",
         "county_id": "64000",
@@ -51542,7 +51542,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "旗津區",
+        "district": "旗津區",
         "county": "高雄市",
         "town_id": "64000100",
         "county_id": "64000",
@@ -51748,7 +51748,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "朴子市",
+        "district": "朴子市",
         "county": "嘉義縣",
         "town_id": "10010020",
         "county_id": "10010",
@@ -52086,7 +52086,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "杉林區",
+        "district": "杉林區",
         "county": "高雄市",
         "town_id": "64000340",
         "county_id": "64000",
@@ -52516,7 +52516,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東勢鄉",
+        "district": "東勢鄉",
         "county": "雲林縣",
         "town_id": "10009140",
         "county_id": "10009",
@@ -52774,7 +52774,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東區",
+        "district": "東區",
         "county": "嘉義市",
         "town_id": "10020010",
         "county_id": "10020",
@@ -53016,7 +53016,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東區",
+        "district": "東區",
         "county": "臺中市",
         "town_id": "66000020",
         "county_id": "66000",
@@ -53106,7 +53106,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東區",
+        "district": "東區",
         "county": "臺南市",
         "town_id": "67000320",
         "county_id": "67000",
@@ -53216,7 +53216,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東山區",
+        "district": "東山區",
         "county": "臺南市",
         "town_id": "67000060",
         "county_id": "67000",
@@ -53694,7 +53694,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東河鄉",
+        "district": "東河鄉",
         "county": "臺東縣",
         "town_id": "10014070",
         "county_id": "10014",
@@ -54216,7 +54216,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東石鄉",
+        "district": "東石鄉",
         "county": "嘉義縣",
         "town_id": "10010090",
         "county_id": "10010",
@@ -54790,7 +54790,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "松山區",
+        "district": "松山區",
         "county": "臺北市",
         "town_id": "63000010",
         "county_id": "63000",
@@ -54888,7 +54888,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "林口區",
+        "district": "林口區",
         "county": "新北市",
         "town_id": "65000170",
         "county_id": "65000",
@@ -55482,7 +55482,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "林園區",
+        "district": "林園區",
         "county": "高雄市",
         "town_id": "64000130",
         "county_id": "64000",
@@ -55624,7 +55624,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "桃園市",
+        "district": "桃園市",
         "county": "桃園縣",
         "town_id": "10003010",
         "county_id": "10003",
@@ -55934,7 +55934,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "桃源區",
+        "district": "桃源區",
         "county": "高雄市",
         "town_id": "64000370",
         "county_id": "64000",
@@ -57252,7 +57252,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "梧棲區",
+        "district": "梧棲區",
         "county": "臺中市",
         "town_id": "66000140",
         "county_id": "66000",
@@ -57390,7 +57390,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "楠梓區",
+        "district": "楠梓區",
         "county": "高雄市",
         "town_id": "64000040",
         "county_id": "64000",
@@ -57712,7 +57712,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "楠西區",
+        "district": "楠西區",
         "county": "臺南市",
         "town_id": "67000240",
         "county_id": "67000",
@@ -58078,7 +58078,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "橫山鄉",
+        "district": "橫山鄉",
         "county": "新竹縣",
         "town_id": "10004080",
         "county_id": "10004",
@@ -58356,7 +58356,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "歸仁區",
+        "district": "歸仁區",
         "county": "臺南市",
         "town_id": "67000280",
         "county_id": "67000",
@@ -58574,7 +58574,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "水上鄉",
+        "district": "水上鄉",
         "county": "嘉義縣",
         "town_id": "10010120",
         "county_id": "10010",
@@ -58928,7 +58928,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "水里鄉",
+        "district": "水里鄉",
         "county": "南投縣",
         "town_id": "10008110",
         "county_id": "10008",
@@ -59422,7 +59422,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "汐止區",
+        "district": "汐止區",
         "county": "新北市",
         "town_id": "65000110",
         "county_id": "65000",
@@ -59736,7 +59736,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "池上鄉",
+        "district": "池上鄉",
         "county": "臺東縣",
         "town_id": "10014060",
         "county_id": "10014",
@@ -59990,7 +59990,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "泰安鄉",
+        "district": "泰安鄉",
         "county": "苗栗縣",
         "town_id": "10005180",
         "county_id": "10005",
@@ -60712,7 +60712,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "泰山區",
+        "district": "泰山區",
         "county": "新北市",
         "town_id": "65000160",
         "county_id": "65000",
@@ -61110,7 +61110,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "淡水區",
+        "district": "淡水區",
         "county": "新北市",
         "town_id": "65000100",
         "county_id": "65000",
@@ -61400,7 +61400,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "清水區",
+        "district": "清水區",
         "county": "臺中市",
         "town_id": "66000120",
         "county_id": "66000",
@@ -61774,7 +61774,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "清水區(海)",
+        "district": "清水區(海)",
         "county": "臺中市",
         "town_id": "66000140",
         "county_id": "66000",
@@ -61920,7 +61920,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "湖內區",
+        "district": "湖內區",
         "county": "高雄市",
         "town_id": "64000250",
         "county_id": "64000",
@@ -62110,7 +62110,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "湖口鄉",
+        "district": "湖口鄉",
         "county": "新竹縣",
         "town_id": "10004050",
         "county_id": "10004",
@@ -62360,7 +62360,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "湖西鄉",
+        "district": "湖西鄉",
         "county": "澎湖縣",
         "town_id": "10016020",
         "county_id": "10016",
@@ -63618,7 +63618,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "溪湖鎮",
+        "district": "溪湖鎮",
         "county": "彰化縣",
         "town_id": "10007110",
         "county_id": "10007",
@@ -63800,7 +63800,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "烏日區",
+        "district": "烏日區",
         "county": "臺中市",
         "town_id": "66000230",
         "county_id": "66000",
@@ -64106,7 +64106,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "燕巢區",
+        "district": "燕巢區",
         "county": "高雄市",
         "town_id": "64000210",
         "county_id": "64000",
@@ -64496,7 +64496,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "玉井區",
+        "district": "玉井區",
         "county": "臺南市",
         "town_id": "67000230",
         "county_id": "67000",
@@ -64934,7 +64934,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "玉里鎮",
+        "district": "玉里鎮",
         "county": "花蓮縣",
         "town_id": "10015030",
         "county_id": "10015",
@@ -65464,7 +65464,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "瑞穗鄉",
+        "district": "瑞穗鄉",
         "county": "花蓮縣",
         "town_id": "10015090",
         "county_id": "10015",
@@ -65926,7 +65926,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "瑞芳區",
+        "district": "瑞芳區",
         "county": "新北市",
         "town_id": "65000120",
         "county_id": "65000",
@@ -66432,7 +66432,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "瑪家鄉",
+        "district": "瑪家鄉",
         "county": "屏東縣",
         "town_id": "10013280",
         "county_id": "10013",
@@ -66746,7 +66746,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "田寮區",
+        "district": "田寮區",
         "county": "高雄市",
         "town_id": "64000220",
         "county_id": "64000",
@@ -67172,7 +67172,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "田尾鄉",
+        "district": "田尾鄉",
         "county": "彰化縣",
         "town_id": "10007210",
         "county_id": "10007",
@@ -67354,7 +67354,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "甲仙區",
+        "district": "甲仙區",
         "county": "高雄市",
         "town_id": "64000330",
         "county_id": "64000",
@@ -67696,7 +67696,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "番路鄉",
+        "district": "番路鄉",
         "county": "嘉義縣",
         "town_id": "10010160",
         "county_id": "10010",
@@ -68234,7 +68234,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "石岡區",
+        "district": "石岡區",
         "county": "臺中市",
         "town_id": "66000200",
         "county_id": "66000",
@@ -68424,7 +68424,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "石碇區",
+        "district": "石碇區",
         "county": "新北市",
         "town_id": "65000190",
         "county_id": "65000",
@@ -68834,7 +68834,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "石門區",
+        "district": "石門區",
         "county": "新北市",
         "town_id": "65000220",
         "county_id": "65000",
@@ -69156,7 +69156,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "社頭鄉",
+        "district": "社頭鄉",
         "county": "彰化縣",
         "town_id": "10007170",
         "county_id": "10007",
@@ -69434,7 +69434,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "神岡區",
+        "district": "神岡區",
         "county": "臺中市",
         "town_id": "66000160",
         "county_id": "66000",
@@ -69628,7 +69628,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "福興鄉",
+        "district": "福興鄉",
         "county": "彰化縣",
         "town_id": "10007060",
         "county_id": "10007",
@@ -69930,7 +69930,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "秀林鄉",
+        "district": "秀林鄉",
         "county": "花蓮縣",
         "town_id": "10015110",
         "county_id": "10015",
@@ -71132,7 +71132,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "秀水鄉",
+        "district": "秀水鄉",
         "county": "彰化縣",
         "town_id": "10007070",
         "county_id": "10007",
@@ -71402,7 +71402,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "竹北市",
+        "district": "竹北市",
         "county": "新竹縣",
         "town_id": "10004010",
         "county_id": "10004",
@@ -71632,7 +71632,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "竹南鎮",
+        "district": "竹南鎮",
         "county": "苗栗縣",
         "town_id": "10005040",
         "county_id": "10005",
@@ -71850,7 +71850,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "竹塘鄉",
+        "district": "竹塘鄉",
         "county": "彰化縣",
         "town_id": "10007250",
         "county_id": "10007",
@@ -72052,7 +72052,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "竹山鎮",
+        "district": "竹山鎮",
         "county": "南投縣",
         "town_id": "10008040",
         "county_id": "10008",
@@ -72626,7 +72626,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "竹崎鄉",
+        "district": "竹崎鄉",
         "county": "嘉義縣",
         "town_id": "10010140",
         "county_id": "10010",
@@ -73160,7 +73160,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "竹田鄉",
+        "district": "竹田鄉",
         "county": "屏東縣",
         "town_id": "10013140",
         "county_id": "10013",
@@ -73390,7 +73390,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "七美鄉",
+        "district": "七美鄉",
         "county": "澎湖縣",
         "town_id": "10016060",
         "county_id": "10016",
@@ -73612,7 +73612,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三地門鄉",
+        "district": "三地門鄉",
         "county": "屏東縣",
         "town_id": "10013260",
         "county_id": "10013",
@@ -74026,7 +74026,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三星鄉",
+        "district": "三星鄉",
         "county": "宜蘭縣",
         "town_id": "10002100",
         "county_id": "10002",
@@ -74348,7 +74348,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三民區",
+        "district": "三民區",
         "county": "高雄市",
         "town_id": "64000050",
         "county_id": "64000",
@@ -74514,7 +74514,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "屏東市",
+        "district": "屏東市",
         "county": "屏東縣",
         "town_id": "10013010",
         "county_id": "10013",
@@ -74752,7 +74752,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新興區",
+        "district": "新興區",
         "county": "高雄市",
         "town_id": "64000060",
         "county_id": "64000",
@@ -74834,7 +74834,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "溪州鄉",
+        "district": "溪州鄉",
         "county": "彰化縣",
         "town_id": "10007260",
         "county_id": "10007",
@@ -75048,7 +75048,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "牡丹鄉",
+        "district": "牡丹鄉",
         "county": "屏東縣",
         "town_id": "10013330",
         "county_id": "10013",
@@ -75442,7 +75442,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北港鎮",
+        "district": "北港鎮",
         "county": "雲林縣",
         "town_id": "10009060",
         "county_id": "10009",
@@ -75712,7 +75712,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "外埔區",
+        "district": "外埔區",
         "county": "臺中市",
         "town_id": "66000210",
         "county_id": "66000",
@@ -75866,7 +75866,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "關廟區",
+        "district": "關廟區",
         "county": "臺南市",
         "town_id": "67000290",
         "county_id": "67000",
@@ -76312,7 +76312,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "梧棲區(海)",
+        "district": "梧棲區(海)",
         "county": "臺中市",
         "town_id": "66000140",
         "county_id": "66000",
@@ -76418,7 +76418,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "獅潭鄉",
+        "district": "獅潭鄉",
         "county": "苗栗縣",
         "town_id": "10005170",
         "county_id": "10005",
@@ -76736,7 +76736,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "五股區",
+        "district": "五股區",
         "county": "新北市",
         "town_id": "65000150",
         "county_id": "65000",
@@ -77014,7 +77014,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "和美鎮",
+        "district": "和美鎮",
         "county": "彰化縣",
         "town_id": "10007030",
         "county_id": "10007",
@@ -77260,7 +77260,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大溪鎮",
+        "district": "大溪鎮",
         "county": "桃園縣",
         "town_id": "10003030",
         "county_id": "10003",
@@ -77666,7 +77666,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "茄萣區",
+        "district": "茄萣區",
         "county": "高雄市",
         "town_id": "64000260",
         "county_id": "64000",
@@ -77828,7 +77828,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "延平鄉",
+        "district": "延平鄉",
         "county": "臺東縣",
         "town_id": "10014130",
         "county_id": "10014",
@@ -78550,7 +78550,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "琉球鄉",
+        "district": "琉球鄉",
         "county": "屏東縣",
         "town_id": "10013220",
         "county_id": "10013",
@@ -78700,7 +78700,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "五峰鄉",
+        "district": "五峰鄉",
         "county": "新竹縣",
         "town_id": "10004130",
         "county_id": "10004",
@@ -79086,7 +79086,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "春日鄉",
+        "district": "春日鄉",
         "county": "屏東縣",
         "town_id": "10013310",
         "county_id": "10013",
@@ -79540,7 +79540,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "中區",
+        "district": "中區",
         "county": "臺中市",
         "town_id": "66000010",
         "county_id": "66000",
@@ -79606,7 +79606,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "信義區",
+        "district": "信義區",
         "county": "基隆市",
         "town_id": "10017070",
         "county_id": "10017",
@@ -79744,7 +79744,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "光復鄉",
+        "district": "光復鄉",
         "county": "花蓮縣",
         "town_id": "10015070",
         "county_id": "10015",
@@ -80042,7 +80042,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "內門區",
+        "district": "內門區",
         "county": "高雄市",
         "town_id": "64000350",
         "county_id": "64000",
@@ -80456,7 +80456,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "公館鄉",
+        "district": "公館鄉",
         "county": "苗栗縣",
         "town_id": "10005090",
         "county_id": "10005",
@@ -80754,7 +80754,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "六龜區",
+        "district": "六龜區",
         "county": "高雄市",
         "town_id": "64000320",
         "county_id": "64000",
@@ -81436,7 +81436,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大里區",
+        "district": "大里區",
         "county": "臺中市",
         "town_id": "66000280",
         "county_id": "66000",
@@ -81618,7 +81618,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "平溪區",
+        "district": "平溪區",
         "county": "新北市",
         "town_id": "65000240",
         "county_id": "65000",
@@ -81916,7 +81916,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "蘇澳鎮",
+        "district": "蘇澳鎮",
         "county": "宜蘭縣",
         "town_id": "10002030",
         "county_id": "10002",
@@ -82602,7 +82602,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鳥松區",
+        "district": "鳥松區",
         "county": "高雄市",
         "town_id": "64000180",
         "county_id": "64000",
@@ -82804,7 +82804,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "海端鄉",
+        "district": "海端鄉",
         "county": "臺東縣",
         "town_id": "10014120",
         "county_id": "10014",
@@ -83626,7 +83626,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "口湖鄉",
+        "district": "口湖鄉",
         "county": "雲林縣",
         "town_id": "10009190",
         "county_id": "10009",
@@ -84768,7 +84768,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "善化區",
+        "district": "善化區",
         "county": "臺南市",
         "town_id": "67000190",
         "county_id": "67000",
@@ -84990,7 +84990,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "太平區",
+        "district": "太平區",
         "county": "臺中市",
         "town_id": "66000270",
         "county_id": "66000",
@@ -85304,7 +85304,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "貢寮區",
+        "district": "貢寮區",
         "county": "新北市",
         "town_id": "65000260",
         "county_id": "65000",
@@ -85798,7 +85798,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鹽埔鄉",
+        "district": "鹽埔鄉",
         "county": "屏東縣",
         "town_id": "10013100",
         "county_id": "10013",
@@ -86012,7 +86012,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "小港區(海)",
+        "district": "小港區(海)",
         "county": "高雄市",
         "town_id": "64000110",
         "county_id": "64000",
@@ -86150,7 +86150,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "安樂區",
+        "district": "安樂區",
         "county": "基隆市",
         "town_id": "10017060",
         "county_id": "10017",
@@ -86344,7 +86344,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "苓雅區",
+        "district": "苓雅區",
         "county": "高雄市",
         "town_id": "64000080",
         "county_id": "64000",
@@ -86510,7 +86510,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "虎尾鎮",
+        "district": "虎尾鎮",
         "county": "雲林縣",
         "town_id": "10009030",
         "county_id": "10009",
@@ -86792,7 +86792,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "佳里區",
+        "district": "佳里區",
         "county": "臺南市",
         "town_id": "67000120",
         "county_id": "67000",
@@ -87062,7 +87062,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "冬山鄉",
+        "district": "冬山鄉",
         "county": "宜蘭縣",
         "town_id": "10002080",
         "county_id": "10002",
@@ -87504,7 +87504,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大村鄉",
+        "district": "大村鄉",
         "county": "彰化縣",
         "town_id": "10007130",
         "county_id": "10007",
@@ -87742,7 +87742,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "林內鄉",
+        "district": "林內鄉",
         "county": "雲林縣",
         "town_id": "10009100",
         "county_id": "10009",
@@ -87908,7 +87908,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新園鄉",
+        "district": "新園鄉",
         "county": "屏東縣",
         "town_id": "10013170",
         "county_id": "10013",
@@ -88070,7 +88070,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "暖暖區",
+        "district": "暖暖區",
         "county": "基隆市",
         "town_id": "10017030",
         "county_id": "10017",
@@ -88228,7 +88228,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "梅山鄉",
+        "district": "梅山鄉",
         "county": "嘉義縣",
         "town_id": "10010150",
         "county_id": "10010",
@@ -88682,7 +88682,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "永靖鄉",
+        "district": "永靖鄉",
         "county": "彰化縣",
         "town_id": "10007160",
         "county_id": "10007",
@@ -88904,7 +88904,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "礁溪鄉",
+        "district": "礁溪鄉",
         "county": "宜蘭縣",
         "town_id": "10002050",
         "county_id": "10002",
@@ -89306,7 +89306,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "七堵區",
+        "district": "七堵區",
         "county": "基隆市",
         "town_id": "10017020",
         "county_id": "10017",
@@ -89596,7 +89596,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "香山區",
+        "district": "香山區",
         "county": "新竹市",
         "town_id": "10018030",
         "county_id": "10018",
@@ -89902,7 +89902,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "枋寮鄉",
+        "district": "枋寮鄉",
         "county": "屏東縣",
         "town_id": "10013160",
         "county_id": "10013",
@@ -90224,7 +90224,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "坪林區",
+        "district": "坪林區",
         "county": "新北市",
         "town_id": "65000200",
         "county_id": "65000",
@@ -90586,7 +90586,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "埤頭鄉",
+        "district": "埤頭鄉",
         "county": "彰化縣",
         "town_id": "10007220",
         "county_id": "10007",
@@ -90820,7 +90820,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大內區",
+        "district": "大內區",
         "county": "臺南市",
         "town_id": "67000110",
         "county_id": "67000",
@@ -91106,7 +91106,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大埔鄉",
+        "district": "大埔鄉",
         "county": "嘉義縣",
         "town_id": "10010170",
         "county_id": "10010",
@@ -91536,7 +91536,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大武鄉",
+        "district": "大武鄉",
         "county": "臺東縣",
         "town_id": "10014100",
         "county_id": "10014",
@@ -91818,7 +91818,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大肚區",
+        "district": "大肚區",
         "county": "臺中市",
         "town_id": "66000240",
         "county_id": "66000",
@@ -91968,7 +91968,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "西區",
+        "district": "西區",
         "county": "臺中市",
         "town_id": "66000040",
         "county_id": "66000",
@@ -92082,7 +92082,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "前鎮區(海)",
+        "district": "前鎮區(海)",
         "county": "高雄市",
         "town_id": "64000090",
         "county_id": "64000",
@@ -92196,7 +92196,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "造橋鄉",
+        "district": "造橋鄉",
         "county": "苗栗縣",
         "town_id": "10005150",
         "county_id": "10005",
@@ -92570,7 +92570,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "金山區",
+        "district": "金山區",
         "county": "新北市",
         "town_id": "65000270",
         "county_id": "65000",
@@ -92832,7 +92832,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "長濱鄉",
+        "district": "長濱鄉",
         "county": "臺東縣",
         "town_id": "10014080",
         "county_id": "10014",
@@ -93190,7 +93190,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "阿里山鄉",
+        "district": "阿里山鄉",
         "county": "嘉義縣",
         "town_id": "10010180",
         "county_id": "10010",
@@ -94032,7 +94032,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "霧峰區",
+        "district": "霧峰區",
         "county": "臺中市",
         "town_id": "66000260",
         "county_id": "66000",
@@ -94334,7 +94334,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "頭屋鄉",
+        "district": "頭屋鄉",
         "county": "苗栗縣",
         "town_id": "10005120",
         "county_id": "10005",
@@ -94588,7 +94588,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鳳山區",
+        "district": "鳳山區",
         "county": "高雄市",
         "town_id": "64000120",
         "county_id": "64000",
@@ -94842,7 +94842,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鹽水區",
+        "district": "鹽水區",
         "county": "臺南市",
         "town_id": "67000020",
         "county_id": "67000",
@@ -95200,7 +95200,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鹿谷鄉",
+        "district": "鹿谷鄉",
         "county": "南投縣",
         "town_id": "10008070",
         "county_id": "10008",
@@ -95562,7 +95562,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "龍井區",
+        "district": "龍井區",
         "county": "臺中市",
         "town_id": "66000250",
         "county_id": "66000",
@@ -95820,7 +95820,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "小港區",
+        "district": "小港區",
         "county": "高雄市",
         "town_id": "64000110",
         "county_id": "64000",
@@ -96194,7 +96194,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "岡山區",
+        "district": "岡山區",
         "county": "高雄市",
         "town_id": "64000190",
         "county_id": "64000",
@@ -96596,7 +96596,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "崙背鄉",
+        "district": "崙背鄉",
         "county": "雲林縣",
         "town_id": "10009120",
         "county_id": "10009",
@@ -96810,7 +96810,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "彌陀區",
+        "district": "彌陀區",
         "county": "高雄市",
         "town_id": "64000280",
         "county_id": "64000",
@@ -96964,7 +96964,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "恆春鎮",
+        "district": "恆春鎮",
         "county": "屏東縣",
         "town_id": "10013040",
         "county_id": "10013",
@@ -97494,7 +97494,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "學甲區",
+        "district": "學甲區",
         "county": "臺南市",
         "town_id": "67000130",
         "county_id": "67000",
@@ -97824,7 +97824,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "宜蘭市",
+        "district": "宜蘭市",
         "county": "宜蘭縣",
         "town_id": "10002010",
         "county_id": "10002",
@@ -98058,7 +98058,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "美濃區",
+        "district": "美濃區",
         "county": "高雄市",
         "town_id": "64000310",
         "county_id": "64000",
@@ -98472,7 +98472,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "芬園鄉",
+        "district": "芬園鄉",
         "county": "彰化縣",
         "town_id": "10007090",
         "county_id": "10007",
@@ -98782,7 +98782,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "苑裡鎮",
+        "district": "苑裡鎮",
         "county": "苗栗縣",
         "town_id": "10005020",
         "county_id": "10005",
@@ -99016,7 +99016,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "莿桐鄉",
+        "district": "莿桐鄉",
         "county": "雲林縣",
         "town_id": "10009090",
         "county_id": "10009",
@@ -99174,7 +99174,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "萬榮鄉",
+        "district": "萬榮鄉",
         "county": "花蓮縣",
         "town_id": "10015120",
         "county_id": "10015",
@@ -100040,7 +100040,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "蘭嶼鄉",
+        "district": "蘭嶼鄉",
         "county": "臺東縣",
         "town_id": "10014160",
         "county_id": "10014",
@@ -100598,7 +100598,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三芝區",
+        "district": "三芝區",
         "county": "新北市",
         "town_id": "65000210",
         "county_id": "65000",
@@ -100956,7 +100956,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "前金區",
+        "district": "前金區",
         "county": "高雄市",
         "town_id": "64000070",
         "county_id": "64000",
@@ -101022,7 +101022,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "永和區",
+        "district": "永和區",
         "county": "新北市",
         "town_id": "65000040",
         "county_id": "65000",
@@ -101128,7 +101128,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大寮區",
+        "district": "大寮區",
         "county": "高雄市",
         "town_id": "64000140",
         "county_id": "64000",
@@ -101374,7 +101374,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大甲區",
+        "district": "大甲區",
         "county": "臺中市",
         "town_id": "66000110",
         "county_id": "66000",
@@ -101668,7 +101668,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "霧臺鄉",
+        "district": "霧臺鄉",
         "county": "屏東縣",
         "town_id": "10013270",
         "county_id": "10013",
@@ -102142,7 +102142,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新店區",
+        "district": "新店區",
         "county": "新北市",
         "town_id": "65000060",
         "county_id": "65000",
@@ -102508,7 +102508,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大樹區",
+        "district": "大樹區",
         "county": "高雄市",
         "town_id": "64000150",
         "county_id": "64000",
@@ -102710,7 +102710,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "馬公市",
+        "district": "馬公市",
         "county": "澎湖縣",
         "town_id": "10016010",
         "county_id": "10016",
@@ -103856,7 +103856,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "國姓鄉",
+        "district": "國姓鄉",
         "county": "南投縣",
         "town_id": "10008100",
         "county_id": "10008",
@@ -104482,7 +104482,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "寶山鄉",
+        "district": "寶山鄉",
         "county": "新竹縣",
         "town_id": "10004100",
         "county_id": "10004",
@@ -104774,7 +104774,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "潮州鎮",
+        "district": "潮州鎮",
         "county": "屏東縣",
         "town_id": "10013020",
         "county_id": "10013",
@@ -105036,7 +105036,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "龍井區(海)",
+        "district": "龍井區(海)",
         "county": "臺中市",
         "town_id": "66000140",
         "county_id": "66000",
@@ -105098,7 +105098,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "仁愛鄉",
+        "district": "仁愛鄉",
         "county": "南投縣",
         "town_id": "10008130",
         "county_id": "10008",
@@ -106292,7 +106292,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "芎林鄉",
+        "district": "芎林鄉",
         "county": "新竹縣",
         "town_id": "10004070",
         "county_id": "10004",
@@ -106546,7 +106546,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "成功鎮",
+        "district": "成功鎮",
         "county": "臺東縣",
         "town_id": "10014020",
         "county_id": "10014",
@@ -107636,7 +107636,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新港鄉",
+        "district": "新港鄉",
         "county": "嘉義縣",
         "town_id": "10010070",
         "county_id": "10010",
@@ -107938,7 +107938,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新豐鄉",
+        "district": "新豐鄉",
         "county": "新竹縣",
         "town_id": "10004060",
         "county_id": "10004",
@@ -108116,7 +108116,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "旗津區(海)",
+        "district": "旗津區(海)",
         "county": "高雄市",
         "town_id": "64000100",
         "county_id": "64000",
@@ -108342,7 +108342,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "望安鄉",
+        "district": "望安鄉",
         "county": "澎湖縣",
         "town_id": "10016050",
         "county_id": "10016",
@@ -109764,7 +109764,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東港鎮",
+        "district": "東港鎮",
         "county": "屏東縣",
         "town_id": "10013030",
         "county_id": "10013",
@@ -109974,7 +109974,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "板橋區",
+        "district": "板橋區",
         "county": "新北市",
         "town_id": "65000010",
         "county_id": "65000",
@@ -110140,7 +110140,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "柳營區",
+        "district": "柳營區",
         "county": "臺南市",
         "town_id": "67000040",
         "county_id": "67000",
@@ -110438,7 +110438,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "楊梅市",
+        "district": "楊梅市",
         "county": "桃園縣",
         "town_id": "10003040",
         "county_id": "10003",
@@ -110700,7 +110700,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "樹林區",
+        "district": "樹林區",
         "county": "新北市",
         "town_id": "65000070",
         "county_id": "65000",
@@ -110910,7 +110910,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "民雄鄉",
+        "district": "民雄鄉",
         "county": "嘉義縣",
         "town_id": "10010050",
         "county_id": "10010",
@@ -111336,7 +111336,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "永安區",
+        "district": "永安區",
         "county": "高雄市",
         "town_id": "64000270",
         "county_id": "64000",
@@ -111590,7 +111590,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "沙鹿區",
+        "district": "沙鹿區",
         "county": "臺中市",
         "town_id": "66000130",
         "county_id": "66000",
@@ -111756,7 +111756,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "泰武鄉",
+        "district": "泰武鄉",
         "county": "屏東縣",
         "town_id": "10013290",
         "county_id": "10013",
@@ -112258,7 +112258,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "深坑區",
+        "district": "深坑區",
         "county": "新北市",
         "town_id": "65000180",
         "county_id": "65000",
@@ -112400,7 +112400,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鹿野鄉",
+        "district": "鹿野鄉",
         "county": "臺東縣",
         "town_id": "10014050",
         "county_id": "10014",
@@ -112674,7 +112674,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "梧棲區",
+        "district": "梧棲區",
         "county": "臺中市",
         "town_id": "66000140",
         "county_id": "66000",
@@ -112748,7 +112748,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "白沙鄉",
+        "district": "白沙鄉",
         "county": "澎湖縣",
         "town_id": "10016030",
         "county_id": "10016",
@@ -115798,7 +115798,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "三峽區",
+        "district": "三峽區",
         "county": "新北市",
         "town_id": "65000090",
         "county_id": "65000",
@@ -116280,7 +116280,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "豐原區",
+        "district": "豐原區",
         "county": "臺中市",
         "town_id": "66000090",
         "county_id": "66000",
@@ -116510,7 +116510,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "水林鄉",
+        "district": "水林鄉",
         "county": "雲林縣",
         "town_id": "10009200",
         "county_id": "10009",
@@ -116800,7 +116800,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "仁德區",
+        "district": "仁德區",
         "county": "臺南市",
         "town_id": "67000270",
         "county_id": "67000",
@@ -117026,7 +117026,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "褒忠鄉",
+        "district": "褒忠鄉",
         "county": "雲林縣",
         "town_id": "10009150",
         "county_id": "10009",
@@ -117216,7 +117216,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "烏來區",
+        "district": "烏來區",
         "county": "新北市",
         "town_id": "65000290",
         "county_id": "65000",
@@ -117782,7 +117782,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "卑南鄉",
+        "district": "卑南鄉",
         "county": "臺東縣",
         "town_id": "10014040",
         "county_id": "10014",
@@ -118596,7 +118596,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "那瑪夏區",
+        "district": "那瑪夏區",
         "county": "高雄市",
         "town_id": "64000380",
         "county_id": "64000",
@@ -119070,7 +119070,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "竹東鎮",
+        "district": "竹東鎮",
         "county": "新竹縣",
         "town_id": "10004020",
         "county_id": "10004",
@@ -119468,7 +119468,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大同鄉",
+        "district": "大同鄉",
         "county": "宜蘭縣",
         "town_id": "10002110",
         "county_id": "10002",
@@ -120334,7 +120334,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "阿蓮區",
+        "district": "阿蓮區",
         "county": "高雄市",
         "town_id": "64000230",
         "county_id": "64000",
@@ -120556,7 +120556,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "彰化市",
+        "district": "彰化市",
         "county": "彰化縣",
         "town_id": "10007010",
         "county_id": "10007",
@@ -120842,7 +120842,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "斗六市",
+        "district": "斗六市",
         "county": "雲林縣",
         "town_id": "10009010",
         "county_id": "10009",
@@ -121256,7 +121256,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "南竿鄉",
+        "district": "南竿鄉",
         "county": "連江縣",
         "town_id": "09007010",
         "county_id": "09007",
@@ -122972,7 +122972,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "莒光鄉",
+        "district": "莒光鄉",
         "county": "連江縣",
         "town_id": "09007030",
         "county_id": "09007",
@@ -123946,7 +123946,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "金湖鎮",
+        "district": "金湖鎮",
         "county": "金門縣",
         "town_id": "09020030",
         "county_id": "09020",
@@ -124256,7 +124256,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東引鄉",
+        "district": "東引鄉",
         "county": "連江縣",
         "town_id": "09007040",
         "county_id": "09007",
@@ -125010,7 +125010,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "金城鎮",
+        "district": "金城鎮",
         "county": "金門縣",
         "town_id": "09020010",
         "county_id": "09020",
@@ -125240,7 +125240,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北竿鄉",
+        "district": "北竿鄉",
         "county": "連江縣",
         "town_id": "09007020",
         "county_id": "09007",
@@ -126338,7 +126338,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "金沙鎮",
+        "district": "金沙鎮",
         "county": "金門縣",
         "town_id": "09020020",
         "county_id": "09020",
@@ -126672,7 +126672,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "金寧鄉",
+        "district": "金寧鄉",
         "county": "金門縣",
         "town_id": "09020040",
         "county_id": "09020",
@@ -126806,7 +126806,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "烈嶼鄉",
+        "district": "烈嶼鄉",
         "county": "金門縣",
         "town_id": "09020050",
         "county_id": "09020",
@@ -127040,7 +127040,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "大安區",
+        "district": "大安區",
         "county": "臺北市",
         "town_id": "63000030",
         "county_id": "63000",
@@ -127134,7 +127134,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "鳳林鎮",
+        "district": "鳳林鎮",
         "county": "花蓮縣",
         "town_id": "10015020",
         "county_id": "10015",
@@ -127420,7 +127420,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "西湖鄉",
+        "district": "西湖鄉",
         "county": "苗栗縣",
         "town_id": "10005140",
         "county_id": "10005",
@@ -127666,7 +127666,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "永康區",
+        "district": "永康區",
         "county": "臺南市",
         "town_id": "67000310",
         "county_id": "67000",
@@ -127880,7 +127880,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "東勢區",
+        "district": "東勢區",
         "county": "臺中市",
         "town_id": "66000100",
         "county_id": "66000",
@@ -128210,7 +128210,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "田中鎮",
+        "district": "田中鎮",
         "county": "彰化縣",
         "town_id": "10007120",
         "county_id": "10007",
@@ -128508,7 +128508,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "西嶼鄉",
+        "district": "西嶼鄉",
         "county": "澎湖縣",
         "town_id": "10016040",
         "county_id": "10016",
@@ -129396,7 +129396,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "西屯區",
+        "district": "西屯區",
         "county": "臺中市",
         "town_id": "66000060",
         "county_id": "66000",
@@ -129626,7 +129626,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "山上區",
+        "district": "山上區",
         "county": "臺南市",
         "town_id": "67000220",
         "county_id": "67000",
@@ -129844,7 +129844,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "北埔鄉",
+        "district": "北埔鄉",
         "county": "新竹縣",
         "town_id": "10004090",
         "county_id": "10004",
@@ -130146,7 +130146,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "官田區",
+        "district": "官田區",
         "county": "臺南市",
         "town_id": "67000100",
         "county_id": "67000",
@@ -130484,7 +130484,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "新莊區",
+        "district": "新莊區",
         "county": "新北市",
         "town_id": "65000050",
         "county_id": "65000",
@@ -130750,7 +130750,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "溪口鄉",
+        "district": "溪口鄉",
         "county": "嘉義縣",
         "town_id": "10010060",
         "county_id": "10010",
@@ -131036,7 +131036,7 @@
     {
       "type": "Feature",
       "properties": {
-        "town": "白河區",
+        "district": "白河區",
         "county": "臺南市",
         "town_id": "67000030",
         "county_id": "67000",

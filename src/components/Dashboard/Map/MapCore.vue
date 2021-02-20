@@ -1,7 +1,8 @@
 <template>
   <div>
+    {{ this.loadingMap }}
     <svg id="geo-map"></svg>
-    {{ isCountyLoadAnimateFinish }}
+    <!-- {{ isCountyLoadAnimateFinish }} -->
   </div>
 </template>
 
@@ -15,7 +16,6 @@ export default {
   data(){
     return {
       svg: null,
-      xScale: null,
       selectedCounty:null,
       width:400,
       height:600,
@@ -25,46 +25,87 @@ export default {
       svg:null,
       mercator:null,
       pathGenerator:null,
-      originColor:null
-      
+      originColor:null,
+      percentage:0,
+      loadingMap: null
+    }
+  },
+  watch:{
+    loadingMap:function(val){
+      console.log(val.totalCounty)
+    },
+    percentage:function(val){
+      let paths = this.g.selectAll('path')
+      if(val % 10 == 0 && val != 100){
+        paths.attr('fill',this.hintColor.get('normal')).attr('fill-opacity', val / 100 + 0.2)
+        .transition().duration(400).attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
+      }
+      if(val == 100){
+        paths.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+      }
     }
   },
   computed:{
     ...mapState({
       hintColor: state => state.hintColor,
-      isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish
+      isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish,
+      schools: state => state.schools
     })
   },
   methods:{
+    buildLoadingMap:function(){
+      let obj = {}
+      return obj
+    },
     countyLoadAnimate:function(c){
       c.nodes().forEach( (d,i) => {
-        console.log(i)
         setTimeout(()=>{
           let p = d3.select(d)
-          this.countyLoadHandler(p)
-        },i * 1000)
+          if(p.data()[0].properties.county_id == '10009'){
+            this.countyLoadHandler(p)
+          }
+        },i * 500)
       });
-      setTimeout(()=>{
-        this.$store.dispatch('toggleCountyLoadAnimationFlag')
-      }, 3000)
+      
+      let interval = setInterval(() => {
+        if(this.percentage == 100-1){
+          clearInterval(interval);
+        }
+        this.percentage++
+      },100)
+      
+
+      // setTimeout(()=>{
+      //   this.$store.dispatch('toggleCountyLoadAnimationFlag')
+      // }, 500)
     },
     countyLoadHandler:function(p){
-      p
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3)
-      .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.4)
-      .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.5)
-      .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.6)
-      .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.7)
-      .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.8)
-      .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.9)
-      .transition().duration(400).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      .transition().duration(400).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',1)
+      // while(this.percentage<100){
+      //   p.transition().duration(6000)
+      //   .attr('fill', this.hintColor.get('normal')).attr('fill-opacity',this.percentage / 100 +0.3)
+      // }
+      // let i = 0.1
+      // while(i<1){
+      //   p.transition().duration(6000)
+      //   .attr('fill', this.hintColor.get('normal')).attr('fill-opacity',i+0.3)
+      //   i += 0.1
+      // }
+      // p
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3)
+      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.4)
+      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.5)
+      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.6)
+      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.7)
+      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.8)
+      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.9)
+      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',1)
     },
     selectMap:function(geojson,location){
       return geojson.filter( geoData => geoData.properties.county_id == location )
@@ -83,35 +124,41 @@ export default {
     },  
   },
   mounted(){
+    this.loadingMap = this.buildLoadingMap()
+
     const vm = this
     //Zoom
     let zzoom = d3.zoom().scaleExtent([1, 2]).on("zoom", vm.zoomed);
     //makemap
     const makemap = (geojson) => {
-      let path = vm.g.selectAll('path').data(geojson)
+      let paths = vm.g.selectAll('path').data(geojson)
       .enter().append('path')
       .attr('d',vm.pathGenerator)
       .attr('class','boundary')
       .attr("stroke-width", 0.2)
       .attr("stroke", "#000000")
-      .attr("fill", vm.hintColor.get('noData'))//.attr('fill-opacity',0.3)
+      .attr("fill", vm.hintColor.get('noData'))
  
-      path
+      paths
       .on('mouseover', (d) => {
-        if(!vm.isCountyLoadAnimationFinish) return
+        // if(!vm.isCountyLoadAnimationFinish) return
         let area = d3.select(event.currentTarget)
         vm.originColor = area.attr('fill')
-        area.transition()
-        .duration(500)
+        area
+        .style('cursor', 'pointer')
+        .transition()
+        .duration(100)
         .attr("fill", vm.hintColor.get('selected'))
         .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
         
       })
       .on('mouseout', (d) => {
-        if(!vm.isCountyLoadAnimationFinish) return
+        // if(!vm.isCountyLoadAnimationFinish) return
         let area = d3.select(event.currentTarget)
-        area.transition()
-        .duration(500)
+        area
+        .style('cursor', 'default')
+        .transition()
+        .duration(100)
         // .attr("fill", this.hintColor.get('noData'))//.attr('fill-opacity',0.3)
         .attr("fill", vm.originColor)//.attr('fill-opacity',0.3)
         .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
@@ -121,16 +168,16 @@ export default {
       .append('title')
       .html( d => `
       <div style="color:blue">
-      ${d.properties.county}
+      ${ d.properties.district ? d.properties.district : d.properties.county}
       data1
       data2
       </div>
 
       `)
 
-      path.on('click',clicked)
+      paths.on('click',clicked)
 
-      vm.countyLoadAnimate(path)
+      vm.countyLoadAnimate(paths)
     }
 
     //zoomToBoundingBox

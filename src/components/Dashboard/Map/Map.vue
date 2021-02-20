@@ -29,10 +29,11 @@
       </div>
     </header>
     <nav class="grid grid-cols-4 gap-4 text-center py-2 px-4">
-      <div class="blue-btn">總覽</div>
-      <div class="blue-btn">電路層監測</div>
-      <div class="blue-btn">頻寬量測</div>
-      <div class="blue-btn">資安通報</div>
+      <div 
+        v-for="(btn,ind) of btns" :key="ind" 
+        class="blue-btn ">
+        {{ btn.text }}
+      </div>
     </nav>
     <main>
       <MapCore></MapCore>
@@ -49,7 +50,18 @@ import ColorHint from '@/components/Dashboard/Map/ColorHint'
 export default {
   components:{
     MapCore, 
-    ColorHint
+    ColorHint,
+
+  },
+  data(){
+    return{
+      btns:[
+        {text:'總覽', clicked:false},
+        {text:'電路層監測', clicked:false},
+        {text:'頻寬量測', clicked:false},
+        {text:'資安通報', clicked:false}
+      ]
+    }
   },
   computed:{
     selectedCounty(){
