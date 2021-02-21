@@ -1,6 +1,9 @@
 <template>
   <div>
-    {{ this.loadingMap }}
+    <p v-for="(s,k) of schools" :key="k">
+        {{ s.county +' - loaded:'+ s.loadedCnt }}
+    </p>
+   
     <svg id="geo-map"></svg>
     <!-- {{ isCountyLoadAnimateFinish }} -->
   </div>
@@ -27,21 +30,19 @@ export default {
       pathGenerator:null,
       originColor:null,
       percentage:0,
-      loadingMap: null
     }
   },
   watch:{
-    loadingMap:function(val){
-      console.log(val.totalCounty)
-    },
     percentage:function(val){
       let paths = this.g.selectAll('path')
       if(val % 10 == 0 && val != 100){
-        paths.attr('fill',this.hintColor.get('normal')).attr('fill-opacity', val / 100 + 0.2)
-        .transition().duration(400).attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
+        paths
+        .transition().duration(500)
+        .attr('fill',this.hintColor.get('normal')).attr('fill-opacity', val / 100 + 0.2)
+        .transition().duration(500).attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
       }
       if(val == 100){
-        paths.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        paths.transition().duration(600).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
       }
     }
   },
@@ -53,9 +54,10 @@ export default {
     })
   },
   methods:{
-    buildLoadingMap:function(){
-      let obj = {}
-      return obj
+    loadData:function(){
+      this.$store.dispatch('loadData',{
+        county_id:'09007'
+      })
     },
     countyLoadAnimate:function(c){
       c.nodes().forEach( (d,i) => {
@@ -124,8 +126,7 @@ export default {
     },  
   },
   mounted(){
-    this.loadingMap = this.buildLoadingMap()
-
+    this.loadData()
     const vm = this
     //Zoom
     let zzoom = d3.zoom().scaleExtent([1, 2]).on("zoom", vm.zoomed);

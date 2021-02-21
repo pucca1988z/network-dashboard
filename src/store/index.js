@@ -5,29 +5,42 @@ let formattedSchool = []
 let formatSchool = (schools) => {
   let curCountyId, curDistrict, i=-1, j=-1    
   schools.forEach( school => {
-    const {county_id, county, district, name } = {...school}
-    if(curCountyId !== county_id){
+    const {county_id, county, district, name, loaded } = {...school}
+    if(curCountyId !== county_id){ // new county
+      curCountyId = county_id
+      curDistrict = district
       j = -1
       i++
+      j++
       formattedSchool.push({
-        county_id, totalSchool:1, loaded:0, districts:[]
+        county_id, 
+        county, 
+        totalSchool:1, 
+        loadedCnt:0, 
+        districts:[{
+          district,
+          totalSchool:1,
+          loadedCnt:0, 
+          schools:[school]
+        }]
       })
-      curCountyId = county_id
+    }else{ // same county
       if(curDistrict !== district){
+        // new district
         curDistrict = district
         j++
+        formattedSchool[i].totalSchool += 1
         formattedSchool[i].districts.push({
-          district, totalSchool:1, loaded:0, schools:[school]
+          district,
+          totalSchool:1,
+          loadedCnt:0, 
+          schools:[school]
         })
-      }else{ 
+      }else{
         formattedSchool[i].totalSchool += 1
         formattedSchool[i].districts[j].totalSchool += 1
         formattedSchool[i].districts[j].schools.push(school) 
       }
-    }else{ 
-      formattedSchool[i].totalSchool += 1
-      formattedSchool[i].districts[j].totalSchool += 1
-      formattedSchool[i].districts[j].schools.push(school) 
     }
   })
 }
@@ -50,7 +63,7 @@ export default new Vuex.Store({
       ['selected','#9acffa']]),
     loadCounty: false,
     isCountyLoadAnimationFinish: false,
-    schools,
+    schools: formattedSchool //.filter( x => x.county_id == 10017)  //schools.filter( x => x.county_id == '09007' || x.county_id == '10013'),
   },
   mutations: {
     SET_COUNTY_NAME(state, data){
@@ -58,6 +71,19 @@ export default new Vuex.Store({
     },
     TOGGLE_COUNTY_ANIMATION_FLAG(state, data){
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
+    },
+    LOAD_DATA(state, data){
+      state.schools.forEach( (s,ci) => {
+        s.districts.forEach((district, di) => {
+          district.schools.forEach( (school, si) => {
+            setTimeout(()=>{
+              school.loaded = true
+              district.loadedCnt = district.schools.filter( x => x.loaded == true).length
+              state.schools[ci].loadedCnt += 1
+            }, si * 400)
+          })
+        })
+      })
     }
   },
   actions: {
@@ -66,6 +92,9 @@ export default new Vuex.Store({
     },
     toggleCountyLoadAnimationFlag({commit}, data){
       commit('TOGGLE_COUNTY_ANIMATION_FLAG', data)
+    },
+    loadData({commit}, data){
+      commit('LOAD_DATA', data)
     }
   },
   modules: {
