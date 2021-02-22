@@ -15,13 +15,16 @@
         </svg>
       </div>
     </header>
-    <main>table</main>
+    <DownloadTable></DownloadTable>
   </div>
 </template>
 
 <script>
+import DownloadTable from "@/components/Dashboard/DownloadStatic/DownloadTable";
 export default {
-
+  components:{
+    DownloadTable
+  }
 }
 </script>
 
