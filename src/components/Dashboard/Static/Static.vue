@@ -25,23 +25,44 @@
     <main class="grid grid-cols-3 space-x-6 px-4">
       <div class="shadow-lg">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">電路層監測</header>
-        <main class="border ">error!</main>
+        <main 
+          class="grid grid-cols-3 grid-rows-1 gap-x-2 my-2 px-4"
+        >
+          <CircleInfo></CircleInfo>
+          <CircleInfo></CircleInfo>
+          <CircleInfo></CircleInfo>
+        </main>
       </div>
       <div class="shadow-lg">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">頻寬量測</header>
-        <main class="border ">error!</main>
+        <main 
+          class="grid grid-cols-3 grid-rows-1 gap-x-2 my-2 px-4"
+        >
+          <CircleInfo></CircleInfo>
+          <CircleInfo></CircleInfo>
+          <CircleInfo></CircleInfo>
+        </main>
       </div>
       <div class="shadow-lg">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">資安通報</header>
-        <main class="border ">error!</main>
+        <main 
+          class="grid grid-cols-3 grid-rows-1 gap-x-2 my-2 px-4"
+        >
+          <CircleInfo></CircleInfo>
+          <CircleInfo></CircleInfo>
+          <CircleInfo></CircleInfo>
+        </main>
       </div>
     </main>
   </div>
 </template>
 
 <script>
+import CircleInfo from "@/components/Dashboard/Static/CircleInfo.vue";
 export default {
-
+  components:{
+    CircleInfo
+  }
 }
 </script>
 
