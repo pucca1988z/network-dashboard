@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="rounded-full h-24 w-24 border-8 flex items-center justify-center"
+    class="rounded-full h-20 w-20 border-8 flex items-center justify-center "
   >
   11
   </div>

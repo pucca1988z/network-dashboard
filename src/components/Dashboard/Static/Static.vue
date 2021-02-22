@@ -15,44 +15,47 @@
       </div>
     </header>
 
-    <div class="grid grid-cols-3">
-      <div class="col-start-3 col-end-4 flex flex-row">
+    <div class="flex justify-end pr-4 py-4">
+      <div class="flex flex-row">
         <div>更新時間：</div>
         <div>{{ new Date().toLocaleString() }}</div>
       </div>
     </div>
     
-    <main class="grid grid-cols-3 space-x-6 px-4">
-      <div class="shadow-lg">
+    <main class="grid grid-cols-3 space-x-6 px-4 ">
+      <div class="shadow-lg ">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">電路層監測</header>
         <main 
-          class="grid grid-cols-3 grid-rows-1 gap-x-2 my-2 px-4"
+          class="grid md:grid-cols-3 md:grid-rows-1 gap-x-2 my-2 px-4 justify-items-center"
         >
           <CircleInfo></CircleInfo>
           <CircleInfo></CircleInfo>
           <CircleInfo></CircleInfo>
         </main>
       </div>
-      <div class="shadow-lg">
-        <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">頻寬量測</header>
+
+      <div class="shadow-lg ">
+        <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">電路層監測</header>
         <main 
-          class="grid grid-cols-3 grid-rows-1 gap-x-2 my-2 px-4"
+          class="grid md:grid-cols-3 md:grid-rows-1 gap-x-2 my-2 px-4 justify-items-center"
         >
           <CircleInfo></CircleInfo>
           <CircleInfo></CircleInfo>
           <CircleInfo></CircleInfo>
         </main>
       </div>
-      <div class="shadow-lg">
-        <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">資安通報</header>
+
+      <div class="shadow-lg ">
+        <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4">電路層監測</header>
         <main 
-          class="grid grid-cols-3 grid-rows-1 gap-x-2 my-2 px-4"
+          class="grid md:grid-cols-3 md:grid-rows-1 gap-x-2 my-2 px-4 justify-items-center"
         >
           <CircleInfo></CircleInfo>
           <CircleInfo></CircleInfo>
           <CircleInfo></CircleInfo>
         </main>
       </div>
+
     </main>
   </div>
 </template>
