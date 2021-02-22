@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="h-screen">
-    <router-view class=" px-10 py-6 h-full"/>
+    <router-view class=" px-8 py-4 h-full"/>
   </div>
 </template>
 
