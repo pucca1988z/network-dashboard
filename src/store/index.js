@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import schools from '@/assets/data/schools2.json'
+import schools from '@/assets/data/schools3.json'
 let formattedSchool = []
 let formatSchool = (schools) => {
   let curCountyId, curDistrict, i=-1, j=-1    
@@ -45,8 +45,7 @@ let formatSchool = (schools) => {
   })
 }
 
-formatSchool(schools)
-console.log(formattedSchool)
+// formatSchool(schools)
 
 
 Vue.use(Vuex)
@@ -63,7 +62,8 @@ export default new Vuex.Store({
       ['selected','#9acffa']]),
     loadCounty: false,
     isCountyLoadAnimationFinish: false,
-    schools: formattedSchool //.filter( x => x.county_id == 10017)  //schools.filter( x => x.county_id == '09007' || x.county_id == '10013'),
+    county_id:[],
+    schools: schools //formattedSchool //.filter( x => x.county_id == 10017)  //schools.filter( x => x.county_id == '09007' || x.county_id == '10013'),
   },
   mutations: {
     SET_COUNTY_NAME(state, data){
@@ -72,17 +72,24 @@ export default new Vuex.Store({
     TOGGLE_COUNTY_ANIMATION_FLAG(state, data){
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
     },
+    // LOAD_DATA(state, data){
+    //   state.schools.forEach( (s,ci) => {
+    //     s.districts.forEach((district, di) => {
+    //       district.schools.forEach( (school, si) => {
+    //         setTimeout(()=>{
+    //           school.loaded = true
+    //           district.loadedCnt = district.schools.filter( x => x.loaded == true).length
+    //           state.schools[ci].loadedCnt += 1
+    //         }, si * 400)
+    //       })
+    //     })
+    //   })
+    // }
     LOAD_DATA(state, data){
-      state.schools.forEach( (s,ci) => {
-        s.districts.forEach((district, di) => {
-          district.schools.forEach( (school, si) => {
-            setTimeout(()=>{
-              school.loaded = true
-              district.loadedCnt = district.schools.filter( x => x.loaded == true).length
-              state.schools[ci].loadedCnt += 1
-            }, si * 400)
-          })
-        })
+      state.schools.forEach( (school, si) => {
+        setTimeout( () => {
+          school.loaded = true
+        }, si * 1)
       })
     }
   },

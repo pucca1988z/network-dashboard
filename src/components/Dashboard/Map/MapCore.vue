@@ -1,7 +1,7 @@
 <template>
   <div>
     <p v-for="(s,k) of schools" :key="k">
-        {{ s.county +' - loaded:'+ s.loadedCnt }}
+        <!-- {{ s.county +' - loaded:'+ s.loadedCnt }} -->
     </p>
    
     <svg id="geo-map"></svg>
@@ -50,7 +50,19 @@ export default {
     ...mapState({
       hintColor: state => state.hintColor,
       isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish,
-      schools: state => state.schools
+      schools: state => {
+        let loaded = state.schools.filter( school => school.loaded == true)
+        console.log(loaded.length)
+        // state.schools.forEach( school => {
+        //   let county_id = school.county_id, county = school.county, 
+        //       district_id = school.district_id, district = school.district, 
+        //       name = school.name, loaded = school.loaded
+        //   if(loaded){
+        //     // console.log(county_id, county, district_id, district, name, loaded)
+        //   }
+        // })
+        return state.schools
+      }
     })
   },
   methods:{
@@ -69,12 +81,12 @@ export default {
         },i * 500)
       });
       
-      let interval = setInterval(() => {
-        if(this.percentage == 100-1){
-          clearInterval(interval);
-        }
-        this.percentage++
-      },100)
+      // let interval = setInterval(() => {
+      //   if(this.percentage == 100-1){
+      //     clearInterval(interval);
+      //   }
+      //   this.percentage++
+      // },100)
       
 
       // setTimeout(()=>{
@@ -178,7 +190,7 @@ export default {
 
       paths.on('click',clicked)
 
-      vm.countyLoadAnimate(paths)
+      // vm.countyLoadAnimate(paths)
     }
 
     //zoomToBoundingBox
