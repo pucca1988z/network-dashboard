@@ -1,0 +1,36 @@
+[
+  {
+    county_id:123, 
+    totalSchool:100, 
+    loadedCnt:85,
+    districts:[
+      {
+        district:'中山區',
+        totalSchool:30,
+        loadedCnt:30,
+        schools:[
+          {"county_id":123,"district":"中山區","name":"龍崎國中", loaded: true},
+          {"county_id":123,"district":"中山區","name":"龍崎國中", loaded: true},
+          {"county_id":123,"district":"中山區","name":"龍崎國中", loaded: true},
+          ...
+        ]
+      },
+      {
+        district:'大安區',
+        totalSchool:40,
+        loadedCnt:30,
+        schools:[
+          {"county_id":123,"district":"大安區","name":"aaa國中", loaded: false}
+        ]
+      },
+      {
+        district:'內湖區',
+        totalSchool:30,
+        loadedCnt:25,
+        schools:[
+          {"county_id":123,"district":"內湖區","name":"bb國中", loaded: false}
+        ]
+      }
+    ]
+  }
+]

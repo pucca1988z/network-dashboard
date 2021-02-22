@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <header 
       class="border rounded-t-lg h-12 purple-to-green-header flex items-center flex-row px-4">
       <div class="flex-1 flex space-x-2">
@@ -10,8 +10,15 @@
         </svg>
         <div 
           id="zoomOutBtn"
-          class="cursor-pointer underline">
+          class="cursor-pointer underline"
+          @click="zoomOut">
           全縣市
+        </div>
+        <div v-if="this.selectedCounty">
+          / 
+        </div>
+        <div v-if="this.selectedCounty">
+          {{ this.selectedCounty }} 
         </div>
       </div>
       <div class="flex space-x-2">
@@ -22,22 +29,51 @@
       </div>
     </header>
     <nav class="grid grid-cols-4 gap-4 text-center py-2 px-4">
-      <div class="blue-btn">總覽</div>
-      <div class="blue-btn">電路層監測</div>
-      <div class="blue-btn">頻寬量測</div>
-      <div class="blue-btn">資安通報</div>
+      <div 
+        v-for="(btn,ind) of btns" :key="ind" 
+        class="blue-btn ">
+        {{ btn.text }}
+      </div>
     </nav>
     <main>
       <MapCore></MapCore>
     </main>
+    <footer>
+      <ColorHint></ColorHint>
+    </footer>
   </div>
 </template>
 
 <script>
 import MapCore from '@/components/Dashboard/Map/MapCore'
+import ColorHint from '@/components/Dashboard/Map/ColorHint'
 export default {
   components:{
-    MapCore
+    MapCore, 
+    ColorHint,
+
+  },
+  data(){
+    return{
+      btns:[
+        {text:'總覽', clicked:false},
+        {text:'電路層監測', clicked:false},
+        {text:'頻寬量測', clicked:false},
+        {text:'資安通報', clicked:false}
+      ]
+    }
+  },
+  computed:{
+    selectedCounty(){
+      return this.$store.state.selectedCountyName
+    }
+  },
+  methods:{
+    zoomOut(){
+      this.$store.dispatch('setSelectedCountyName', {
+        selectedCountyName: null
+      })
+    }
   }
 }
 </script>
