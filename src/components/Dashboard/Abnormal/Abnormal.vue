@@ -17,14 +17,18 @@
         </svg>
       </div>
     </header>
-    <main>table</main>
-    <footer>tool bar</footer>
+    <AbnormalTable></AbnormalTable>
+    <AbnormalToolbar></AbnormalToolbar>
   </div>
 </template>
 
 <script>
+import AbnormalTable from "@/components/Dashboard/Abnormal/AbnormalTable.vue";
+import AbnormalToolbar from "@/components/Dashboard/Abnormal/AbnormalToolbar.vue";
 export default {
-
+  components:{
+    AbnormalTable, AbnormalToolbar
+  }
 }
 </script>
 

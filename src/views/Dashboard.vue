@@ -1,5 +1,5 @@
 <template>
-  <div class=" grid grid-cols-6 grid-rows-3 gap-3">
+  <div class=" grid grid-cols-6 grid-rows-3 gap-2">
     <Map 
       data-aos="flip-left" 
       data-aos-duration="1300"
