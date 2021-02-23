@@ -1,51 +1,39 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import schools from '@/assets/data/schools3.json'
-let formattedSchool = []
-let formatSchool = (schools) => {
-  let curCountyId, curDistrict, i=-1, j=-1    
-  schools.forEach( school => {
-    const {county_id, county, district, name, loaded } = {...school}
-    if(curCountyId !== county_id){ // new county
-      curCountyId = county_id
-      curDistrict = district
-      j = -1
-      i++
-      j++
-      formattedSchool.push({
-        county_id, 
-        county, 
-        totalSchool:1, 
-        loadedCnt:0, 
-        districts:[{
-          district,
-          totalSchool:1,
-          loadedCnt:0, 
-          schools:[school]
-        }]
-      })
-    }else{ // same county
-      if(curDistrict !== district){
-        // new district
-        curDistrict = district
-        j++
-        formattedSchool[i].totalSchool += 1
-        formattedSchool[i].districts.push({
-          district,
-          totalSchool:1,
-          loadedCnt:0, 
-          schools:[school]
-        })
+import { setTimeout } from 'core-js'
+let countySet = new Set()
+let districtSet = new Set()
+
+let buildMap = ( p ) => {
+  let m = new Map()
+  schools.forEach (school => {
+    const {county_id, district_id, name, loadData} = {...school}
+    if(m.has(county_id)){
+      if(m.get(county_id).has(district_id)){
+        let distObj = m.get(county_id).get(district_id)
+        distObj.names.push(school)
+        distObj.total += 1
+        m.get(county_id).set(district_id, distObj)
       }else{
-        formattedSchool[i].totalSchool += 1
-        formattedSchool[i].districts[j].totalSchool += 1
-        formattedSchool[i].districts[j].schools.push(school) 
+        districtSet.add(district_id)
+        let distMap = new Map()
+        let distObj = { total:1, loaded:0, names:[school]}
+        distMap.set(district_id, distObj)
+        m.get(county_id).set(district_id, distObj)
       }
+    }else{
+      countySet.add(county_id)
+      let distMap = new Map()
+      let distObj = { total:1, loaded:0, names:[school]}
+      distMap.set(district_id, distObj)
+      m.set(county_id, distMap)
     }
   })
+  // console.log(m)
+  return m 
 }
 
-// formatSchool(schools)
 
 
 Vue.use(Vuex)
@@ -54,8 +42,8 @@ export default new Vuex.Store({
   state: {
     selectedCountyName:null,
     hintColor:new Map([
-      // ['normal','#1dc9b7'],
-      ['normal','#059669'],
+      ['normal','#1dc9b7'],
+      // ['normal','#059669'],
       ['watch','#ffc241'],
       ['warning','#fd3995'],
       ['noData','#909090'], 
@@ -63,8 +51,16 @@ export default new Vuex.Store({
     loadCounty: false,
     isCountyLoadAnimationFinish: false,
     county_id:[],
-    schools: schools //formattedSchool //.filter( x => x.county_id == 10017)  //schools.filter( x => x.county_id == '09007' || x.county_id == '10013'),
+    schools: schools, 
+    schoolsMap: buildMap(schools),
+    changedData:null,
+    countySet,
+    districtSet,
+    splitInto: 70,
+    totalGroup: Math.floor(schools.length / 70),
+    circuitCnt:0
   },
+
   mutations: {
     SET_COUNTY_NAME(state, data){
       state.selectedCountyName = data.selectedCountyName
@@ -72,24 +68,26 @@ export default new Vuex.Store({
     TOGGLE_COUNTY_ANIMATION_FLAG(state, data){
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
     },
-    // LOAD_DATA(state, data){
-    //   state.schools.forEach( (s,ci) => {
-    //     s.districts.forEach((district, di) => {
-    //       district.schools.forEach( (school, si) => {
-    //         setTimeout(()=>{
-    //           school.loaded = true
-    //           district.loadedCnt = district.schools.filter( x => x.loaded == true).length
-    //           state.schools[ci].loadedCnt += 1
-    //         }, si * 400)
-    //       })
-    //     })
-    //   })
-    // }
     LOAD_DATA(state, data){
-      state.schools.forEach( (school, si) => {
-        setTimeout( () => {
-          school.loaded = true
-        }, si * 1)
+      for(let i = 0 ; i <= state.totalGroup ; i++){
+        setTimeout( () =>{
+          for(let j = 0 ; j < state.splitInto ; j++){
+            let index = i * state.splitInto + j
+            if(index == state.schools.length ) break
+            state.schools[index].loaded = true
+          }
+        }, i * 1000)
+      }
+    },
+    ADD_COUNTY_CIRCUIT_CNT(state, data){
+      let i = 0 
+      countySet.forEach( s =>{
+        i++
+        setTimeout( ()=>{ 
+          state.circuitCnt = state.circuitCnt + 1 
+        }, i*1000)
+        // console.log(state.circuitCnt)
+        // state.circuitCnt += 1
       })
     }
   },
@@ -102,6 +100,28 @@ export default new Vuex.Store({
     },
     loadData({commit}, data){
       commit('LOAD_DATA', data)
+    },
+    addCountyCircuitCnt({commit}, data){
+      commit('ADD_COUNTY_CIRCUIT_CNT')
+    }
+  },
+  getters:{
+    getLoadedRecords: state => state.schools.filter( x => x.loaded == true).length,
+    getLoadedRecordsCountyLevel: state => {
+      let res = []
+      for(let key of countySet.values()){
+        let county = state.schools.filter( x => x.county_id == key)
+        let obj = {
+          county_id:key, 
+          total:county.length,
+          loaded:county.filter( x => x.loaded == true).length
+        }
+        res.push(obj)
+      }
+      return res
+    },
+    getCircuitNormalRecordsCountyLevel: state => {
+      return state.circuitCnt
     }
   },
   modules: {

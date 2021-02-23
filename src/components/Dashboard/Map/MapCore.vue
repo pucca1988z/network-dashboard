@@ -1,11 +1,9 @@
 <template>
   <div>
-    <p v-for="(s,k) of schools" :key="k">
-        <!-- {{ s.county +' - loaded:'+ s.loadedCnt }} -->
+    <p>
+      <!-- {{ getLoadedRecordsCountyLevel }} -->
     </p>
-   
     <svg id="geo-map"></svg>
-    <!-- {{ isCountyLoadAnimateFinish }} -->
   </div>
 </template>
 
@@ -13,9 +11,7 @@
 import * as d3 from 'd3'
 import { mapState } from "vuex";
 export default {
-  components:{
-
-  },
+  components:{},
   data(){
     return {
       svg: null,
@@ -29,39 +25,46 @@ export default {
       mercator:null,
       pathGenerator:null,
       originColor:null,
-      percentage:0,
+      paths: null
     }
   },
   watch:{
-    percentage:function(val){
-      let paths = this.g.selectAll('path')
-      if(val % 10 == 0 && val != 100){
-        paths
-        .transition().duration(500)
-        .attr('fill',this.hintColor.get('normal')).attr('fill-opacity', val / 100 + 0.2)
-        .transition().duration(500).attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
-      }
-      if(val == 100){
-        paths.transition().duration(600).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
-      }
+    getLoadedRecordsCountyLevel:function(newVal){
+      newVal.forEach( a => {
+        let p = d3.select(`#id_${a.county_id}`)
+        if(a.loaded == 0){}
+        else if(a.total == a.loaded){
+          // animate to normal
+            p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        }else{
+          // keep animation
+            p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (a.loaded / a.total))
+            .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        }
+      })
     }
   },
   computed:{
+    getLoadedRecordsCountyLevel(){
+      return this.$store.getters.getLoadedRecordsCountyLevel
+    },
+    getTotalRecords(){
+      return this.$store.getters.getTotalRecords
+    },
+    getLoadedRecords(){ 
+      return this.$store.getters.getLoadedRecords
+     },
     ...mapState({
       hintColor: state => state.hintColor,
       isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish,
+      countySet: state => state.countySet,
+      districtSet: state => state.districtSet,
       schools: state => {
-        let loaded = state.schools.filter( school => school.loaded == true)
-        console.log(loaded.length)
-        // state.schools.forEach( school => {
-        //   let county_id = school.county_id, county = school.county, 
-        //       district_id = school.district_id, district = school.district, 
-        //       name = school.name, loaded = school.loaded
-        //   if(loaded){
-        //     // console.log(county_id, county, district_id, district, name, loaded)
-        //   }
-        // })
+        let loadedArr = state.schools.filter( school => school.loaded == true)
         return state.schools
+      },
+      schoolsMap: state => {
+        return state.schoolsMap
       }
     })
   },
@@ -80,46 +83,8 @@ export default {
           }
         },i * 500)
       });
-      
-      // let interval = setInterval(() => {
-      //   if(this.percentage == 100-1){
-      //     clearInterval(interval);
-      //   }
-      //   this.percentage++
-      // },100)
-      
-
-      // setTimeout(()=>{
-      //   this.$store.dispatch('toggleCountyLoadAnimationFlag')
-      // }, 500)
     },
     countyLoadHandler:function(p){
-      // while(this.percentage<100){
-      //   p.transition().duration(6000)
-      //   .attr('fill', this.hintColor.get('normal')).attr('fill-opacity',this.percentage / 100 +0.3)
-      // }
-      // let i = 0.1
-      // while(i<1){
-      //   p.transition().duration(6000)
-      //   .attr('fill', this.hintColor.get('normal')).attr('fill-opacity',i+0.3)
-      //   i += 0.1
-      // }
-      // p
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.4)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.5)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.6)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.7)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.8)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.9)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',1)
     },
     selectMap:function(geojson,location){
       return geojson.filter( geoData => geoData.properties.county_id == location )
@@ -151,10 +116,14 @@ export default {
       .attr("stroke-width", 0.2)
       .attr("stroke", "#000000")
       .attr("fill", vm.hintColor.get('noData'))
+      .attr('id', d => {
+        let id 
+        d.properties.town_id ? id = d.properties.town_id : id = d.properties.county_id
+        return `id_${id}`
+      })
  
       paths
       .on('mouseover', (d) => {
-        // if(!vm.isCountyLoadAnimationFinish) return
         let area = d3.select(event.currentTarget)
         vm.originColor = area.attr('fill')
         area
@@ -166,7 +135,6 @@ export default {
         
       })
       .on('mouseout', (d) => {
-        // if(!vm.isCountyLoadAnimationFinish) return
         let area = d3.select(event.currentTarget)
         area
         .style('cursor', 'default')
@@ -189,8 +157,6 @@ export default {
       `)
 
       paths.on('click',clicked)
-
-      // vm.countyLoadAnimate(paths)
     }
 
     //zoomToBoundingBox
