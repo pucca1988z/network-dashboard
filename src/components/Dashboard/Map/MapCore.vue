@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <!-- {{ getLoadedRecordsCountyLevel }} -->
+      <!-- {{ getLoadedRecordsDistrictLevel }} -->
     </p>
     <svg id="geo-map"></svg>
   </div>
@@ -25,13 +25,31 @@ export default {
       mercator:null,
       pathGenerator:null,
       originColor:null,
+      originOpacity:null,
       paths: null
     }
   },
   watch:{
     getLoadedRecordsCountyLevel:function(newVal){
+      if(this.$store.state.selectedCountyId != null ) return 
       newVal.forEach( a => {
         let p = d3.select(`#id_${a.county_id}`)
+        if(a.loaded == 0){}
+        else if(a.total == a.loaded){
+          // animate to normal
+            p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        }else{
+          // keep animation
+            p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (a.loaded / a.total))
+            .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        }
+      })
+    },
+    getLoadedRecordsDistrictLevel: function(newVal){
+      if(this.$store.state.selectedCountyId == null ) return
+      newVal.forEach( a => {
+        console.log(a)
+        let p = d3.select(`#id_${a.district_id}`)
         if(a.loaded == 0){}
         else if(a.total == a.loaded){
           // animate to normal
@@ -48,6 +66,9 @@ export default {
     getLoadedRecordsCountyLevel(){
       return this.$store.getters.getLoadedRecordsCountyLevel
     },
+    getLoadedRecordsDistrictLevel(){
+      return this.$store.getters.getLoadedRecordsDistrictLevel
+    },
     getTotalRecords(){
       return this.$store.getters.getTotalRecords
     },
@@ -59,13 +80,9 @@ export default {
       isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish,
       countySet: state => state.countySet,
       districtSet: state => state.districtSet,
-      schools: state => {
-        let loadedArr = state.schools.filter( school => school.loaded == true)
-        return state.schools
-      },
-      schoolsMap: state => {
-        return state.schoolsMap
-      }
+      schools: state =>  state.schools,
+      schoolsMap: state => state.schoolsMap, 
+      colorChangeMap: state => state.colorChangeMap
     })
   },
   methods:{
@@ -96,9 +113,14 @@ export default {
       this.g.style("stroke-width", 1 / d3.event.transform.k + "px");
       this.g.attr("transform", d3.event.transform); // updated for d3 v4
     },
-    setSelectedCountyName:function(){
-      this.$store.dispatch('setSelectedCountyName', {
-        selectedCountyName: this.selectedCountyName
+    setSelectedPathData:function(obj){
+      const { county_id, county, district, district_id } = {...obj}
+      console.log(county_id, county, district, district_id)
+      this.$store.dispatch('setSelectedPathData', {
+        selectedCountyName: county,
+        selectedCountyId:county_id,
+        selectedDistrict:district, 
+        selectedDistrictId:district_id,
       })
     },  
   },
@@ -118,18 +140,35 @@ export default {
       .attr("fill", vm.hintColor.get('noData'))
       .attr('id', d => {
         let id 
-        d.properties.town_id ? id = d.properties.town_id : id = d.properties.county_id
+        d.properties.district_id ? id = d.properties.district_id : id = d.properties.county_id
         return `id_${id}`
+      })
+
+      // fill color
+      vm.getLoadedRecordsCountyLevel.forEach( a => {
+        let {county_id, total, loaded} = a 
+        let p = d3.select(`#id_${county_id}`)
+        if(loaded == 0){
+          p.attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
+        }
+        else if(total == loaded){
+            p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        }else{
+            p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
+            .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        }
       })
  
       paths
       .on('mouseover', (d) => {
         let area = d3.select(event.currentTarget)
         vm.originColor = area.attr('fill')
+        vm.originOpacity = area.attr('fill-opacity')
+
         area
         .style('cursor', 'pointer')
         .transition()
-        .duration(100)
+        .duration(20)
         .attr("fill", vm.hintColor.get('selected'))
         .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
         
@@ -139,13 +178,11 @@ export default {
         area
         .style('cursor', 'default')
         .transition()
-        .duration(100)
+        .duration(20)
         // .attr("fill", this.hintColor.get('noData'))//.attr('fill-opacity',0.3)
-        .attr("fill", vm.originColor)//.attr('fill-opacity',0.3)
+        .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
         .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
       })
-      // .append('title')
-      // .text( d => d.properties.county)
       .append('title')
       .html( d => `
       <div style="color:blue">
@@ -178,11 +215,12 @@ export default {
       .then(projectGeoJSON =>{
         let projectgeojson = projectGeoJSON.features;
         zoomToBoundingBox(d);
-        let selectedBlock = d.properties.county_id;
-        this.selectedCounty = selectedBlock
-        this.selectedCountyName = d.properties.county 
-        this.setSelectedCountyName()
-        let selectedjson = this.selectMap(projectgeojson,selectedBlock);
+        // this.selectedCounty = d.properties.county_id
+        // this.selectedCountyName = d.properties.county 
+        const { county_id, county, district, district_id } = {...d.properties}
+
+        this.setSelectedPathData( d.properties )
+        let selectedjson = this.selectMap(projectgeojson, county_id);
         vm.g.selectAll("*").remove();
         makemap(selectedjson)
       })

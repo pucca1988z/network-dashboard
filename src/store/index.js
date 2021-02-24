@@ -41,6 +41,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     selectedCountyName:null,
+    selectedCountyId:null,
+    selectedDistrict:null, 
+    selectedDistrictId:null,
     hintColor:new Map([
       ['normal','#1dc9b7'],
       // ['normal','#059669'],
@@ -56,14 +59,18 @@ export default new Vuex.Store({
     changedData:null,
     countySet,
     districtSet,
-    splitInto: 70,
-    totalGroup: Math.floor(schools.length / 70),
-    circuitCnt:0
+    splitInto: 20,
+    totalGroup: Math.floor(schools.length / 20),
+    circuitCnt:0,
+    colorChangeMap:new Map()
   },
 
   mutations: {
-    SET_COUNTY_NAME(state, data){
+    SET_SELECTED_PATH_DATA(state, data){
       state.selectedCountyName = data.selectedCountyName
+      state.selectedCountyId = data.selectedCountyId
+      state.selectedDistrict = data.selectedDistrict
+      state.selectedDistrictId = data.selectedDistrictId
     },
     TOGGLE_COUNTY_ANIMATION_FLAG(state, data){
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
@@ -86,14 +93,12 @@ export default new Vuex.Store({
         setTimeout( ()=>{ 
           state.circuitCnt = state.circuitCnt + 1 
         }, i*1000)
-        // console.log(state.circuitCnt)
-        // state.circuitCnt += 1
       })
     }
   },
   actions: {
-    setSelectedCountyName({commit}, data){
-      commit('SET_COUNTY_NAME', data)
+    setSelectedPathData({commit}, data){
+      commit('SET_SELECTED_PATH_DATA', data)
     },
     toggleCountyLoadAnimationFlag({commit}, data){
       commit('TOGGLE_COUNTY_ANIMATION_FLAG', data)
@@ -118,6 +123,26 @@ export default new Vuex.Store({
         }
         res.push(obj)
       }
+      return res
+    },
+    getLoadedRecordsDistrictLevel: state => {
+      if(state.selectedCountyId == null) return
+      let selectedCountyId = state.selectedCountyId
+      let countyArr = state.schools.filter( x => x.county_id == selectedCountyId)
+      let res = [], district_id
+      countyArr.forEach( a => {
+        if(a.district_id != district_id){
+          district_id = a.district_id
+          let distArr = countyArr.filter( x => x.district_id == district_id)
+          let obj = {
+            county_id: a.county_id, 
+            district_id,
+            total: distArr.length,
+            loaded: distArr.filter( x => x.loaded == true).length
+          }
+          res.push(obj)
+        }
+      })
       return res
     },
     getCircuitNormalRecordsCountyLevel: state => {

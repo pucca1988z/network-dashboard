@@ -14,12 +14,27 @@
           @click="zoomOut">
           全縣市
         </div>
-        <div v-if="this.selectedCounty">
+
+        <div v-if="this.selectedCountyName">
           / 
         </div>
-        <div v-if="this.selectedCounty">
-          {{ this.selectedCounty }} 
+        <div 
+          v-if="this.selectedCountyName" 
+          :class="{ 
+            'cursor-pointer' : this.selectedDistrict, 
+            'underline' : this.selectedDistrict 
+          }"
+        >
+          {{ this.selectedCountyName }} 
         </div>
+
+        <div v-if="this.selectedDistrict">
+          / 
+        </div>
+        <div v-if="this.selectedDistrict">
+          {{ this.selectedDistrict }} 
+        </div>
+
       </div>
       <div class="flex space-x-2">
         <svg 
@@ -45,6 +60,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import MapCore from '@/components/Dashboard/Map/MapCore'
 import ColorHint from '@/components/Dashboard/Map/ColorHint'
 export default {
@@ -64,14 +80,20 @@ export default {
     }
   },
   computed:{
-    selectedCounty(){
-      return this.$store.state.selectedCountyName
-    }
+    ...mapState({
+      selectedCountyName: state => state.selectedCountyName,
+      selectedCountyId: state => state.selectedCountyId,
+      selectedDistrict: state => state.selectedDistrict, 
+      selectedDistrictId: state => state.selectedDistrictId
+    })
   },
   methods:{
     zoomOut(){
-      this.$store.dispatch('setSelectedCountyName', {
-        selectedCountyName: null
+      this.$store.dispatch('setSelectedPathData', {
+        selectedCountyName: null,
+        selectedCountyId: null,
+        selectedDistrict: null, 
+        selectedDistrictId: null,
       })
     }
   }
