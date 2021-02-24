@@ -48,7 +48,6 @@ export default {
     getLoadedRecordsDistrictLevel: function(newVal){
       if(this.$store.state.selectedCountyId == null ) return
       newVal.forEach( a => {
-        console.log(a)
         let p = d3.select(`#id_${a.district_id}`)
         if(a.loaded == 0){}
         else if(a.total == a.loaded){
@@ -82,26 +81,12 @@ export default {
       districtSet: state => state.districtSet,
       schools: state =>  state.schools,
       schoolsMap: state => state.schoolsMap, 
-      colorChangeMap: state => state.colorChangeMap
+      colorMap: state => state.colorMap
     })
   },
   methods:{
     loadData:function(){
-      this.$store.dispatch('loadData',{
-        county_id:'09007'
-      })
-    },
-    countyLoadAnimate:function(c){
-      c.nodes().forEach( (d,i) => {
-        setTimeout(()=>{
-          let p = d3.select(d)
-          if(p.data()[0].properties.county_id == '10009'){
-            this.countyLoadHandler(p)
-          }
-        },i * 500)
-      });
-    },
-    countyLoadHandler:function(p){
+      this.$store.dispatch('loadData',{ county_id:'09007' })
     },
     selectMap:function(geojson,location){
       return geojson.filter( geoData => geoData.properties.county_id == location )
@@ -115,7 +100,6 @@ export default {
     },
     setSelectedPathData:function(obj){
       const { county_id, county, district, district_id } = {...obj}
-      console.log(county_id, county, district, district_id)
       this.$store.dispatch('setSelectedPathData', {
         selectedCountyName: county,
         selectedCountyId:county_id,
@@ -123,6 +107,31 @@ export default {
         selectedDistrictId:district_id,
       })
     },  
+    fillColor:function(){
+      const {selectedCountyId, selectedDistrictId} = {...this.$store.state}
+      let arr
+      selectedCountyId == null ? 
+      arr = this.getLoadedRecordsCountyLevel : 
+      arr = this.getLoadedRecordsDistrictLevel
+
+      arr.forEach( a => {
+        let {county_id, district_id, total, loaded} = a 
+        let p = d3.select(`#id_${ district_id ? district_id : county_id }`)
+        this.$store.dispatch('setPathColor',{ county_id, district_id, total, loaded })
+        setTimeout(()=>{
+          if(loaded == 0){
+            p.attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
+          }
+          else if(total == loaded){
+              p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+          }else{
+              p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
+              .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+          }
+
+        }, 0)
+      })
+    }
   },
   mounted(){
     this.loadData()
@@ -145,22 +154,13 @@ export default {
       })
 
       // fill color
-      vm.getLoadedRecordsCountyLevel.forEach( a => {
-        let {county_id, total, loaded} = a 
-        let p = d3.select(`#id_${county_id}`)
-        if(loaded == 0){
-          p.attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
-        }
-        else if(total == loaded){
-            p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
-        }else{
-            p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
-            .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-        }
-      })
+      setTimeout(()=>{
+        this.fillColor()
+      },300)
  
       paths
-      .on('mouseover', (d) => {
+      // .on('mouseover', (d) => {
+      .on('mouseenter', (d) => {
         let area = d3.select(event.currentTarget)
         vm.originColor = area.attr('fill')
         vm.originOpacity = area.attr('fill-opacity')
@@ -215,10 +215,7 @@ export default {
       .then(projectGeoJSON =>{
         let projectgeojson = projectGeoJSON.features;
         zoomToBoundingBox(d);
-        // this.selectedCounty = d.properties.county_id
-        // this.selectedCountyName = d.properties.county 
         const { county_id, county, district, district_id } = {...d.properties}
-
         this.setSelectedPathData( d.properties )
         let selectedjson = this.selectMap(projectgeojson, county_id);
         vm.g.selectAll("*").remove();

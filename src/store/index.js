@@ -62,7 +62,7 @@ export default new Vuex.Store({
     splitInto: 20,
     totalGroup: Math.floor(schools.length / 20),
     circuitCnt:0,
-    colorChangeMap:new Map()
+    colorMap:new Map()
   },
 
   mutations: {
@@ -71,6 +71,14 @@ export default new Vuex.Store({
       state.selectedCountyId = data.selectedCountyId
       state.selectedDistrict = data.selectedDistrict
       state.selectedDistrictId = data.selectedDistrictId
+    },
+    SET_PATH_COLOR(state, data){
+      let {county_id, district_id, total, loaded} = data 
+      if(district_id == null){
+        if(state.colorMap.has(county_id)){
+          let obj = state.colorMap
+        }
+      }
     },
     TOGGLE_COUNTY_ANIMATION_FLAG(state, data){
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
@@ -108,7 +116,8 @@ export default new Vuex.Store({
     },
     addCountyCircuitCnt({commit}, data){
       commit('ADD_COUNTY_CIRCUIT_CNT')
-    }
+    },
+    setPathColor({commit}, data){ commit('SET_PATH_COLOR', data) }
   },
   getters:{
     getLoadedRecords: state => state.schools.filter( x => x.loaded == true).length,
