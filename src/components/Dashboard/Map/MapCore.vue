@@ -1,11 +1,9 @@
 <template>
   <div>
-    <p v-for="(s,k) of schools" :key="k">
-        <!-- {{ s.county +' - loaded:'+ s.loadedCnt }} -->
+    <p>
+      <!-- {{ getLoadedRecordsDistrictLevel }} -->
     </p>
-   
     <svg id="geo-map"></svg>
-    <!-- {{ isCountyLoadAnimateFinish }} -->
   </div>
 </template>
 
@@ -13,9 +11,7 @@
 import * as d3 from 'd3'
 import { mapState } from "vuex";
 export default {
-  components:{
-
-  },
+  components:{},
   data(){
     return {
       svg: null,
@@ -29,97 +25,68 @@ export default {
       mercator:null,
       pathGenerator:null,
       originColor:null,
-      percentage:0,
+      originOpacity:null,
+      paths: null,
+      selectedD: null
     }
   },
   watch:{
-    percentage:function(val){
-      let paths = this.g.selectAll('path')
-      if(val % 10 == 0 && val != 100){
-        paths
-        .transition().duration(500)
-        .attr('fill',this.hintColor.get('normal')).attr('fill-opacity', val / 100 + 0.2)
-        .transition().duration(500).attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
-      }
-      if(val == 100){
-        paths.transition().duration(600).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
-      }
+    getLoadedRecordsCountyLevel:function(newVal){
+      if(this.$store.state.selectedCountyId != null ) return 
+      newVal.forEach( a => {
+        let p = d3.select(`#id_${a.county_id}`)
+        if(a.loaded == 0){}
+        else if(a.total == a.loaded){
+          // animate to normal
+            p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        }else{
+          // keep animation
+            p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (a.loaded / a.total))
+            .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        }
+      })
+    },
+    getLoadedRecordsDistrictLevel: function(newVal){
+      if(this.$store.state.selectedCountyId == null ) return
+      newVal.forEach( a => {
+        let p = d3.select(`#id_${a.district_id}`)
+        if(a.loaded == 0){}
+        else if(a.total == a.loaded){
+          // animate to normal
+            p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        }else{
+          // keep animation
+            p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (a.loaded / a.total))
+            .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        }
+      })
     }
   },
   computed:{
+    getLoadedRecordsCountyLevel(){
+      return this.$store.getters.getLoadedRecordsCountyLevel
+    },
+    getLoadedRecordsDistrictLevel(){
+      return this.$store.getters.getLoadedRecordsDistrictLevel
+    },
+    getTotalRecords(){
+      return this.$store.getters.getTotalRecords
+    },
+    getLoadedRecords(){ 
+      return this.$store.getters.getLoadedRecords
+     },
     ...mapState({
       hintColor: state => state.hintColor,
       isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish,
-      schools: state => {
-        let loaded = state.schools.filter( school => school.loaded == true)
-        console.log(loaded.length)
-        // state.schools.forEach( school => {
-        //   let county_id = school.county_id, county = school.county, 
-        //       district_id = school.district_id, district = school.district, 
-        //       name = school.name, loaded = school.loaded
-        //   if(loaded){
-        //     // console.log(county_id, county, district_id, district, name, loaded)
-        //   }
-        // })
-        return state.schools
-      }
+      countySet: state => state.countySet,
+      districtSet: state => state.districtSet,
+      schools: state =>  state.schools,
+      schoolsMap: state => state.schoolsMap, 
     })
   },
   methods:{
     loadData:function(){
-      this.$store.dispatch('loadData',{
-        county_id:'09007'
-      })
-    },
-    countyLoadAnimate:function(c){
-      c.nodes().forEach( (d,i) => {
-        setTimeout(()=>{
-          let p = d3.select(d)
-          if(p.data()[0].properties.county_id == '10009'){
-            this.countyLoadHandler(p)
-          }
-        },i * 500)
-      });
-      
-      // let interval = setInterval(() => {
-      //   if(this.percentage == 100-1){
-      //     clearInterval(interval);
-      //   }
-      //   this.percentage++
-      // },100)
-      
-
-      // setTimeout(()=>{
-      //   this.$store.dispatch('toggleCountyLoadAnimationFlag')
-      // }, 500)
-    },
-    countyLoadHandler:function(p){
-      // while(this.percentage<100){
-      //   p.transition().duration(6000)
-      //   .attr('fill', this.hintColor.get('normal')).attr('fill-opacity',this.percentage / 100 +0.3)
-      // }
-      // let i = 0.1
-      // while(i<1){
-      //   p.transition().duration(6000)
-      //   .attr('fill', this.hintColor.get('normal')).attr('fill-opacity',i+0.3)
-      //   i += 0.1
-      // }
-      // p
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.4)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.5)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.6)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.7)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.8)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.9)
-      // .transition().duration(600).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-      // .transition().duration(600).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',1)
+      this.$store.dispatch('loadData',{ county_id:'09007' })
     },
     selectMap:function(geojson,location){
       return geojson.filter( geoData => geoData.properties.county_id == location )
@@ -131,11 +98,35 @@ export default {
       this.g.style("stroke-width", 1 / d3.event.transform.k + "px");
       this.g.attr("transform", d3.event.transform); // updated for d3 v4
     },
-    setSelectedCountyName:function(){
-      this.$store.dispatch('setSelectedCountyName', {
-        selectedCountyName: this.selectedCountyName
+    setSelectedPathData:function(obj){
+      const { county_id, county, district, district_id } = {...obj}
+      this.$store.dispatch('setSelectedPathData', {
+        selectedCountyName: county,
+        selectedCountyId:county_id,
+        selectedDistrict:district, 
+        selectedDistrictId:district_id,
       })
     },  
+    fillColor:function(){
+      const {selectedCountyId, selectedDistrictId} = {...this.$store.state}
+      let arr
+      selectedCountyId == null ? 
+      arr = this.getLoadedRecordsCountyLevel : 
+      arr = this.getLoadedRecordsDistrictLevel
+      arr.forEach( a => {
+        let {county_id, district_id, total, loaded} = a 
+        let p = d3.select(`#id_${ district_id ? district_id : county_id }`)
+        if(loaded == 0){
+          p.attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
+        }
+        else if(total == loaded){
+          p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        }else{
+          p.transition().duration(100).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
+          .transition().duration(100).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        }
+      })
+    }
   },
   mounted(){
     this.loadData()
@@ -148,36 +139,34 @@ export default {
       .enter().append('path')
       .attr('d',vm.pathGenerator)
       .attr('class','boundary')
-      .attr("stroke-width", 0.2)
-      .attr("stroke", "#000000")
+      .attr("stroke-width", 1.2).attr("stroke", "white")
       .attr("fill", vm.hintColor.get('noData'))
+      .attr('id', d => {
+        return `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`
+      })
+
+      // fill color
+      setTimeout(()=>{
+        this.fillColor()
+      },0)
  
       paths
       .on('mouseover', (d) => {
-        // if(!vm.isCountyLoadAnimationFinish) return
         let area = d3.select(event.currentTarget)
-        vm.originColor = area.attr('fill')
+        // vm.originColor = area.attr('fill')
+        // vm.originOpacity = area.attr('fill-opacity')
         area
         .style('cursor', 'pointer')
-        .transition()
-        .duration(100)
-        .attr("fill", vm.hintColor.get('selected'))
-        .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+        // .attr("fill", vm.hintColor.get('selected'))
+        .attr('stroke','gray').attr('stroke-opacity', 0.3).attr("stroke-width", 0.2)
         
       })
       .on('mouseout', (d) => {
-        // if(!vm.isCountyLoadAnimationFinish) return
         let area = d3.select(event.currentTarget)
         area
-        .style('cursor', 'default')
-        .transition()
-        .duration(100)
-        // .attr("fill", this.hintColor.get('noData'))//.attr('fill-opacity',0.3)
-        .attr("fill", vm.originColor)//.attr('fill-opacity',0.3)
-        .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+        // .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
+        .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 1.2)
       })
-      // .append('title')
-      // .text( d => d.properties.county)
       .append('title')
       .html( d => `
       <div style="color:blue">
@@ -187,14 +176,12 @@ export default {
       </div>
 
       `)
-
       paths.on('click',clicked)
-
-      // vm.countyLoadAnimate(paths)
     }
 
     //zoomToBoundingBox
     const zoomToBoundingBox = d => {
+      if(this.selectedD == null ) this.selectedD = d
       let bounds = vm.pathGenerator.bounds(d),
         dx = bounds[1][0] - bounds[0][0],
         dy = bounds[1][1] - bounds[0][1],
@@ -207,32 +194,39 @@ export default {
     }
 
     //clicked
-    const clicked = d =>{
+    const clicked = d => {
       d3.json('twTown.json')
-      .then(projectGeoJSON =>{
-        let projectgeojson = projectGeoJSON.features;
+      .then(json =>{
         zoomToBoundingBox(d);
-        let selectedBlock = d.properties.county_id;
-        this.selectedCounty = selectedBlock
-        this.selectedCountyName = d.properties.county 
-        this.setSelectedCountyName()
-        let selectedjson = this.selectMap(projectgeojson,selectedBlock);
+        const { county_id, county, district, district_id } = {...d.properties}
+        this.setSelectedPathData( d.properties )
+        let selectedjson = this.selectMap(json.features, county_id);
         vm.g.selectAll("*").remove();
         makemap(selectedjson)
+
+        d3.select('#zoomOutToCounty').on('click', () => { 
+          d.properties.district_id = null, d.properties.district = null
+          this.setSelectedPathData( d.properties )
+          vm.g.selectAll("*").remove();
+          vm.svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
+          zoomToBoundingBox(vm.selectedD);
+          makemap(selectedjson);
+        })
+
       })
     }
 
     d3.json('twCountry.json')
     .then(json =>{
       makemap(json.features)
-      d3.select('#zoomOutBtn')
+      d3.select('#zoomOutToCountry')
       .on('click',function(){
+        vm.selectedD = null
         vm.g.selectAll("*").remove();
         vm.svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
         makemap(json.features);
       })
     })
-
 
     vm.svg = d3.select('#geo-map')
     vm.g = vm.svg.append('g')

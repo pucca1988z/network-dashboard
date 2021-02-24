@@ -10,7 +10,7 @@
       "properties": {
         "district": "北區",
         "county": "新竹市",
-        "town_id": "10018020",
+        "district_id": "10018020",
         "county_id": "10018",
         "area": 25766435.2565,
         "sort": 19,
@@ -232,7 +232,7 @@
       "properties": {
         "district": "北區",
         "county": "臺中市",
-        "town_id": "66000050",
+        "district_id": "66000050",
         "county_id": "66000",
         "area": 7613580.0138,
         "sort": 3,
@@ -366,7 +366,7 @@
       "properties": {
         "district": "北區",
         "county": "臺南市",
-        "town_id": "67000340",
+        "district_id": "67000340",
         "county_id": "67000",
         "area": 9800499.9162,
         "sort": 4,
@@ -472,7 +472,7 @@
       "properties": {
         "district": "北屯區",
         "county": "臺中市",
-        "town_id": "66000080",
+        "district_id": "66000080",
         "county_id": "66000",
         "area": 61877043.1004,
         "sort": 3,
@@ -794,7 +794,7 @@
       "properties": {
         "district": "北門區",
         "county": "臺南市",
-        "town_id": "67000170",
+        "district_id": "67000170",
         "county_id": "67000",
         "area": 63415895.1981,
         "sort": 4,
@@ -1064,7 +1064,7 @@
       "properties": {
         "district": "卓溪鄉",
         "county": "花蓮縣",
-        "town_id": "10015130",
+        "district_id": "10015130",
         "county_id": "10015",
         "area": 1011573506.645,
         "sort": 16,
@@ -2150,7 +2150,7 @@
       "properties": {
         "district": "卓蘭鎮",
         "county": "苗栗縣",
-        "town_id": "10005070",
+        "district_id": "10005070",
         "county_id": "10005",
         "area": 77409763.0468,
         "sort": 9,
@@ -2440,7 +2440,7 @@
       "properties": {
         "district": "南化區",
         "county": "臺南市",
-        "town_id": "67000250",
+        "district_id": "67000250",
         "county_id": "67000",
         "area": 171362522.3897,
         "sort": 4,
@@ -2986,7 +2986,7 @@
       "properties": {
         "district": "南區",
         "county": "臺中市",
-        "town_id": "66000030",
+        "district_id": "66000030",
         "county_id": "66000",
         "area": 7931705.8477,
         "sort": 3,
@@ -3116,7 +3116,7 @@
       "properties": {
         "district": "南區",
         "county": "臺南市",
-        "town_id": "67000330",
+        "district_id": "67000330",
         "county_id": "67000",
         "area": 27867400.6626,
         "sort": 4,
@@ -3242,7 +3242,7 @@
       "properties": {
         "district": "南屯區",
         "county": "臺中市",
-        "town_id": "66000070",
+        "district_id": "66000070",
         "county_id": "66000",
         "area": 30195860.3013,
         "sort": 3,
@@ -3432,7 +3432,7 @@
       "properties": {
         "district": "南州鄉",
         "county": "屏東縣",
-        "town_id": "10013200",
+        "district_id": "10013200",
         "county_id": "10013",
         "area": 18794660.2017,
         "sort": 14,
@@ -3594,7 +3594,7 @@
       "properties": {
         "district": "南庄鄉",
         "county": "苗栗縣",
-        "town_id": "10005110",
+        "district_id": "10005110",
         "county_id": "10005",
         "area": 162025468.0839,
         "sort": 9,
@@ -3988,7 +3988,7 @@
       "properties": {
         "district": "南投市",
         "county": "南投縣",
-        "town_id": "10008010",
+        "district_id": "10008010",
         "county_id": "10008",
         "area": 71748307.0389,
         "sort": 11,
@@ -4406,7 +4406,7 @@
       "properties": {
         "district": "南港區",
         "county": "臺北市",
-        "town_id": "63000090",
+        "district_id": "63000090",
         "county_id": "63000",
         "area": 21963695.3685,
         "sort": 2,
@@ -4592,7 +4592,7 @@
       "properties": {
         "district": "南澳鄉",
         "county": "宜蘭縣",
-        "town_id": "10002120",
+        "district_id": "10002120",
         "county_id": "10002",
         "area": 716070057.0483,
         "sort": 6,
@@ -5510,7 +5510,7 @@
       "properties": {
         "district": "名間鄉",
         "county": "南投縣",
-        "town_id": "10008060",
+        "district_id": "10008060",
         "county_id": "10008",
         "area": 78819546.42,
         "sort": 11,
@@ -5960,7 +5960,7 @@
       "properties": {
         "district": "員林鎮",
         "county": "彰化縣",
-        "town_id": "10007100",
+        "district_id": "10007100",
         "county_id": "10007",
         "area": 39476058.5844,
         "sort": 10,
@@ -6250,7 +6250,7 @@
       "properties": {
         "district": "古坑鄉",
         "county": "雲林縣",
-        "town_id": "10009070",
+        "district_id": "10009070",
         "county_id": "10009",
         "area": 166279364.3186,
         "sort": 12,
@@ -6784,7 +6784,7 @@
       "properties": {
         "district": "吉安鄉",
         "county": "花蓮縣",
-        "town_id": "10015050",
+        "district_id": "10015050",
         "county_id": "10015",
         "area": 62654386.5442,
         "sort": 16,
@@ -6954,7 +6954,7 @@
       "properties": {
         "district": "后里區",
         "county": "臺中市",
-        "town_id": "66000150",
+        "district_id": "66000150",
         "county_id": "66000",
         "area": 57195630.496,
         "sort": 3,
@@ -7128,7 +7128,7 @@
       "properties": {
         "district": "員山鄉",
         "county": "宜蘭縣",
-        "town_id": "10002070",
+        "district_id": "10002070",
         "county_id": "10002",
         "area": 141617418.4012,
         "sort": 6,
@@ -7446,7 +7446,7 @@
       "properties": {
         "district": "四湖鄉",
         "county": "雲林縣",
-        "town_id": "10009180",
+        "district_id": "10009180",
         "county_id": "10009",
         "area": 73893312.8445,
         "sort": 12,
@@ -7752,7 +7752,7 @@
       "properties": {
         "district": "土城區",
         "county": "新北市",
-        "town_id": "65000130",
+        "district_id": "65000130",
         "county_id": "65000",
         "area": 29941513.588,
         "sort": 1,
@@ -7950,7 +7950,7 @@
       "properties": {
         "district": "土庫鎮",
         "county": "雲林縣",
-        "town_id": "10009050",
+        "district_id": "10009050",
         "county_id": "10009",
         "area": 48126814.3194,
         "sort": 12,
@@ -8236,7 +8236,7 @@
       "properties": {
         "district": "埔里鎮",
         "county": "南投縣",
-        "town_id": "10008020",
+        "district_id": "10008020",
         "county_id": "10008",
         "area": 172232616.9621,
         "sort": 11,
@@ -8898,7 +8898,7 @@
       "properties": {
         "district": "埔鹽鄉",
         "county": "彰化縣",
-        "town_id": "10007140",
+        "district_id": "10007140",
         "county_id": "10007",
         "area": 38927007.8507,
         "sort": 10,
@@ -9124,7 +9124,7 @@
       "properties": {
         "district": "士林區",
         "county": "臺北市",
-        "town_id": "63000110",
+        "district_id": "63000110",
         "county_id": "63000",
         "area": 61943111.4439,
         "sort": 2,
@@ -9438,7 +9438,7 @@
       "properties": {
         "district": "壯圍鄉",
         "county": "宜蘭縣",
-        "town_id": "10002060",
+        "district_id": "10002060",
         "county_id": "10002",
         "area": 39900689.6053,
         "sort": 6,
@@ -9640,7 +9640,7 @@
       "properties": {
         "district": "大同區",
         "county": "臺北市",
-        "town_id": "63000060",
+        "district_id": "63000060",
         "county_id": "63000",
         "area": 4711348.4492,
         "sort": 2,
@@ -9722,7 +9722,7 @@
       "properties": {
         "district": "大園鄉",
         "county": "桃園縣",
-        "town_id": "10003060",
+        "district_id": "10003060",
         "county_id": "10003",
         "area": 87146585.9333,
         "sort": 7,
@@ -10148,7 +10148,7 @@
       "properties": {
         "district": "大城鄉",
         "county": "彰化縣",
-        "town_id": "10007240",
+        "district_id": "10007240",
         "county_id": "10007",
         "area": 95146245.6971,
         "sort": 10,
@@ -10362,7 +10362,7 @@
       "properties": {
         "district": "大埤鄉",
         "county": "雲林縣",
-        "town_id": "10009080",
+        "district_id": "10009080",
         "county_id": "10009",
         "area": 44250773.8786,
         "sort": 12,
@@ -10608,7 +10608,7 @@
       "properties": {
         "district": "大安區",
         "county": "臺中市",
-        "town_id": "66000220",
+        "district_id": "66000220",
         "county_id": "66000",
         "area": 32960526.853,
         "sort": 3,
@@ -10902,7 +10902,7 @@
       "properties": {
         "district": "大湖鄉",
         "county": "苗栗縣",
-        "town_id": "10005080",
+        "district_id": "10005080",
         "county_id": "10005",
         "area": 90708961.6446,
         "sort": 9,
@@ -11284,7 +11284,7 @@
       "properties": {
         "district": "大社區",
         "county": "高雄市",
-        "town_id": "64000160",
+        "district_id": "64000160",
         "county_id": "64000",
         "area": 25219216.3398,
         "sort": 5,
@@ -11530,7 +11530,7 @@
       "properties": {
         "district": "太保市",
         "county": "嘉義縣",
-        "town_id": "10010010",
+        "district_id": "10010010",
         "county_id": "10010",
         "area": 66504430.628,
         "sort": 13,
@@ -11848,7 +11848,7 @@
       "properties": {
         "district": "西螺鎮",
         "county": "雲林縣",
-        "town_id": "10009040",
+        "district_id": "10009040",
         "county_id": "10009",
         "area": 50123087.6335,
         "sort": 12,
@@ -12050,7 +12050,7 @@
       "properties": {
         "district": "觀音鄉",
         "county": "桃園縣",
-        "town_id": "10003120",
+        "district_id": "10003120",
         "county_id": "10003",
         "area": 93279256.3905,
         "sort": 7,
@@ -12344,7 +12344,7 @@
       "properties": {
         "district": "豐濱鄉",
         "county": "花蓮縣",
-        "town_id": "10015080",
+        "district_id": "10015080",
         "county_id": "10015",
         "area": 157250341.4866,
         "sort": 16,
@@ -13042,7 +13042,7 @@
       "properties": {
         "district": "路竹區",
         "county": "高雄市",
-        "town_id": "64000240",
+        "district_id": "64000240",
         "county_id": "64000",
         "area": 50661503.319,
         "sort": 5,
@@ -13308,7 +13308,7 @@
       "properties": {
         "district": "車城鄉",
         "county": "屏東縣",
-        "town_id": "10013230",
+        "district_id": "10013230",
         "county_id": "10013",
         "area": 58655875.4781,
         "sort": 14,
@@ -13698,7 +13698,7 @@
       "properties": {
         "district": "通霄鎮",
         "county": "苗栗縣",
-        "town_id": "10005030",
+        "district_id": "10005030",
         "county_id": "10005",
         "area": 113791169.9139,
         "sort": 9,
@@ -14048,7 +14048,7 @@
       "properties": {
         "district": "達仁鄉",
         "county": "臺東縣",
-        "town_id": "10014150",
+        "district_id": "10014150",
         "county_id": "10014",
         "area": 320554718.5137,
         "sort": 15,
@@ -14682,7 +14682,7 @@
       "properties": {
         "district": "里港鄉",
         "county": "屏東縣",
-        "town_id": "10013090",
+        "district_id": "10013090",
         "county_id": "10013",
         "area": 69706442.3701,
         "sort": 14,
@@ -14948,7 +14948,7 @@
       "properties": {
         "district": "金峰鄉",
         "county": "臺東縣",
-        "town_id": "10014140",
+        "district_id": "10014140",
         "county_id": "10014",
         "area": 387529660.6962,
         "sort": 15,
@@ -15602,7 +15602,7 @@
       "properties": {
         "district": "長治鄉",
         "county": "屏東縣",
-        "town_id": "10013060",
+        "district_id": "10013060",
         "county_id": "10013",
         "area": 45787434.4584,
         "sort": 14,
@@ -15846,7 +15846,7 @@
       "properties": {
         "district": "關山鎮",
         "county": "臺東縣",
-        "town_id": "10014030",
+        "district_id": "10014030",
         "county_id": "10014",
         "area": 60336389.6221,
         "sort": 15,
@@ -16140,7 +16140,7 @@
       "properties": {
         "district": "關西鎮",
         "county": "新竹縣",
-        "town_id": "10004040",
+        "district_id": "10004040",
         "county_id": "10004",
         "area": 125189805.0143,
         "sort": 8,
@@ -16514,7 +16514,7 @@
       "properties": {
         "district": "集集鎮",
         "county": "南投縣",
-        "town_id": "10008050",
+        "district_id": "10008050",
         "county_id": "10008",
         "area": 39728659.2368,
         "sort": 11,
@@ -16736,7 +16736,7 @@
       "properties": {
         "district": "雙溪區",
         "county": "新北市",
-        "town_id": "65000250",
+        "district_id": "65000250",
         "county_id": "65000",
         "area": 145594008.9289,
         "sort": 1,
@@ -17122,7 +17122,7 @@
       "properties": {
         "district": "頭份鎮",
         "county": "苗栗縣",
-        "town_id": "10005050",
+        "district_id": "10005050",
         "county_id": "10005",
         "area": 52941563.7089,
         "sort": 9,
@@ -17464,7 +17464,7 @@
       "properties": {
         "district": "頭城鎮",
         "county": "宜蘭縣",
-        "town_id": "10002040",
+        "district_id": "10002040",
         "county_id": "10002",
         "area": 92871022.5472,
         "sort": 6,
@@ -17994,7 +17994,7 @@
       "properties": {
         "district": "高樹鄉",
         "county": "屏東縣",
-        "town_id": "10013110",
+        "district_id": "10013110",
         "county_id": "10013",
         "area": 94227398.8766,
         "sort": 14,
@@ -18268,7 +18268,7 @@
       "properties": {
         "district": "魚池鄉",
         "county": "南投縣",
-        "town_id": "10008090",
+        "district_id": "10008090",
         "county_id": "10008",
         "area": 124350003.3662,
         "sort": 11,
@@ -18658,7 +18658,7 @@
       "properties": {
         "district": "鶯歌區",
         "county": "新北市",
-        "town_id": "65000080",
+        "district_id": "65000080",
         "county_id": "65000",
         "area": 21930250.8133,
         "sort": 1,
@@ -18840,7 +18840,7 @@
       "properties": {
         "district": "鹽埕區",
         "county": "高雄市",
-        "town_id": "64000010",
+        "district_id": "64000010",
         "county_id": "64000",
         "area": 1569703.6924,
         "sort": 5,
@@ -18882,7 +18882,7 @@
       "properties": {
         "district": "鹿港鎮",
         "county": "彰化縣",
-        "town_id": "10007020",
+        "district_id": "10007020",
         "county_id": "10007",
         "area": 72272844.3475,
         "sort": 10,
@@ -19196,7 +19196,7 @@
       "properties": {
         "district": "鹿草鄉",
         "county": "嘉義縣",
-        "town_id": "10010110",
+        "district_id": "10010110",
         "county_id": "10010",
         "area": 54850581.9991,
         "sort": 13,
@@ -19518,7 +19518,7 @@
       "properties": {
         "district": "麟洛鄉",
         "county": "屏東縣",
-        "town_id": "10013070",
+        "district_id": "10013070",
         "county_id": "10013",
         "area": 13902408.4911,
         "sort": 14,
@@ -19696,7 +19696,7 @@
       "properties": {
         "district": "麻豆區",
         "county": "臺南市",
-        "town_id": "67000070",
+        "district_id": "67000070",
         "county_id": "67000",
         "area": 54951315.6956,
         "sort": 4,
@@ -19922,7 +19922,7 @@
       "properties": {
         "district": "鼓山區(海)",
         "county": "高雄市",
-        "town_id": "64000020",
+        "district_id": "64000020",
         "county_id": "64000",
         "area": 2455546.1156,
         "sort": 5,
@@ -20052,7 +20052,7 @@
       "properties": {
         "district": "富里鄉",
         "county": "花蓮縣",
-        "town_id": "10015100",
+        "district_id": "10015100",
         "county_id": "10015",
         "area": 171999227.6311,
         "sort": 16,
@@ -20506,7 +20506,7 @@
       "properties": {
         "district": "將軍區",
         "county": "臺南市",
-        "town_id": "67000160",
+        "district_id": "67000160",
         "county_id": "67000",
         "area": 47046394.351,
         "sort": 4,
@@ -20756,7 +20756,7 @@
       "properties": {
         "district": "尖石鄉",
         "county": "新竹縣",
-        "town_id": "10004120",
+        "district_id": "10004120",
         "county_id": "10004",
         "area": 522925765.4894,
         "sort": 8,
@@ -21366,7 +21366,7 @@
       "properties": {
         "district": "峨眉鄉",
         "county": "新竹縣",
-        "town_id": "10004110",
+        "district_id": "10004110",
         "county_id": "10004",
         "area": 46529083.8796,
         "sort": 8,
@@ -21664,7 +21664,7 @@
       "properties": {
         "district": "崁頂鄉",
         "county": "屏東縣",
-        "town_id": "10013180",
+        "district_id": "10013180",
         "county_id": "10013",
         "area": 25314919.7333,
         "sort": 14,
@@ -21858,7 +21858,7 @@
       "properties": {
         "district": "左營區",
         "county": "高雄市",
-        "town_id": "64000030",
+        "district_id": "64000030",
         "county_id": "64000",
         "area": 20303971.1755,
         "sort": 5,
@@ -22092,7 +22092,7 @@
       "properties": {
         "district": "布袋鎮",
         "county": "嘉義縣",
-        "town_id": "10010030",
+        "district_id": "10010030",
         "county_id": "10010",
         "area": 77028823.4592,
         "sort": 13,
@@ -22606,7 +22606,7 @@
       "properties": {
         "district": "平鎮市",
         "county": "桃園縣",
-        "town_id": "10003100",
+        "district_id": "10003100",
         "county_id": "10003",
         "area": 43528836.9275,
         "sort": 7,
@@ -22868,7 +22868,7 @@
       "properties": {
         "district": "後龍鎮",
         "county": "苗栗縣",
-        "town_id": "10005060",
+        "district_id": "10005060",
         "county_id": "10005",
         "area": 86132827.283,
         "sort": 9,
@@ -23186,7 +23186,7 @@
       "properties": {
         "district": "復興鄉",
         "county": "桃園縣",
-        "town_id": "10003130",
+        "district_id": "10003130",
         "county_id": "10003",
         "area": 336835935.1682,
         "sort": 7,
@@ -23776,7 +23776,7 @@
       "properties": {
         "district": "太麻里鄉",
         "county": "臺東縣",
-        "town_id": "10014090",
+        "district_id": "10014090",
         "county_id": "10014",
         "area": 102289468.0685,
         "sort": 15,
@@ -24214,7 +24214,7 @@
       "properties": {
         "district": "安南區",
         "county": "臺南市",
-        "town_id": "67000350",
+        "district_id": "67000350",
         "county_id": "67000",
         "area": 116964387.6386,
         "sort": 4,
@@ -24424,7 +24424,7 @@
       "properties": {
         "district": "安定區",
         "county": "臺南市",
-        "town_id": "67000210",
+        "district_id": "67000210",
         "county_id": "67000",
         "area": 32250865.5752,
         "sort": 4,
@@ -24610,7 +24610,7 @@
       "properties": {
         "district": "安平區",
         "county": "臺南市",
-        "town_id": "67000360",
+        "district_id": "67000360",
         "county_id": "67000",
         "area": 11388150.234,
         "sort": 4,
@@ -24720,7 +24720,7 @@
       "properties": {
         "district": "線西鄉",
         "county": "彰化縣",
-        "town_id": "10007040",
+        "district_id": "10007040",
         "county_id": "10007",
         "area": 20018716.1426,
         "sort": 10,
@@ -24862,7 +24862,7 @@
       "properties": {
         "district": "羅東鎮",
         "county": "宜蘭縣",
-        "town_id": "10002020",
+        "district_id": "10002020",
         "county_id": "10002",
         "area": 11272558.4471,
         "sort": 6,
@@ -25032,7 +25032,7 @@
       "properties": {
         "district": "義竹鄉",
         "county": "嘉義縣",
-        "town_id": "10010100",
+        "district_id": "10010100",
         "county_id": "10010",
         "area": 78807319.8254,
         "sort": 13,
@@ -25322,7 +25322,7 @@
       "properties": {
         "district": "臺東市",
         "county": "臺東縣",
-        "town_id": "10014010",
+        "district_id": "10014010",
         "county_id": "10014",
         "area": 111479626.2547,
         "sort": 15,
@@ -25640,7 +25640,7 @@
       "properties": {
         "district": "臺西鄉",
         "county": "雲林縣",
-        "town_id": "10009160",
+        "district_id": "10009160",
         "county_id": "10009",
         "area": 60521832.5527,
         "sort": 12,
@@ -26018,7 +26018,7 @@
       "properties": {
         "district": "花蓮市",
         "county": "花蓮縣",
-        "town_id": "10015010",
+        "district_id": "10015010",
         "county_id": "10015",
         "area": 29311635.6823,
         "sort": 16,
@@ -26280,7 +26280,7 @@
       "properties": {
         "district": "芳苑鄉",
         "county": "彰化縣",
-        "town_id": "10007230",
+        "district_id": "10007230",
         "county_id": "10007",
         "area": 145452368.4577,
         "sort": 10,
@@ -26606,7 +26606,7 @@
       "properties": {
         "district": "苗栗市",
         "county": "苗栗縣",
-        "town_id": "10005010",
+        "district_id": "10005010",
         "county_id": "10005",
         "area": 37653786.6898,
         "sort": 9,
@@ -26804,7 +26804,7 @@
       "properties": {
         "district": "茂林區",
         "county": "高雄市",
-        "town_id": "64000360",
+        "district_id": "64000360",
         "county_id": "64000",
         "area": 241392279.1506,
         "sort": 5,
@@ -27230,7 +27230,7 @@
       "properties": {
         "district": "萬丹鄉",
         "county": "屏東縣",
-        "town_id": "10013050",
+        "district_id": "10013050",
         "county_id": "10013",
         "area": 59279258.6788,
         "sort": 14,
@@ -27480,7 +27480,7 @@
       "properties": {
         "district": "萬巒鄉",
         "county": "屏東縣",
-        "town_id": "10013120",
+        "district_id": "10013120",
         "county_id": "10013",
         "area": 60835332.2557,
         "sort": 14,
@@ -27982,7 +27982,7 @@
       "properties": {
         "district": "萬華區",
         "county": "臺北市",
-        "town_id": "63000070",
+        "district_id": "63000070",
         "county_id": "63000",
         "area": 7480598.005,
         "sort": 2,
@@ -28064,7 +28064,7 @@
       "properties": {
         "district": "萬里區",
         "county": "新北市",
-        "town_id": "65000280",
+        "district_id": "65000280",
         "county_id": "65000",
         "area": 62830166.8911,
         "sort": 1,
@@ -28438,7 +28438,7 @@
       "properties": {
         "district": "蘆竹鄉",
         "county": "桃園縣",
-        "town_id": "10003050",
+        "district_id": "10003050",
         "county_id": "10003",
         "area": 74758565.7339,
         "sort": 7,
@@ -28864,7 +28864,7 @@
       "properties": {
         "district": "西區",
         "county": "嘉義市",
-        "town_id": "10020020",
+        "district_id": "10020020",
         "county_id": "10020",
         "area": 29498513.5539,
         "sort": 20,
@@ -29066,7 +29066,7 @@
       "properties": {
         "district": "三灣鄉",
         "county": "苗栗縣",
-        "town_id": "10005160",
+        "district_id": "10005160",
         "county_id": "10005",
         "area": 54197026.9164,
         "sort": 9,
@@ -29484,7 +29484,7 @@
       "properties": {
         "district": "三重區",
         "county": "新北市",
-        "town_id": "65000020",
+        "district_id": "65000020",
         "county_id": "65000",
         "area": 18104828.5499,
         "sort": 1,
@@ -29598,7 +29598,7 @@
       "properties": {
         "district": "下營區",
         "county": "臺南市",
-        "town_id": "67000080",
+        "district_id": "67000080",
         "county_id": "67000",
         "area": 33444704.7779,
         "sort": 4,
@@ -29860,7 +29860,7 @@
       "properties": {
         "district": "中和區",
         "county": "新北市",
-        "town_id": "65000030",
+        "district_id": "65000030",
         "county_id": "65000",
         "area": 19398814.4429,
         "sort": 1,
@@ -30062,7 +30062,7 @@
       "properties": {
         "district": "中埔鄉",
         "county": "嘉義縣",
-        "town_id": "10010130",
+        "district_id": "10010130",
         "county_id": "10010",
         "area": 130100635.9488,
         "sort": 13,
@@ -30464,7 +30464,7 @@
       "properties": {
         "district": "中壢市",
         "county": "桃園縣",
-        "town_id": "10003020",
+        "district_id": "10003020",
         "county_id": "10003",
         "area": 75750704.1052,
         "sort": 7,
@@ -30810,7 +30810,7 @@
       "properties": {
         "district": "中寮鄉",
         "county": "南投縣",
-        "town_id": "10008080",
+        "district_id": "10008080",
         "county_id": "10008",
         "area": 144272375.0473,
         "sort": 11,
@@ -31300,7 +31300,7 @@
       "properties": {
         "district": "中山區",
         "county": "臺北市",
-        "town_id": "63000040",
+        "district_id": "63000040",
         "county_id": "63000",
         "area": 13873824.7299,
         "sort": 2,
@@ -31450,7 +31450,7 @@
       "properties": {
         "district": "中正區",
         "county": "基隆市",
-        "town_id": "10017010",
+        "district_id": "10017010",
         "county_id": "10017",
         "area": 10022677.4647,
         "sort": 18,
@@ -31780,7 +31780,7 @@
       "properties": {
         "district": "中正區",
         "county": "臺北市",
-        "town_id": "63000050",
+        "district_id": "63000050",
         "county_id": "63000",
         "area": 7408349.287,
         "sort": 2,
@@ -31866,7 +31866,7 @@
       "properties": {
         "district": "中西區",
         "county": "臺南市",
-        "town_id": "67000370",
+        "district_id": "67000370",
         "county_id": "67000",
         "area": 6380530.7955,
         "sort": 4,
@@ -31960,7 +31960,7 @@
       "properties": {
         "district": "九如鄉",
         "county": "屏東縣",
-        "town_id": "10013080",
+        "district_id": "10013080",
         "county_id": "10013",
         "area": 43106712.7454,
         "sort": 14,
@@ -32174,7 +32174,7 @@
       "properties": {
         "district": "二崙鄉",
         "county": "雲林縣",
-        "town_id": "10009110",
+        "district_id": "10009110",
         "county_id": "10009",
         "area": 60665257.0015,
         "sort": 12,
@@ -32384,7 +32384,7 @@
       "properties": {
         "district": "二林鎮",
         "county": "彰化縣",
-        "town_id": "10007200",
+        "district_id": "10007200",
         "county_id": "10007",
         "area": 92333145.8583,
         "sort": 10,
@@ -32766,7 +32766,7 @@
       "properties": {
         "district": "二水鄉",
         "county": "彰化縣",
-        "town_id": "10007180",
+        "district_id": "10007180",
         "county_id": "10007",
         "area": 35569408.5231,
         "sort": 10,
@@ -33060,7 +33060,7 @@
       "properties": {
         "district": "五結鄉",
         "county": "宜蘭縣",
-        "town_id": "10002090",
+        "district_id": "10002090",
         "county_id": "10002",
         "area": 39972820.735,
         "sort": 6,
@@ -33298,7 +33298,7 @@
       "properties": {
         "district": "仁武區",
         "county": "高雄市",
-        "town_id": "64000170",
+        "district_id": "64000170",
         "county_id": "64000",
         "area": 37957387.7635,
         "sort": 5,
@@ -33556,7 +33556,7 @@
       "properties": {
         "district": "伸港鄉",
         "county": "彰化縣",
-        "town_id": "10007050",
+        "district_id": "10007050",
         "county_id": "10007",
         "area": 28481647.8316,
         "sort": 10,
@@ -33738,7 +33738,7 @@
       "properties": {
         "district": "佳冬鄉",
         "county": "屏東縣",
-        "town_id": "10013210",
+        "district_id": "10013210",
         "county_id": "10013",
         "area": 31221060.2096,
         "sort": 14,
@@ -33880,7 +33880,7 @@
       "properties": {
         "district": "來義鄉",
         "county": "屏東縣",
-        "town_id": "10013300",
+        "district_id": "10013300",
         "county_id": "10013",
         "area": 162271246.6374,
         "sort": 14,
@@ -34334,7 +34334,7 @@
       "properties": {
         "district": "信義區",
         "county": "臺北市",
-        "town_id": "63000020",
+        "district_id": "63000020",
         "county_id": "63000",
         "area": 11193617.7388,
         "sort": 2,
@@ -34424,7 +34424,7 @@
       "properties": {
         "district": "信義鄉",
         "county": "南投縣",
-        "town_id": "10008120",
+        "district_id": "10008120",
         "county_id": "10008",
         "area": 1423498316.1893,
         "sort": 11,
@@ -35506,7 +35506,7 @@
       "properties": {
         "district": "元長鄉",
         "county": "雲林縣",
-        "town_id": "10009170",
+        "district_id": "10009170",
         "county_id": "10009",
         "area": 72444338.1182,
         "sort": 12,
@@ -35760,7 +35760,7 @@
       "properties": {
         "district": "內埔鄉",
         "county": "屏東縣",
-        "town_id": "10013130",
+        "district_id": "10013130",
         "county_id": "10013",
         "area": 77145120.5631,
         "sort": 14,
@@ -36046,7 +36046,7 @@
       "properties": {
         "district": "內湖區",
         "county": "臺北市",
-        "town_id": "63000100",
+        "district_id": "63000100",
         "county_id": "63000",
         "area": 32019748.4938,
         "sort": 2,
@@ -36236,7 +36236,7 @@
       "properties": {
         "district": "八德市",
         "county": "桃園縣",
-        "town_id": "10003080",
+        "district_id": "10003080",
         "county_id": "10003",
         "area": 33788973.3138,
         "sort": 7,
@@ -36494,7 +36494,7 @@
       "properties": {
         "district": "八里區",
         "county": "新北市",
-        "town_id": "65000230",
+        "district_id": "65000230",
         "county_id": "65000",
         "area": 39569767.8264,
         "sort": 1,
@@ -36792,7 +36792,7 @@
       "properties": {
         "district": "六甲區",
         "county": "臺南市",
-        "town_id": "67000090",
+        "district_id": "67000090",
         "county_id": "67000",
         "area": 67069843.4892,
         "sort": 4,
@@ -37230,7 +37230,7 @@
       "properties": {
         "district": "六腳鄉",
         "county": "嘉義縣",
-        "town_id": "10010080",
+        "district_id": "10010080",
         "county_id": "10010",
         "area": 62313118.9227,
         "sort": 13,
@@ -37544,7 +37544,7 @@
       "properties": {
         "district": "前鎮區",
         "county": "高雄市",
-        "town_id": "64000090",
+        "district_id": "64000090",
         "county_id": "64000",
         "area": 18286418.0175,
         "sort": 5,
@@ -37746,7 +37746,7 @@
       "properties": {
         "district": "新市區",
         "county": "臺南市",
-        "town_id": "67000200",
+        "district_id": "67000200",
         "county_id": "67000",
         "area": 50002567.7026,
         "sort": 4,
@@ -38028,7 +38028,7 @@
       "properties": {
         "district": "枋山鄉",
         "county": "屏東縣",
-        "town_id": "10013250",
+        "district_id": "10013250",
         "county_id": "10013",
         "area": 16532990.6909,
         "sort": 14,
@@ -38398,7 +38398,7 @@
       "properties": {
         "district": "中山區",
         "county": "基隆市",
-        "town_id": "10017050",
+        "district_id": "10017050",
         "county_id": "10017",
         "area": 9741228.7629,
         "sort": 18,
@@ -38568,7 +38568,7 @@
       "properties": {
         "district": "埔心鄉",
         "county": "彰化縣",
-        "town_id": "10007150",
+        "district_id": "10007150",
         "county_id": "10007",
         "area": 20895721.6614,
         "sort": 10,
@@ -38754,7 +38754,7 @@
       "properties": {
         "district": "蘆洲區",
         "county": "新北市",
-        "town_id": "65000140",
+        "district_id": "65000140",
         "county_id": "65000",
         "area": 7727957.013,
         "sort": 1,
@@ -38840,7 +38840,7 @@
       "properties": {
         "district": "麥寮鄉",
         "county": "雲林縣",
-        "town_id": "10009130",
+        "district_id": "10009130",
         "county_id": "10009",
         "area": 109971607.8648,
         "sort": 12,
@@ -39342,7 +39342,7 @@
       "properties": {
         "district": "左鎮區",
         "county": "臺南市",
-        "town_id": "67000260",
+        "district_id": "67000260",
         "county_id": "67000",
         "area": 72790614.7305,
         "sort": 4,
@@ -39788,7 +39788,7 @@
       "properties": {
         "district": "林邊鄉",
         "county": "屏東縣",
-        "town_id": "10013190",
+        "district_id": "10013190",
         "county_id": "10013",
         "area": 15850704.6587,
         "sort": 14,
@@ -39946,7 +39946,7 @@
       "properties": {
         "district": "仁愛區",
         "county": "基隆市",
-        "town_id": "10017040",
+        "district_id": "10017040",
         "county_id": "10017",
         "area": 4525795.9835,
         "sort": 18,
@@ -40040,7 +40040,7 @@
       "properties": {
         "district": "和平區",
         "county": "臺中市",
-        "town_id": "66000290",
+        "district_id": "66000290",
         "county_id": "66000",
         "area": 1006123787.3022,
         "sort": 3,
@@ -41126,7 +41126,7 @@
       "properties": {
         "district": "綠島鄉",
         "county": "臺東縣",
-        "town_id": "10014110",
+        "district_id": "10014110",
         "county_id": "10014",
         "area": 16291719.7319,
         "sort": 15,
@@ -41516,7 +41516,7 @@
       "properties": {
         "district": "梓官區",
         "county": "高雄市",
-        "town_id": "64000290",
+        "district_id": "64000290",
         "county_id": "64000",
         "area": 11894556.6977,
         "sort": 5,
@@ -41666,7 +41666,7 @@
       "properties": {
         "district": "滿州鄉",
         "county": "屏東縣",
-        "town_id": "10013240",
+        "district_id": "10013240",
         "county_id": "10013",
         "area": 147346101.6208,
         "sort": 14,
@@ -42100,7 +42100,7 @@
       "properties": {
         "district": "大雅區",
         "county": "臺中市",
-        "town_id": "66000180",
+        "district_id": "66000180",
         "county_id": "66000",
         "area": 32815509.3986,
         "sort": 3,
@@ -42302,7 +42302,7 @@
       "properties": {
         "district": "花壇鄉",
         "county": "彰化縣",
-        "town_id": "10007080",
+        "district_id": "10007080",
         "county_id": "10007",
         "area": 36047085.0043,
         "sort": 10,
@@ -42484,7 +42484,7 @@
       "properties": {
         "district": "西港區",
         "county": "臺南市",
-        "town_id": "67000140",
+        "district_id": "67000140",
         "county_id": "67000",
         "area": 33514379.5481,
         "sort": 4,
@@ -42646,7 +42646,7 @@
       "properties": {
         "district": "新埤鄉",
         "county": "屏東縣",
-        "town_id": "10013150",
+        "district_id": "10013150",
         "county_id": "10013",
         "area": 56757066.7755,
         "sort": 14,
@@ -42976,7 +42976,7 @@
       "properties": {
         "district": "東區",
         "county": "新竹市",
-        "town_id": "10018010",
+        "district_id": "10018010",
         "county_id": "10018",
         "area": 34149416.2761,
         "sort": 19,
@@ -43242,7 +43242,7 @@
       "properties": {
         "district": "橋頭區",
         "county": "高雄市",
-        "town_id": "64000200",
+        "district_id": "64000200",
         "county_id": "64000",
         "area": 24357405.1186,
         "sort": 5,
@@ -43476,7 +43476,7 @@
       "properties": {
         "district": "龍崎區",
         "county": "臺南市",
-        "town_id": "67000300",
+        "district_id": "67000300",
         "county_id": "67000",
         "area": 62359415.256,
         "sort": 4,
@@ -43818,7 +43818,7 @@
       "properties": {
         "district": "龍潭鄉",
         "county": "桃園縣",
-        "town_id": "10003090",
+        "district_id": "10003090",
         "county_id": "10003",
         "area": 75923949.926,
         "sort": 7,
@@ -44112,7 +44112,7 @@
       "properties": {
         "district": "龜山鄉",
         "county": "桃園縣",
-        "town_id": "10003070",
+        "district_id": "10003070",
         "county_id": "10003",
         "area": 71397864.1432,
         "sort": 7,
@@ -44522,7 +44522,7 @@
       "properties": {
         "district": "三義鄉",
         "county": "苗栗縣",
-        "town_id": "10005130",
+        "district_id": "10005130",
         "county_id": "10005",
         "area": 67696331.3098,
         "sort": 9,
@@ -44744,7 +44744,7 @@
       "properties": {
         "district": "北斗鎮",
         "county": "彰化縣",
-        "town_id": "10007190",
+        "district_id": "10007190",
         "county_id": "10007",
         "area": 20226766.8029,
         "sort": 10,
@@ -44926,7 +44926,7 @@
       "properties": {
         "district": "壽豐鄉",
         "county": "花蓮縣",
-        "town_id": "10015060",
+        "district_id": "10015060",
         "county_id": "10015",
         "area": 206400018.1714,
         "sort": 16,
@@ -45296,7 +45296,7 @@
       "properties": {
         "district": "草屯鎮",
         "county": "南投縣",
-        "town_id": "10008030",
+        "district_id": "10008030",
         "county_id": "10008",
         "area": 103944144.5542,
         "sort": 11,
@@ -45682,7 +45682,7 @@
       "properties": {
         "district": "銅鑼鄉",
         "county": "苗栗縣",
-        "town_id": "10005100",
+        "district_id": "10005100",
         "county_id": "10005",
         "area": 78080893.5834,
         "sort": 9,
@@ -45992,7 +45992,7 @@
       "properties": {
         "district": "鼓山區",
         "county": "高雄市",
-        "town_id": "64000020",
+        "district_id": "64000020",
         "county_id": "64000",
         "area": 20643388.3355,
         "sort": 5,
@@ -46178,7 +46178,7 @@
       "properties": {
         "district": "後壁區",
         "county": "臺南市",
-        "town_id": "67000050",
+        "district_id": "67000050",
         "county_id": "67000",
         "area": 72946763.5943,
         "sort": 4,
@@ -46480,7 +46480,7 @@
       "properties": {
         "district": "潭子區",
         "county": "臺中市",
-        "town_id": "66000170",
+        "district_id": "66000170",
         "county_id": "66000",
         "area": 25843262.3331,
         "sort": 3,
@@ -46758,7 +46758,7 @@
       "properties": {
         "district": "獅子鄉",
         "county": "屏東縣",
-        "town_id": "10013320",
+        "district_id": "10013320",
         "county_id": "10013",
         "area": 313345732.5734,
         "sort": 14,
@@ -47372,7 +47372,7 @@
       "properties": {
         "district": "七股區",
         "county": "臺南市",
-        "town_id": "67000150",
+        "district_id": "67000150",
         "county_id": "67000",
         "area": 142813243.7422,
         "sort": 4,
@@ -47730,7 +47730,7 @@
       "properties": {
         "district": "北投區",
         "county": "臺北市",
-        "town_id": "63000120",
+        "district_id": "63000120",
         "county_id": "63000",
         "area": 57441221.7899,
         "sort": 2,
@@ -47972,7 +47972,7 @@
       "properties": {
         "district": "大林鎮",
         "county": "嘉義縣",
-        "town_id": "10010040",
+        "district_id": "10010040",
         "county_id": "10010",
         "area": 64607616.9229,
         "sort": 13,
@@ -48342,7 +48342,7 @@
       "properties": {
         "district": "文山區",
         "county": "臺北市",
-        "town_id": "63000080",
+        "district_id": "63000080",
         "county_id": "63000",
         "area": 31219241.6339,
         "sort": 2,
@@ -48568,7 +48568,7 @@
       "properties": {
         "district": "斗南鎮",
         "county": "雲林縣",
-        "town_id": "10009020",
+        "district_id": "10009020",
         "county_id": "10009",
         "area": 48377447.5603,
         "sort": 12,
@@ -48934,7 +48934,7 @@
       "properties": {
         "district": "新化區",
         "county": "臺南市",
-        "town_id": "67000180",
+        "district_id": "67000180",
         "county_id": "67000",
         "area": 61945175.2673,
         "sort": 4,
@@ -49368,7 +49368,7 @@
       "properties": {
         "district": "新城鄉",
         "county": "花蓮縣",
-        "town_id": "10015040",
+        "district_id": "10015040",
         "county_id": "10015",
         "area": 28827032.9504,
         "sort": 16,
@@ -49546,7 +49546,7 @@
       "properties": {
         "district": "新埔鎮",
         "county": "新竹縣",
-        "town_id": "10004030",
+        "district_id": "10004030",
         "county_id": "10004",
         "area": 72197072.5945,
         "sort": 8,
@@ -49904,7 +49904,7 @@
       "properties": {
         "district": "新屋鄉",
         "county": "桃園縣",
-        "town_id": "10003110",
+        "district_id": "10003110",
         "county_id": "10003",
         "area": 87176894.0214,
         "sort": 7,
@@ -50270,7 +50270,7 @@
       "properties": {
         "district": "新營區",
         "county": "臺南市",
-        "town_id": "67000010",
+        "district_id": "67000010",
         "county_id": "67000",
         "area": 37719077.856,
         "sort": 4,
@@ -50612,7 +50612,7 @@
       "properties": {
         "district": "新社區",
         "county": "臺中市",
-        "town_id": "66000190",
+        "district_id": "66000190",
         "county_id": "66000",
         "area": 82011823.433,
         "sort": 3,
@@ -51046,7 +51046,7 @@
       "properties": {
         "district": "旗山區",
         "county": "高雄市",
-        "town_id": "64000300",
+        "district_id": "64000300",
         "county_id": "64000",
         "area": 96999471.9718,
         "sort": 5,
@@ -51544,7 +51544,7 @@
       "properties": {
         "district": "旗津區",
         "county": "高雄市",
-        "town_id": "64000100",
+        "district_id": "64000100",
         "county_id": "64000",
         "area": 4720894.7647,
         "sort": 5,
@@ -51750,7 +51750,7 @@
       "properties": {
         "district": "朴子市",
         "county": "嘉義縣",
-        "town_id": "10010020",
+        "district_id": "10010020",
         "county_id": "10010",
         "area": 49940774.4803,
         "sort": 13,
@@ -52088,7 +52088,7 @@
       "properties": {
         "district": "杉林區",
         "county": "高雄市",
-        "town_id": "64000340",
+        "district_id": "64000340",
         "county_id": "64000",
         "area": 102168054.0006,
         "sort": 5,
@@ -52518,7 +52518,7 @@
       "properties": {
         "district": "東勢鄉",
         "county": "雲林縣",
-        "town_id": "10009140",
+        "district_id": "10009140",
         "county_id": "10009",
         "area": 46075401.7833,
         "sort": 12,
@@ -52776,7 +52776,7 @@
       "properties": {
         "district": "東區",
         "county": "嘉義市",
-        "town_id": "10020010",
+        "district_id": "10020010",
         "county_id": "10020",
         "area": 30165759.2778,
         "sort": 20,
@@ -53018,7 +53018,7 @@
       "properties": {
         "district": "東區",
         "county": "臺中市",
-        "town_id": "66000020",
+        "district_id": "66000020",
         "county_id": "66000",
         "area": 6760465.0799,
         "sort": 3,
@@ -53108,7 +53108,7 @@
       "properties": {
         "district": "東區",
         "county": "臺南市",
-        "town_id": "67000320",
+        "district_id": "67000320",
         "county_id": "67000",
         "area": 12910238.0504,
         "sort": 4,
@@ -53218,7 +53218,7 @@
       "properties": {
         "district": "東山區",
         "county": "臺南市",
-        "town_id": "67000060",
+        "district_id": "67000060",
         "county_id": "67000",
         "area": 123748347.5357,
         "sort": 4,
@@ -53696,7 +53696,7 @@
       "properties": {
         "district": "東河鄉",
         "county": "臺東縣",
-        "town_id": "10014070",
+        "district_id": "10014070",
         "county_id": "10014",
         "area": 215119249.3603,
         "sort": 15,
@@ -54218,7 +54218,7 @@
       "properties": {
         "district": "東石鄉",
         "county": "嘉義縣",
-        "town_id": "10010090",
+        "district_id": "10010090",
         "county_id": "10010",
         "area": 81976925.3864,
         "sort": 13,
@@ -54792,7 +54792,7 @@
       "properties": {
         "district": "松山區",
         "county": "臺北市",
-        "town_id": "63000010",
+        "district_id": "63000010",
         "county_id": "63000",
         "area": 8706123.1368,
         "sort": 2,
@@ -54890,7 +54890,7 @@
       "properties": {
         "district": "林口區",
         "county": "新北市",
-        "town_id": "65000170",
+        "district_id": "65000170",
         "county_id": "65000",
         "area": 53728487.6392,
         "sort": 1,
@@ -55484,7 +55484,7 @@
       "properties": {
         "district": "林園區",
         "county": "高雄市",
-        "town_id": "64000130",
+        "district_id": "64000130",
         "county_id": "64000",
         "area": 31256513.1501,
         "sort": 5,
@@ -55626,7 +55626,7 @@
       "properties": {
         "district": "桃園市",
         "county": "桃園縣",
-        "town_id": "10003010",
+        "district_id": "10003010",
         "county_id": "10003",
         "area": 34415889.1907,
         "sort": 7,
@@ -55936,7 +55936,7 @@
       "properties": {
         "district": "桃源區",
         "county": "高雄市",
-        "town_id": "64000370",
+        "district_id": "64000370",
         "county_id": "64000",
         "area": 969427892.7874,
         "sort": 5,
@@ -57254,7 +57254,7 @@
       "properties": {
         "district": "梧棲區",
         "county": "臺中市",
-        "town_id": "66000140",
+        "district_id": "66000140",
         "county_id": "66000",
         "area": 24258037.8871,
         "sort": 3,
@@ -57392,7 +57392,7 @@
       "properties": {
         "district": "楠梓區",
         "county": "高雄市",
-        "town_id": "64000040",
+        "district_id": "64000040",
         "county_id": "64000",
         "area": 27631830.8778,
         "sort": 5,
@@ -57714,7 +57714,7 @@
       "properties": {
         "district": "楠西區",
         "county": "臺南市",
-        "town_id": "67000240",
+        "district_id": "67000240",
         "county_id": "67000",
         "area": 108949651.0943,
         "sort": 4,
@@ -58080,7 +58080,7 @@
       "properties": {
         "district": "橫山鄉",
         "county": "新竹縣",
-        "town_id": "10004080",
+        "district_id": "10004080",
         "county_id": "10004",
         "area": 65136098.0663,
         "sort": 8,
@@ -58358,7 +58358,7 @@
       "properties": {
         "district": "歸仁區",
         "county": "臺南市",
-        "town_id": "67000280",
+        "district_id": "67000280",
         "county_id": "67000",
         "area": 54932023.3851,
         "sort": 4,
@@ -58576,7 +58576,7 @@
       "properties": {
         "district": "水上鄉",
         "county": "嘉義縣",
-        "town_id": "10010120",
+        "district_id": "10010120",
         "county_id": "10010",
         "area": 69894217.1604,
         "sort": 13,
@@ -58930,7 +58930,7 @@
       "properties": {
         "district": "水里鄉",
         "county": "南投縣",
-        "town_id": "10008110",
+        "district_id": "10008110",
         "county_id": "10008",
         "area": 111946203.1305,
         "sort": 11,
@@ -59424,7 +59424,7 @@
       "properties": {
         "district": "汐止區",
         "county": "新北市",
-        "town_id": "65000110",
+        "district_id": "65000110",
         "county_id": "65000",
         "area": 71753684.1931,
         "sort": 1,
@@ -59738,7 +59738,7 @@
       "properties": {
         "district": "池上鄉",
         "county": "臺東縣",
-        "town_id": "10014060",
+        "district_id": "10014060",
         "county_id": "10014",
         "area": 79226239.518,
         "sort": 15,
@@ -59992,7 +59992,7 @@
       "properties": {
         "district": "泰安鄉",
         "county": "苗栗縣",
-        "town_id": "10005180",
+        "district_id": "10005180",
         "county_id": "10005",
         "area": 602884806.7142,
         "sort": 9,
@@ -60714,7 +60714,7 @@
       "properties": {
         "district": "泰山區",
         "county": "新北市",
-        "town_id": "65000160",
+        "district_id": "65000160",
         "county_id": "65000",
         "area": 18075346.6656,
         "sort": 1,
@@ -61112,7 +61112,7 @@
       "properties": {
         "district": "淡水區",
         "county": "新北市",
-        "town_id": "65000100",
+        "district_id": "65000100",
         "county_id": "65000",
         "area": 72078713.8149,
         "sort": 1,
@@ -61402,7 +61402,7 @@
       "properties": {
         "district": "清水區",
         "county": "臺中市",
-        "town_id": "66000120",
+        "district_id": "66000120",
         "county_id": "66000",
         "area": 66365261.4323,
         "sort": 3,
@@ -61776,7 +61776,7 @@
       "properties": {
         "district": "清水區(海)",
         "county": "臺中市",
-        "town_id": "66000140",
+        "district_id": "66000140",
         "county_id": "66000",
         "area": 2043134.719,
         "sort": 3,
@@ -61922,7 +61922,7 @@
       "properties": {
         "district": "湖內區",
         "county": "高雄市",
-        "town_id": "64000250",
+        "district_id": "64000250",
         "county_id": "64000",
         "area": 21714409.0404,
         "sort": 5,
@@ -62112,7 +62112,7 @@
       "properties": {
         "district": "湖口鄉",
         "county": "新竹縣",
-        "town_id": "10004050",
+        "district_id": "10004050",
         "county_id": "10004",
         "area": 58016999.4957,
         "sort": 8,
@@ -62362,7 +62362,7 @@
       "properties": {
         "district": "湖西鄉",
         "county": "澎湖縣",
-        "town_id": "10016020",
+        "district_id": "10016020",
         "county_id": "10016",
         "area": 34685210.2998,
         "sort": 17,
@@ -63620,7 +63620,7 @@
       "properties": {
         "district": "溪湖鎮",
         "county": "彰化縣",
-        "town_id": "10007110",
+        "district_id": "10007110",
         "county_id": "10007",
         "area": 31070762.9918,
         "sort": 10,
@@ -63802,7 +63802,7 @@
       "properties": {
         "district": "烏日區",
         "county": "臺中市",
-        "town_id": "66000230",
+        "district_id": "66000230",
         "county_id": "66000",
         "area": 42267170.4111,
         "sort": 3,
@@ -64108,7 +64108,7 @@
       "properties": {
         "district": "燕巢區",
         "county": "高雄市",
-        "town_id": "64000210",
+        "district_id": "64000210",
         "county_id": "64000",
         "area": 68060155.6129,
         "sort": 5,
@@ -64498,7 +64498,7 @@
       "properties": {
         "district": "玉井區",
         "county": "臺南市",
-        "town_id": "67000230",
+        "district_id": "67000230",
         "county_id": "67000",
         "area": 75062558.9768,
         "sort": 4,
@@ -64936,7 +64936,7 @@
       "properties": {
         "district": "玉里鎮",
         "county": "花蓮縣",
-        "town_id": "10015030",
+        "district_id": "10015030",
         "county_id": "10015",
         "area": 210906974.5797,
         "sort": 16,
@@ -65466,7 +65466,7 @@
       "properties": {
         "district": "瑞穗鄉",
         "county": "花蓮縣",
-        "town_id": "10015090",
+        "district_id": "10015090",
         "county_id": "10015",
         "area": 151588872.9219,
         "sort": 16,
@@ -65928,7 +65928,7 @@
       "properties": {
         "district": "瑞芳區",
         "county": "新北市",
-        "town_id": "65000120",
+        "district_id": "65000120",
         "county_id": "65000",
         "area": 71407179.5603,
         "sort": 1,
@@ -66434,7 +66434,7 @@
       "properties": {
         "district": "瑪家鄉",
         "county": "屏東縣",
-        "town_id": "10013280",
+        "district_id": "10013280",
         "county_id": "10013",
         "area": 61676518.2737,
         "sort": 14,
@@ -66748,7 +66748,7 @@
       "properties": {
         "district": "田寮區",
         "county": "高雄市",
-        "town_id": "64000220",
+        "district_id": "64000220",
         "county_id": "64000",
         "area": 89445103.0875,
         "sort": 5,
@@ -67174,7 +67174,7 @@
       "properties": {
         "district": "田尾鄉",
         "county": "彰化縣",
-        "town_id": "10007210",
+        "district_id": "10007210",
         "county_id": "10007",
         "area": 24689344.9523,
         "sort": 10,
@@ -67356,7 +67356,7 @@
       "properties": {
         "district": "甲仙區",
         "county": "高雄市",
-        "town_id": "64000330",
+        "district_id": "64000330",
         "county_id": "64000",
         "area": 125222677.246,
         "sort": 5,
@@ -67698,7 +67698,7 @@
       "properties": {
         "district": "番路鄉",
         "county": "嘉義縣",
-        "town_id": "10010160",
+        "district_id": "10010160",
         "county_id": "10010",
         "area": 112395668.1465,
         "sort": 13,
@@ -68236,7 +68236,7 @@
       "properties": {
         "district": "石岡區",
         "county": "臺中市",
-        "town_id": "66000200",
+        "district_id": "66000200",
         "county_id": "66000",
         "area": 17809585.1637,
         "sort": 3,
@@ -68426,7 +68426,7 @@
       "properties": {
         "district": "石碇區",
         "county": "新北市",
-        "town_id": "65000190",
+        "district_id": "65000190",
         "county_id": "65000",
         "area": 141854179.9616,
         "sort": 1,
@@ -68836,7 +68836,7 @@
       "properties": {
         "district": "石門區",
         "county": "新北市",
-        "town_id": "65000220",
+        "district_id": "65000220",
         "county_id": "65000",
         "area": 52324019.0453,
         "sort": 1,
@@ -69158,7 +69158,7 @@
       "properties": {
         "district": "社頭鄉",
         "county": "彰化縣",
-        "town_id": "10007170",
+        "district_id": "10007170",
         "county_id": "10007",
         "area": 35977521.2726,
         "sort": 10,
@@ -69436,7 +69436,7 @@
       "properties": {
         "district": "神岡區",
         "county": "臺中市",
-        "town_id": "66000160",
+        "district_id": "66000160",
         "county_id": "66000",
         "area": 36439366.953,
         "sort": 3,
@@ -69630,7 +69630,7 @@
       "properties": {
         "district": "福興鄉",
         "county": "彰化縣",
-        "town_id": "10007060",
+        "district_id": "10007060",
         "county_id": "10007",
         "area": 58317502.9562,
         "sort": 10,
@@ -69932,7 +69932,7 @@
       "properties": {
         "district": "秀林鄉",
         "county": "花蓮縣",
-        "town_id": "10015110",
+        "district_id": "10015110",
         "county_id": "10015",
         "area": 1623832682.2374,
         "sort": 16,
@@ -71134,7 +71134,7 @@
       "properties": {
         "district": "秀水鄉",
         "county": "彰化縣",
-        "town_id": "10007070",
+        "district_id": "10007070",
         "county_id": "10007",
         "area": 28972174.3433,
         "sort": 10,
@@ -71404,7 +71404,7 @@
       "properties": {
         "district": "竹北市",
         "county": "新竹縣",
-        "town_id": "10004010",
+        "district_id": "10004010",
         "county_id": "10004",
         "area": 50354034.4023,
         "sort": 8,
@@ -71634,7 +71634,7 @@
       "properties": {
         "district": "竹南鎮",
         "county": "苗栗縣",
-        "town_id": "10005040",
+        "district_id": "10005040",
         "county_id": "10005",
         "area": 41609002.8807,
         "sort": 9,
@@ -71852,7 +71852,7 @@
       "properties": {
         "district": "竹塘鄉",
         "county": "彰化縣",
-        "town_id": "10007250",
+        "district_id": "10007250",
         "county_id": "10007",
         "area": 41885220.0885,
         "sort": 10,
@@ -72054,7 +72054,7 @@
       "properties": {
         "district": "竹山鎮",
         "county": "南投縣",
-        "town_id": "10008040",
+        "district_id": "10008040",
         "county_id": "10008",
         "area": 258592194.2454,
         "sort": 11,
@@ -72628,7 +72628,7 @@
       "properties": {
         "district": "竹崎鄉",
         "county": "嘉義縣",
-        "town_id": "10010140",
+        "district_id": "10010140",
         "county_id": "10010",
         "area": 156830571.3263,
         "sort": 13,
@@ -73162,7 +73162,7 @@
       "properties": {
         "district": "竹田鄉",
         "county": "屏東縣",
-        "town_id": "10013140",
+        "district_id": "10013140",
         "county_id": "10013",
         "area": 29639558.2502,
         "sort": 14,
@@ -73392,7 +73392,7 @@
       "properties": {
         "district": "七美鄉",
         "county": "澎湖縣",
-        "town_id": "10016060",
+        "district_id": "10016060",
         "county_id": "10016",
         "area": 7433290.5212,
         "sort": 17,
@@ -73614,7 +73614,7 @@
       "properties": {
         "district": "三地門鄉",
         "county": "屏東縣",
-        "town_id": "10013260",
+        "district_id": "10013260",
         "county_id": "10013",
         "area": 185904861.0373,
         "sort": 14,
@@ -74028,7 +74028,7 @@
       "properties": {
         "district": "三星鄉",
         "county": "宜蘭縣",
-        "town_id": "10002100",
+        "district_id": "10002100",
         "county_id": "10002",
         "area": 88131938.4089,
         "sort": 6,
@@ -74350,7 +74350,7 @@
       "properties": {
         "district": "三民區",
         "county": "高雄市",
-        "town_id": "64000050",
+        "district_id": "64000050",
         "county_id": "64000",
         "area": 16937009.4814,
         "sort": 5,
@@ -74516,7 +74516,7 @@
       "properties": {
         "district": "屏東市",
         "county": "屏東縣",
-        "town_id": "10013010",
+        "district_id": "10013010",
         "county_id": "10013",
         "area": 66046235.5759,
         "sort": 14,
@@ -74754,7 +74754,7 @@
       "properties": {
         "district": "新興區",
         "county": "高雄市",
-        "town_id": "64000060",
+        "district_id": "64000060",
         "county_id": "64000",
         "area": 2551460.9996,
         "sort": 5,
@@ -74836,7 +74836,7 @@
       "properties": {
         "district": "溪州鄉",
         "county": "彰化縣",
-        "town_id": "10007260",
+        "district_id": "10007260",
         "county_id": "10007",
         "area": 68881960.648,
         "sort": 10,
@@ -75050,7 +75050,7 @@
       "properties": {
         "district": "牡丹鄉",
         "county": "屏東縣",
-        "town_id": "10013330",
+        "district_id": "10013330",
         "county_id": "10013",
         "area": 173846913.7795,
         "sort": 14,
@@ -75444,7 +75444,7 @@
       "properties": {
         "district": "北港鎮",
         "county": "雲林縣",
-        "town_id": "10009060",
+        "district_id": "10009060",
         "county_id": "10009",
         "area": 41873484.1169,
         "sort": 12,
@@ -75714,7 +75714,7 @@
       "properties": {
         "district": "外埔區",
         "county": "臺中市",
-        "town_id": "66000210",
+        "district_id": "66000210",
         "county_id": "66000",
         "area": 42086522.53,
         "sort": 3,
@@ -75868,7 +75868,7 @@
       "properties": {
         "district": "關廟區",
         "county": "臺南市",
-        "town_id": "67000290",
+        "district_id": "67000290",
         "county_id": "67000",
         "area": 53498649.473,
         "sort": 4,
@@ -76314,7 +76314,7 @@
       "properties": {
         "district": "梧棲區(海)",
         "county": "臺中市",
-        "town_id": "66000140",
+        "district_id": "66000140",
         "county_id": "66000",
         "area": 9397241.9587,
         "sort": 3,
@@ -76420,7 +76420,7 @@
       "properties": {
         "district": "獅潭鄉",
         "county": "苗栗縣",
-        "town_id": "10005170",
+        "district_id": "10005170",
         "county_id": "10005",
         "area": 79387619.5281,
         "sort": 9,
@@ -76738,7 +76738,7 @@
       "properties": {
         "district": "五股區",
         "county": "新北市",
-        "town_id": "65000150",
+        "district_id": "65000150",
         "county_id": "65000",
         "area": 34349167.5822,
         "sort": 1,
@@ -77016,7 +77016,7 @@
       "properties": {
         "district": "和美鎮",
         "county": "彰化縣",
-        "town_id": "10007030",
+        "district_id": "10007030",
         "county_id": "10007",
         "area": 38335766.2423,
         "sort": 10,
@@ -77262,7 +77262,7 @@
       "properties": {
         "district": "大溪鎮",
         "county": "桃園縣",
-        "town_id": "10003030",
+        "district_id": "10003030",
         "county_id": "10003",
         "area": 105070007.5878,
         "sort": 7,
@@ -77668,7 +77668,7 @@
       "properties": {
         "district": "茄萣區",
         "county": "高雄市",
-        "town_id": "64000260",
+        "district_id": "64000260",
         "county_id": "64000",
         "area": 17461137.0345,
         "sort": 5,
@@ -77830,7 +77830,7 @@
       "properties": {
         "district": "延平鄉",
         "county": "臺東縣",
-        "town_id": "10014130",
+        "district_id": "10014130",
         "county_id": "10014",
         "area": 480642178.4807,
         "sort": 15,
@@ -78552,7 +78552,7 @@
       "properties": {
         "district": "琉球鄉",
         "county": "屏東縣",
-        "town_id": "10013220",
+        "district_id": "10013220",
         "county_id": "10013",
         "area": 6873606.6814,
         "sort": 14,
@@ -78702,7 +78702,7 @@
       "properties": {
         "district": "五峰鄉",
         "county": "新竹縣",
-        "town_id": "10004130",
+        "district_id": "10004130",
         "county_id": "10004",
         "area": 210039072.8463,
         "sort": 8,
@@ -79088,7 +79088,7 @@
       "properties": {
         "district": "春日鄉",
         "county": "屏東縣",
-        "town_id": "10013310",
+        "district_id": "10013310",
         "county_id": "10013",
         "area": 155546874.0109,
         "sort": 14,
@@ -79542,7 +79542,7 @@
       "properties": {
         "district": "中區",
         "county": "臺中市",
-        "town_id": "66000010",
+        "district_id": "66000010",
         "county_id": "66000",
         "area": 943735.3322,
         "sort": 3,
@@ -79608,7 +79608,7 @@
       "properties": {
         "district": "信義區",
         "county": "基隆市",
-        "town_id": "10017070",
+        "district_id": "10017070",
         "county_id": "10017",
         "area": 10734491.898,
         "sort": 18,
@@ -79746,7 +79746,7 @@
       "properties": {
         "district": "光復鄉",
         "county": "花蓮縣",
-        "town_id": "10015070",
+        "district_id": "10015070",
         "county_id": "10015",
         "area": 131634539.5307,
         "sort": 16,
@@ -80044,7 +80044,7 @@
       "properties": {
         "district": "內門區",
         "county": "高雄市",
-        "town_id": "64000350",
+        "district_id": "64000350",
         "county_id": "64000",
         "area": 93438297.4732,
         "sort": 5,
@@ -80458,7 +80458,7 @@
       "properties": {
         "district": "公館鄉",
         "county": "苗栗縣",
-        "town_id": "10005090",
+        "district_id": "10005090",
         "county_id": "10005",
         "area": 71684451.775,
         "sort": 9,
@@ -80756,7 +80756,7 @@
       "properties": {
         "district": "六龜區",
         "county": "高雄市",
-        "town_id": "64000320",
+        "district_id": "64000320",
         "county_id": "64000",
         "area": 186085059.6863,
         "sort": 5,
@@ -81438,7 +81438,7 @@
       "properties": {
         "district": "大里區",
         "county": "臺中市",
-        "town_id": "66000280",
+        "district_id": "66000280",
         "county_id": "66000",
         "area": 29272350.1966,
         "sort": 3,
@@ -81620,7 +81620,7 @@
       "properties": {
         "district": "平溪區",
         "county": "新北市",
-        "town_id": "65000240",
+        "district_id": "65000240",
         "county_id": "65000",
         "area": 71207049.6757,
         "sort": 1,
@@ -81918,7 +81918,7 @@
       "properties": {
         "district": "蘇澳鎮",
         "county": "宜蘭縣",
-        "town_id": "10002030",
+        "district_id": "10002030",
         "county_id": "10002",
         "area": 86562200.634,
         "sort": 6,
@@ -82604,7 +82604,7 @@
       "properties": {
         "district": "鳥松區",
         "county": "高雄市",
-        "town_id": "64000180",
+        "district_id": "64000180",
         "county_id": "64000",
         "area": 24830508.3236,
         "sort": 5,
@@ -82806,7 +82806,7 @@
       "properties": {
         "district": "海端鄉",
         "county": "臺東縣",
-        "town_id": "10014120",
+        "district_id": "10014120",
         "county_id": "10014",
         "area": 892992227.6046,
         "sort": 15,
@@ -83628,7 +83628,7 @@
       "properties": {
         "district": "口湖鄉",
         "county": "雲林縣",
-        "town_id": "10009190",
+        "district_id": "10009190",
         "county_id": "10009",
         "area": 98461054.5013,
         "sort": 12,
@@ -84770,7 +84770,7 @@
       "properties": {
         "district": "善化區",
         "county": "臺南市",
-        "town_id": "67000190",
+        "district_id": "67000190",
         "county_id": "67000",
         "area": 53789424.9687,
         "sort": 4,
@@ -84992,7 +84992,7 @@
       "properties": {
         "district": "太平區",
         "county": "臺中市",
-        "town_id": "66000270",
+        "district_id": "66000270",
         "county_id": "66000",
         "area": 120246350.9822,
         "sort": 3,
@@ -85306,7 +85306,7 @@
       "properties": {
         "district": "貢寮區",
         "county": "新北市",
-        "town_id": "65000260",
+        "district_id": "65000260",
         "county_id": "65000",
         "area": 98889880.6791,
         "sort": 1,
@@ -85800,7 +85800,7 @@
       "properties": {
         "district": "鹽埔鄉",
         "county": "屏東縣",
-        "town_id": "10013100",
+        "district_id": "10013100",
         "county_id": "10013",
         "area": 59171290.0969,
         "sort": 14,
@@ -86014,7 +86014,7 @@
       "properties": {
         "district": "小港區(海)",
         "county": "高雄市",
-        "town_id": "64000110",
+        "district_id": "64000110",
         "county_id": "64000",
         "area": 3124615.525,
         "sort": 5,
@@ -86152,7 +86152,7 @@
       "properties": {
         "district": "安樂區",
         "county": "基隆市",
-        "town_id": "10017060",
+        "district_id": "10017060",
         "county_id": "10017",
         "area": 17867348.9498,
         "sort": 18,
@@ -86346,7 +86346,7 @@
       "properties": {
         "district": "苓雅區",
         "county": "高雄市",
-        "town_id": "64000080",
+        "district_id": "64000080",
         "county_id": "64000",
         "area": 8195374.4384,
         "sort": 5,
@@ -86512,7 +86512,7 @@
       "properties": {
         "district": "虎尾鎮",
         "county": "雲林縣",
-        "town_id": "10009030",
+        "district_id": "10009030",
         "county_id": "10009",
         "area": 68043130.4751,
         "sort": 12,
@@ -86794,7 +86794,7 @@
       "properties": {
         "district": "佳里區",
         "county": "臺南市",
-        "town_id": "67000120",
+        "district_id": "67000120",
         "county_id": "67000",
         "area": 39078104.1264,
         "sort": 4,
@@ -87064,7 +87064,7 @@
       "properties": {
         "district": "冬山鄉",
         "county": "宜蘭縣",
-        "town_id": "10002080",
+        "district_id": "10002080",
         "county_id": "10002",
         "area": 75334997.2364,
         "sort": 6,
@@ -87506,7 +87506,7 @@
       "properties": {
         "district": "大村鄉",
         "county": "彰化縣",
-        "town_id": "10007130",
+        "district_id": "10007130",
         "county_id": "10007",
         "area": 30563225.4795,
         "sort": 10,
@@ -87744,7 +87744,7 @@
       "properties": {
         "district": "林內鄉",
         "county": "雲林縣",
-        "town_id": "10009100",
+        "district_id": "10009100",
         "county_id": "10009",
         "area": 52303015.2019,
         "sort": 12,
@@ -87910,7 +87910,7 @@
       "properties": {
         "district": "新園鄉",
         "county": "屏東縣",
-        "town_id": "10013170",
+        "district_id": "10013170",
         "county_id": "10013",
         "area": 44320669.4025,
         "sort": 14,
@@ -88072,7 +88072,7 @@
       "properties": {
         "district": "暖暖區",
         "county": "基隆市",
-        "town_id": "10017030",
+        "district_id": "10017030",
         "county_id": "10017",
         "area": 23013125.4003,
         "sort": 18,
@@ -88230,7 +88230,7 @@
       "properties": {
         "district": "梅山鄉",
         "county": "嘉義縣",
-        "town_id": "10010150",
+        "district_id": "10010150",
         "county_id": "10010",
         "area": 119490984.769,
         "sort": 13,
@@ -88684,7 +88684,7 @@
       "properties": {
         "district": "永靖鄉",
         "county": "彰化縣",
-        "town_id": "10007160",
+        "district_id": "10007160",
         "county_id": "10007",
         "area": 20268853.0966,
         "sort": 10,
@@ -88906,7 +88906,7 @@
       "properties": {
         "district": "礁溪鄉",
         "county": "宜蘭縣",
-        "town_id": "10002050",
+        "district_id": "10002050",
         "county_id": "10002",
         "area": 100566312.9348,
         "sort": 6,
@@ -89308,7 +89308,7 @@
       "properties": {
         "district": "七堵區",
         "county": "基隆市",
-        "town_id": "10017020",
+        "district_id": "10017020",
         "county_id": "10017",
         "area": 56625885.36,
         "sort": 18,
@@ -89598,7 +89598,7 @@
       "properties": {
         "district": "香山區",
         "county": "新竹市",
-        "town_id": "10018030",
+        "district_id": "10018030",
         "county_id": "10018",
         "area": 64538351.8195,
         "sort": 19,
@@ -89904,7 +89904,7 @@
       "properties": {
         "district": "枋寮鄉",
         "county": "屏東縣",
-        "town_id": "10013160",
+        "district_id": "10013160",
         "county_id": "10013",
         "area": 58884115.2809,
         "sort": 14,
@@ -90226,7 +90226,7 @@
       "properties": {
         "district": "坪林區",
         "county": "新北市",
-        "town_id": "65000200",
+        "district_id": "65000200",
         "county_id": "65000",
         "area": 168274354.4382,
         "sort": 1,
@@ -90588,7 +90588,7 @@
       "properties": {
         "district": "埤頭鄉",
         "county": "彰化縣",
-        "town_id": "10007220",
+        "district_id": "10007220",
         "county_id": "10007",
         "area": 42430702.4784,
         "sort": 10,
@@ -90822,7 +90822,7 @@
       "properties": {
         "district": "大內區",
         "county": "臺南市",
-        "town_id": "67000110",
+        "district_id": "67000110",
         "county_id": "67000",
         "area": 70874676.3568,
         "sort": 4,
@@ -91108,7 +91108,7 @@
       "properties": {
         "district": "大埔鄉",
         "county": "嘉義縣",
-        "town_id": "10010170",
+        "district_id": "10010170",
         "county_id": "10010",
         "area": 174289067.7317,
         "sort": 13,
@@ -91538,7 +91538,7 @@
       "properties": {
         "district": "大武鄉",
         "county": "臺東縣",
-        "town_id": "10014100",
+        "district_id": "10014100",
         "county_id": "10014",
         "area": 62590011.2969,
         "sort": 15,
@@ -91820,7 +91820,7 @@
       "properties": {
         "district": "大肚區",
         "county": "臺中市",
-        "town_id": "66000240",
+        "district_id": "66000240",
         "county_id": "66000",
         "area": 38298473.6903,
         "sort": 3,
@@ -91970,7 +91970,7 @@
       "properties": {
         "district": "西區",
         "county": "臺中市",
-        "town_id": "66000040",
+        "district_id": "66000040",
         "county_id": "66000",
         "area": 6374932.3015,
         "sort": 3,
@@ -92084,7 +92084,7 @@
       "properties": {
         "district": "前鎮區(海)",
         "county": "高雄市",
-        "town_id": "64000090",
+        "district_id": "64000090",
         "county_id": "64000",
         "area": 2106713.9366,
         "sort": 5,
@@ -92198,7 +92198,7 @@
       "properties": {
         "district": "造橋鄉",
         "county": "苗栗縣",
-        "town_id": "10005150",
+        "district_id": "10005150",
         "county_id": "10005",
         "area": 48391169.4502,
         "sort": 9,
@@ -92572,7 +92572,7 @@
       "properties": {
         "district": "金山區",
         "county": "新北市",
-        "town_id": "65000270",
+        "district_id": "65000270",
         "county_id": "65000",
         "area": 47575488.0063,
         "sort": 1,
@@ -92834,7 +92834,7 @@
       "properties": {
         "district": "長濱鄉",
         "county": "臺東縣",
-        "town_id": "10014080",
+        "district_id": "10014080",
         "county_id": "10014",
         "area": 148842372.6552,
         "sort": 15,
@@ -93192,7 +93192,7 @@
       "properties": {
         "district": "阿里山鄉",
         "county": "嘉義縣",
-        "town_id": "10010180",
+        "district_id": "10010180",
         "county_id": "10010",
         "area": 468330722.611,
         "sort": 13,
@@ -94034,7 +94034,7 @@
       "properties": {
         "district": "霧峰區",
         "county": "臺中市",
-        "town_id": "66000260",
+        "district_id": "66000260",
         "county_id": "66000",
         "area": 96021760.1612,
         "sort": 3,
@@ -94336,7 +94336,7 @@
       "properties": {
         "district": "頭屋鄉",
         "county": "苗栗縣",
-        "town_id": "10005120",
+        "district_id": "10005120",
         "county_id": "10005",
         "area": 51583962.2758,
         "sort": 9,
@@ -94590,7 +94590,7 @@
       "properties": {
         "district": "鳳山區",
         "county": "高雄市",
-        "town_id": "64000120",
+        "district_id": "64000120",
         "county_id": "64000",
         "area": 27855307.7757,
         "sort": 5,
@@ -94844,7 +94844,7 @@
       "properties": {
         "district": "鹽水區",
         "county": "臺南市",
-        "town_id": "67000020",
+        "district_id": "67000020",
         "county_id": "67000",
         "area": 51351270.0113,
         "sort": 4,
@@ -95202,7 +95202,7 @@
       "properties": {
         "district": "鹿谷鄉",
         "county": "南投縣",
-        "town_id": "10008070",
+        "district_id": "10008070",
         "county_id": "10008",
         "area": 142948389.1925,
         "sort": 11,
@@ -95564,7 +95564,7 @@
       "properties": {
         "district": "龍井區",
         "county": "臺中市",
-        "town_id": "66000250",
+        "district_id": "66000250",
         "county_id": "66000",
         "area": 48679668.63,
         "sort": 3,
@@ -95822,7 +95822,7 @@
       "properties": {
         "district": "小港區",
         "county": "高雄市",
-        "town_id": "64000110",
+        "district_id": "64000110",
         "county_id": "64000",
         "area": 43827138.2707,
         "sort": 5,
@@ -96196,7 +96196,7 @@
       "properties": {
         "district": "岡山區",
         "county": "高雄市",
-        "town_id": "64000190",
+        "district_id": "64000190",
         "county_id": "64000",
         "area": 50219828.9589,
         "sort": 5,
@@ -96598,7 +96598,7 @@
       "properties": {
         "district": "崙背鄉",
         "county": "雲林縣",
-        "town_id": "10009120",
+        "district_id": "10009120",
         "county_id": "10009",
         "area": 57201126.7397,
         "sort": 12,
@@ -96812,7 +96812,7 @@
       "properties": {
         "district": "彌陀區",
         "county": "高雄市",
-        "town_id": "64000280",
+        "district_id": "64000280",
         "county_id": "64000",
         "area": 14573461.236,
         "sort": 5,
@@ -96966,7 +96966,7 @@
       "properties": {
         "district": "恆春鎮",
         "county": "屏東縣",
-        "town_id": "10013040",
+        "district_id": "10013040",
         "county_id": "10013",
         "area": 138018538.8322,
         "sort": 14,
@@ -97496,7 +97496,7 @@
       "properties": {
         "district": "學甲區",
         "county": "臺南市",
-        "town_id": "67000130",
+        "district_id": "67000130",
         "county_id": "67000",
         "area": 54739608.1932,
         "sort": 4,
@@ -97826,7 +97826,7 @@
       "properties": {
         "district": "宜蘭市",
         "county": "宜蘭縣",
-        "town_id": "10002010",
+        "district_id": "10002010",
         "county_id": "10002",
         "area": 30148773.4711,
         "sort": 6,
@@ -98060,7 +98060,7 @@
       "properties": {
         "district": "美濃區",
         "county": "高雄市",
-        "town_id": "64000310",
+        "district_id": "64000310",
         "county_id": "64000",
         "area": 118035869.3682,
         "sort": 5,
@@ -98474,7 +98474,7 @@
       "properties": {
         "district": "芬園鄉",
         "county": "彰化縣",
-        "town_id": "10007090",
+        "district_id": "10007090",
         "county_id": "10007",
         "area": 38279490.892,
         "sort": 10,
@@ -98784,7 +98784,7 @@
       "properties": {
         "district": "苑裡鎮",
         "county": "苗栗縣",
-        "town_id": "10005020",
+        "district_id": "10005020",
         "county_id": "10005",
         "area": 69918348.7978,
         "sort": 9,
@@ -99018,7 +99018,7 @@
       "properties": {
         "district": "莿桐鄉",
         "county": "雲林縣",
-        "town_id": "10009090",
+        "district_id": "10009090",
         "county_id": "10009",
         "area": 57332457.2891,
         "sort": 12,
@@ -99176,7 +99176,7 @@
       "properties": {
         "district": "萬榮鄉",
         "county": "花蓮縣",
-        "town_id": "10015120",
+        "district_id": "10015120",
         "county_id": "10015",
         "area": 687351027.9358,
         "sort": 16,
@@ -100042,7 +100042,7 @@
       "properties": {
         "district": "蘭嶼鄉",
         "county": "臺東縣",
-        "town_id": "10014160",
+        "district_id": "10014160",
         "county_id": "10014",
         "area": 47042606.2885,
         "sort": 15,
@@ -100600,7 +100600,7 @@
       "properties": {
         "district": "三芝區",
         "county": "新北市",
-        "town_id": "65000210",
+        "district_id": "65000210",
         "county_id": "65000",
         "area": 67133617.7106,
         "sort": 1,
@@ -100958,7 +100958,7 @@
       "properties": {
         "district": "前金區",
         "county": "高雄市",
-        "town_id": "64000070",
+        "district_id": "64000070",
         "county_id": "64000",
         "area": 1957267.9281,
         "sort": 5,
@@ -101024,7 +101024,7 @@
       "properties": {
         "district": "永和區",
         "county": "新北市",
-        "town_id": "65000040",
+        "district_id": "65000040",
         "county_id": "65000",
         "area": 6202837.8273,
         "sort": 1,
@@ -101130,7 +101130,7 @@
       "properties": {
         "district": "大寮區",
         "county": "高雄市",
-        "town_id": "64000140",
+        "district_id": "64000140",
         "county_id": "64000",
         "area": 70104476.9938,
         "sort": 5,
@@ -101376,7 +101376,7 @@
       "properties": {
         "district": "大甲區",
         "county": "臺中市",
-        "town_id": "66000110",
+        "district_id": "66000110",
         "county_id": "66000",
         "area": 59771861.3998,
         "sort": 3,
@@ -101670,7 +101670,7 @@
       "properties": {
         "district": "霧臺鄉",
         "county": "屏東縣",
-        "town_id": "10013270",
+        "district_id": "10013270",
         "county_id": "10013",
         "area": 304669387.0938,
         "sort": 14,
@@ -102144,7 +102144,7 @@
       "properties": {
         "district": "新店區",
         "county": "新北市",
-        "town_id": "65000060",
+        "district_id": "65000060",
         "county_id": "65000",
         "area": 121120359.6507,
         "sort": 1,
@@ -102510,7 +102510,7 @@
       "properties": {
         "district": "大樹區",
         "county": "高雄市",
-        "town_id": "64000150",
+        "district_id": "64000150",
         "county_id": "64000",
         "area": 67341377.6391,
         "sort": 5,
@@ -102712,7 +102712,7 @@
       "properties": {
         "district": "馬公市",
         "county": "澎湖縣",
-        "town_id": "10016010",
+        "district_id": "10016010",
         "county_id": "10016",
         "area": 34893429.6253,
         "sort": 17,
@@ -103858,7 +103858,7 @@
       "properties": {
         "district": "國姓鄉",
         "county": "南投縣",
-        "town_id": "10008100",
+        "district_id": "10008100",
         "county_id": "10008",
         "area": 206001412.6714,
         "sort": 11,
@@ -104484,7 +104484,7 @@
       "properties": {
         "district": "寶山鄉",
         "county": "新竹縣",
-        "town_id": "10004100",
+        "district_id": "10004100",
         "county_id": "10004",
         "area": 64307891.2364,
         "sort": 8,
@@ -104776,7 +104776,7 @@
       "properties": {
         "district": "潮州鎮",
         "county": "屏東縣",
-        "town_id": "10013020",
+        "district_id": "10013020",
         "county_id": "10013",
         "area": 42525387.6161,
         "sort": 14,
@@ -105038,7 +105038,7 @@
       "properties": {
         "district": "龍井區(海)",
         "county": "臺中市",
-        "town_id": "66000140",
+        "district_id": "66000140",
         "county_id": "66000",
         "area": 1148859.7077,
         "sort": 3,
@@ -105100,7 +105100,7 @@
       "properties": {
         "district": "仁愛鄉",
         "county": "南投縣",
-        "town_id": "10008130",
+        "district_id": "10008130",
         "county_id": "10008",
         "area": 1219335051.0924,
         "sort": 11,
@@ -106294,7 +106294,7 @@
       "properties": {
         "district": "芎林鄉",
         "county": "新竹縣",
-        "town_id": "10004070",
+        "district_id": "10004070",
         "county_id": "10004",
         "area": 39926097.3104,
         "sort": 8,
@@ -106548,7 +106548,7 @@
       "properties": {
         "district": "成功鎮",
         "county": "臺東縣",
-        "town_id": "10014020",
+        "district_id": "10014020",
         "county_id": "10014",
         "area": 143525877.0159,
         "sort": 15,
@@ -107638,7 +107638,7 @@
       "properties": {
         "district": "新港鄉",
         "county": "嘉義縣",
-        "town_id": "10010070",
+        "district_id": "10010070",
         "county_id": "10010",
         "area": 66147578.5573,
         "sort": 13,
@@ -107940,7 +107940,7 @@
       "properties": {
         "district": "新豐鄉",
         "county": "新竹縣",
-        "town_id": "10004060",
+        "district_id": "10004060",
         "county_id": "10004",
         "area": 49887961.2026,
         "sort": 8,
@@ -108118,7 +108118,7 @@
       "properties": {
         "district": "旗津區(海)",
         "county": "高雄市",
-        "town_id": "64000100",
+        "district_id": "64000100",
         "county_id": "64000",
         "area": 4506427.7961,
         "sort": 5,
@@ -108344,7 +108344,7 @@
       "properties": {
         "district": "望安鄉",
         "county": "澎湖縣",
-        "town_id": "10016050",
+        "district_id": "10016050",
         "county_id": "10016",
         "area": 15557740.0088,
         "sort": 17,
@@ -109766,7 +109766,7 @@
       "properties": {
         "district": "東港鎮",
         "county": "屏東縣",
-        "town_id": "10013030",
+        "district_id": "10013030",
         "county_id": "10013",
         "area": 28467529.6273,
         "sort": 14,
@@ -109976,7 +109976,7 @@
       "properties": {
         "district": "板橋區",
         "county": "新北市",
-        "town_id": "65000010",
+        "district_id": "65000010",
         "county_id": "65000",
         "area": 21240955.131,
         "sort": 1,
@@ -110142,7 +110142,7 @@
       "properties": {
         "district": "柳營區",
         "county": "臺南市",
-        "town_id": "67000040",
+        "district_id": "67000040",
         "county_id": "67000",
         "area": 61962835.7968,
         "sort": 4,
@@ -110440,7 +110440,7 @@
       "properties": {
         "district": "楊梅市",
         "county": "桃園縣",
-        "town_id": "10003040",
+        "district_id": "10003040",
         "county_id": "10003",
         "area": 89650594.3014,
         "sort": 7,
@@ -110702,7 +110702,7 @@
       "properties": {
         "district": "樹林區",
         "county": "新北市",
-        "town_id": "65000070",
+        "district_id": "65000070",
         "county_id": "65000",
         "area": 31917924.9875,
         "sort": 1,
@@ -110912,7 +110912,7 @@
       "properties": {
         "district": "民雄鄉",
         "county": "嘉義縣",
-        "town_id": "10010050",
+        "district_id": "10010050",
         "county_id": "10010",
         "area": 84837538.5813,
         "sort": 13,
@@ -111338,7 +111338,7 @@
       "properties": {
         "district": "永安區",
         "county": "高雄市",
-        "town_id": "64000270",
+        "district_id": "64000270",
         "county_id": "64000",
         "area": 26436859.8491,
         "sort": 5,
@@ -111592,7 +111592,7 @@
       "properties": {
         "district": "沙鹿區",
         "county": "臺中市",
-        "town_id": "66000130",
+        "district_id": "66000130",
         "county_id": "66000",
         "area": 40127103.2402,
         "sort": 3,
@@ -111758,7 +111758,7 @@
       "properties": {
         "district": "泰武鄉",
         "county": "屏東縣",
-        "town_id": "10013290",
+        "district_id": "10013290",
         "county_id": "10013",
         "area": 124108174.9893,
         "sort": 14,
@@ -112260,7 +112260,7 @@
       "properties": {
         "district": "深坑區",
         "county": "新北市",
-        "town_id": "65000180",
+        "district_id": "65000180",
         "county_id": "65000",
         "area": 21025463.5664,
         "sort": 1,
@@ -112402,7 +112402,7 @@
       "properties": {
         "district": "鹿野鄉",
         "county": "臺東縣",
-        "town_id": "10014050",
+        "district_id": "10014050",
         "county_id": "10014",
         "area": 79749077.2358,
         "sort": 15,
@@ -112676,7 +112676,7 @@
       "properties": {
         "district": "梧棲區",
         "county": "臺中市",
-        "town_id": "66000140",
+        "district_id": "66000140",
         "county_id": "66000",
         "area": 7126895.0008,
         "sort": 3,
@@ -112750,7 +112750,7 @@
       "properties": {
         "district": "白沙鄉",
         "county": "澎湖縣",
-        "town_id": "10016030",
+        "district_id": "10016030",
         "county_id": "10016",
         "area": 22939061.296,
         "sort": 17,
@@ -115800,7 +115800,7 @@
       "properties": {
         "district": "三峽區",
         "county": "新北市",
-        "town_id": "65000090",
+        "district_id": "65000090",
         "county_id": "65000",
         "area": 189607099.452,
         "sort": 1,
@@ -116282,7 +116282,7 @@
       "properties": {
         "district": "豐原區",
         "county": "臺中市",
-        "town_id": "66000090",
+        "district_id": "66000090",
         "county_id": "66000",
         "area": 41611846.1219,
         "sort": 3,
@@ -116512,7 +116512,7 @@
       "properties": {
         "district": "水林鄉",
         "county": "雲林縣",
-        "town_id": "10009200",
+        "district_id": "10009200",
         "county_id": "10009",
         "area": 72873822.0748,
         "sort": 12,
@@ -116802,7 +116802,7 @@
       "properties": {
         "district": "仁德區",
         "county": "臺南市",
-        "town_id": "67000270",
+        "district_id": "67000270",
         "county_id": "67000",
         "area": 50396747.877,
         "sort": 4,
@@ -117028,7 +117028,7 @@
       "properties": {
         "district": "褒忠鄉",
         "county": "雲林縣",
-        "town_id": "10009150",
+        "district_id": "10009150",
         "county_id": "10009",
         "area": 35600913.9343,
         "sort": 12,
@@ -117218,7 +117218,7 @@
       "properties": {
         "district": "烏來區",
         "county": "新北市",
-        "town_id": "65000290",
+        "district_id": "65000290",
         "county_id": "65000",
         "area": 333512130.7324,
         "sort": 1,
@@ -117784,7 +117784,7 @@
       "properties": {
         "district": "卑南鄉",
         "county": "臺東縣",
-        "town_id": "10014040",
+        "district_id": "10014040",
         "county_id": "10014",
         "area": 425473502.0182,
         "sort": 15,
@@ -118598,7 +118598,7 @@
       "properties": {
         "district": "那瑪夏區",
         "county": "高雄市",
-        "town_id": "64000380",
+        "district_id": "64000380",
         "county_id": "64000",
         "area": 172345931.5253,
         "sort": 5,
@@ -119072,7 +119072,7 @@
       "properties": {
         "district": "竹東鎮",
         "county": "新竹縣",
-        "town_id": "10004020",
+        "district_id": "10004020",
         "county_id": "10004",
         "area": 53504391.9014,
         "sort": 8,
@@ -119470,7 +119470,7 @@
       "properties": {
         "district": "大同鄉",
         "county": "宜蘭縣",
-        "town_id": "10002110",
+        "district_id": "10002110",
         "county_id": "10002",
         "area": 765419487.1491,
         "sort": 6,
@@ -120336,7 +120336,7 @@
       "properties": {
         "district": "阿蓮區",
         "county": "高雄市",
-        "town_id": "64000230",
+        "district_id": "64000230",
         "county_id": "64000",
         "area": 35339343.1198,
         "sort": 5,
@@ -120558,7 +120558,7 @@
       "properties": {
         "district": "彰化市",
         "county": "彰化縣",
-        "town_id": "10007010",
+        "district_id": "10007010",
         "county_id": "10007",
         "area": 65664577.7253,
         "sort": 10,
@@ -120844,7 +120844,7 @@
       "properties": {
         "district": "斗六市",
         "county": "雲林縣",
-        "town_id": "10009010",
+        "district_id": "10009010",
         "county_id": "10009",
         "area": 91586490.5743,
         "sort": 12,
@@ -121258,7 +121258,7 @@
       "properties": {
         "district": "南竿鄉",
         "county": "連江縣",
-        "town_id": "09007010",
+        "district_id": "09007010",
         "county_id": "09007",
         "area": 4734200,
         "sort": 0,
@@ -122974,7 +122974,7 @@
       "properties": {
         "district": "莒光鄉",
         "county": "連江縣",
-        "town_id": "09007030",
+        "district_id": "09007030",
         "county_id": "09007",
         "area": 3942600,
         "sort": 0,
@@ -123948,7 +123948,7 @@
       "properties": {
         "district": "金湖鎮",
         "county": "金門縣",
-        "town_id": "09020030",
+        "district_id": "09020030",
         "county_id": "09020",
         "area": 34138900,
         "sort": 0,
@@ -124258,7 +124258,7 @@
       "properties": {
         "district": "東引鄉",
         "county": "連江縣",
-        "town_id": "09007040",
+        "district_id": "09007040",
         "county_id": "09007",
         "area": 4502400,
         "sort": 0,
@@ -125012,7 +125012,7 @@
       "properties": {
         "district": "金城鎮",
         "county": "金門縣",
-        "town_id": "09020010",
+        "district_id": "09020010",
         "county_id": "09020",
         "area": 18919700,
         "sort": 0,
@@ -125242,7 +125242,7 @@
       "properties": {
         "district": "北竿鄉",
         "county": "連江縣",
-        "town_id": "09007020",
+        "district_id": "09007020",
         "county_id": "09007",
         "area": 3754700,
         "sort": 0,
@@ -126340,7 +126340,7 @@
       "properties": {
         "district": "金沙鎮",
         "county": "金門縣",
-        "town_id": "09020020",
+        "district_id": "09020020",
         "county_id": "09020",
         "area": 43374800,
         "sort": 0,
@@ -126674,7 +126674,7 @@
       "properties": {
         "district": "金寧鄉",
         "county": "金門縣",
-        "town_id": "09020040",
+        "district_id": "09020040",
         "county_id": "09020",
         "area": 34988600,
         "sort": 0,
@@ -126808,7 +126808,7 @@
       "properties": {
         "district": "烈嶼鄉",
         "county": "金門縣",
-        "town_id": "09020050",
+        "district_id": "09020050",
         "county_id": "09020",
         "area": 15285700,
         "sort": 0,
@@ -127042,7 +127042,7 @@
       "properties": {
         "district": "大安區",
         "county": "臺北市",
-        "town_id": "63000030",
+        "district_id": "63000030",
         "county_id": "63000",
         "area": 11331460.228,
         "sort": 2,
@@ -127136,7 +127136,7 @@
       "properties": {
         "district": "鳳林鎮",
         "county": "花蓮縣",
-        "town_id": "10015020",
+        "district_id": "10015020",
         "county_id": "10015",
         "area": 127451843.3978,
         "sort": 16,
@@ -127422,7 +127422,7 @@
       "properties": {
         "district": "西湖鄉",
         "county": "苗栗縣",
-        "town_id": "10005140",
+        "district_id": "10005140",
         "county_id": "10005",
         "area": 40933423.3792,
         "sort": 9,
@@ -127668,7 +127668,7 @@
       "properties": {
         "district": "永康區",
         "county": "臺南市",
-        "town_id": "67000310",
+        "district_id": "67000310",
         "county_id": "67000",
         "area": 40883856.9535,
         "sort": 4,
@@ -127882,7 +127882,7 @@
       "properties": {
         "district": "東勢區",
         "county": "臺中市",
-        "town_id": "66000100",
+        "district_id": "66000100",
         "county_id": "66000",
         "area": 107793540.5161,
         "sort": 3,
@@ -128212,7 +128212,7 @@
       "properties": {
         "district": "田中鎮",
         "county": "彰化縣",
-        "town_id": "10007120",
+        "district_id": "10007120",
         "county_id": "10007",
         "area": 34362092.1109,
         "sort": 10,
@@ -128510,7 +128510,7 @@
       "properties": {
         "district": "西嶼鄉",
         "county": "澎湖縣",
-        "town_id": "10016040",
+        "district_id": "10016040",
         "county_id": "10016",
         "area": 19657049.5187,
         "sort": 17,
@@ -129398,7 +129398,7 @@
       "properties": {
         "district": "西屯區",
         "county": "臺中市",
-        "town_id": "66000060",
+        "district_id": "66000060",
         "county_id": "66000",
         "area": 40121187.8154,
         "sort": 3,
@@ -129628,7 +129628,7 @@
       "properties": {
         "district": "山上區",
         "county": "臺南市",
-        "town_id": "67000220",
+        "district_id": "67000220",
         "county_id": "67000",
         "area": 27660020.7975,
         "sort": 4,
@@ -129846,7 +129846,7 @@
       "properties": {
         "district": "北埔鄉",
         "county": "新竹縣",
-        "town_id": "10004090",
+        "district_id": "10004090",
         "county_id": "10004",
         "area": 53413117.627,
         "sort": 8,
@@ -130148,7 +130148,7 @@
       "properties": {
         "district": "官田區",
         "county": "臺南市",
-        "town_id": "67000100",
+        "district_id": "67000100",
         "county_id": "67000",
         "area": 72207243.2646,
         "sort": 4,
@@ -130486,7 +130486,7 @@
       "properties": {
         "district": "新莊區",
         "county": "新北市",
-        "town_id": "65000050",
+        "district_id": "65000050",
         "county_id": "65000",
         "area": 20704303.9982,
         "sort": 1,
@@ -130752,7 +130752,7 @@
       "properties": {
         "district": "溪口鄉",
         "county": "嘉義縣",
-        "town_id": "10010060",
+        "district_id": "10010060",
         "county_id": "10010",
         "area": 32418829.2624,
         "sort": 13,
@@ -131038,7 +131038,7 @@
       "properties": {
         "district": "白河區",
         "county": "臺南市",
-        "town_id": "67000030",
+        "district_id": "67000030",
         "county_id": "67000",
         "area": 128382970.951,
         "sort": 4,
