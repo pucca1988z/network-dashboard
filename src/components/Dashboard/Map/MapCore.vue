@@ -26,7 +26,8 @@ export default {
       pathGenerator:null,
       originColor:null,
       originOpacity:null,
-      paths: null
+      paths: null,
+      selectedD: null
     }
   },
   watch:{
@@ -81,7 +82,6 @@ export default {
       districtSet: state => state.districtSet,
       schools: state =>  state.schools,
       schoolsMap: state => state.schoolsMap, 
-      colorMap: state => state.colorMap
     })
   },
   methods:{
@@ -113,23 +113,18 @@ export default {
       selectedCountyId == null ? 
       arr = this.getLoadedRecordsCountyLevel : 
       arr = this.getLoadedRecordsDistrictLevel
-
       arr.forEach( a => {
         let {county_id, district_id, total, loaded} = a 
         let p = d3.select(`#id_${ district_id ? district_id : county_id }`)
-        this.$store.dispatch('setPathColor',{ county_id, district_id, total, loaded })
-        setTimeout(()=>{
-          if(loaded == 0){
-            p.attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
-          }
-          else if(total == loaded){
-              p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
-          }else{
-              p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
-              .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
-          }
-
-        }, 0)
+        if(loaded == 0){
+          p.attr('fill',this.hintColor.get('noData')).attr('fill-opacity', 1)
+        }
+        else if(total == loaded){
+          p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+        }else{
+          p.transition().duration(100).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
+          .transition().duration(100).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+        }
       })
     }
   },
@@ -144,44 +139,33 @@ export default {
       .enter().append('path')
       .attr('d',vm.pathGenerator)
       .attr('class','boundary')
-      .attr("stroke-width", 0.2)
-      .attr("stroke", "#000000")
+      .attr("stroke-width", 1.2).attr("stroke", "white")
       .attr("fill", vm.hintColor.get('noData'))
       .attr('id', d => {
-        let id 
-        d.properties.district_id ? id = d.properties.district_id : id = d.properties.county_id
-        return `id_${id}`
+        return `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`
       })
 
       // fill color
       setTimeout(()=>{
         this.fillColor()
-      },300)
+      },0)
  
       paths
-      // .on('mouseover', (d) => {
-      .on('mouseenter', (d) => {
+      .on('mouseover', (d) => {
         let area = d3.select(event.currentTarget)
-        vm.originColor = area.attr('fill')
-        vm.originOpacity = area.attr('fill-opacity')
-
+        // vm.originColor = area.attr('fill')
+        // vm.originOpacity = area.attr('fill-opacity')
         area
         .style('cursor', 'pointer')
-        .transition()
-        .duration(20)
-        .attr("fill", vm.hintColor.get('selected'))
-        .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+        // .attr("fill", vm.hintColor.get('selected'))
+        .attr('stroke','gray').attr('stroke-opacity', 0.3).attr("stroke-width", 0.2)
         
       })
       .on('mouseout', (d) => {
         let area = d3.select(event.currentTarget)
         area
-        .style('cursor', 'default')
-        .transition()
-        .duration(20)
-        // .attr("fill", this.hintColor.get('noData'))//.attr('fill-opacity',0.3)
-        .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
-        .attr('stroke','black').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+        // .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
+        .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 1.2)
       })
       .append('title')
       .html( d => `
@@ -192,12 +176,12 @@ export default {
       </div>
 
       `)
-
       paths.on('click',clicked)
     }
 
     //zoomToBoundingBox
     const zoomToBoundingBox = d => {
+      if(this.selectedD == null ) this.selectedD = d
       let bounds = vm.pathGenerator.bounds(d),
         dx = bounds[1][0] - bounds[0][0],
         dy = bounds[1][1] - bounds[0][1],
@@ -210,30 +194,39 @@ export default {
     }
 
     //clicked
-    const clicked = d =>{
+    const clicked = d => {
       d3.json('twTown.json')
-      .then(projectGeoJSON =>{
-        let projectgeojson = projectGeoJSON.features;
+      .then(json =>{
         zoomToBoundingBox(d);
         const { county_id, county, district, district_id } = {...d.properties}
         this.setSelectedPathData( d.properties )
-        let selectedjson = this.selectMap(projectgeojson, county_id);
+        let selectedjson = this.selectMap(json.features, county_id);
         vm.g.selectAll("*").remove();
         makemap(selectedjson)
+
+        d3.select('#zoomOutToCounty').on('click', () => { 
+          d.properties.district_id = null, d.properties.district = null
+          this.setSelectedPathData( d.properties )
+          vm.g.selectAll("*").remove();
+          vm.svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
+          zoomToBoundingBox(vm.selectedD);
+          makemap(selectedjson);
+        })
+
       })
     }
 
     d3.json('twCountry.json')
     .then(json =>{
       makemap(json.features)
-      d3.select('#zoomOutBtn')
+      d3.select('#zoomOutToCountry')
       .on('click',function(){
+        vm.selectedD = null
         vm.g.selectAll("*").remove();
         vm.svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
         makemap(json.features);
       })
     })
-
 
     vm.svg = d3.select('#geo-map')
     vm.g = vm.svg.append('g')

@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import schools from '@/assets/data/schools3.json'
-import { setTimeout } from 'core-js'
 let countySet = new Set()
 let districtSet = new Set()
 
@@ -16,6 +15,7 @@ let buildMap = ( p ) => {
         distObj.total += 1
         m.get(county_id).set(district_id, distObj)
       }else{
+
         districtSet.add(district_id)
         let distMap = new Map()
         let distObj = { total:1, loaded:0, names:[school]}
@@ -23,6 +23,7 @@ let buildMap = ( p ) => {
         m.get(county_id).set(district_id, distObj)
       }
     }else{
+
       countySet.add(county_id)
       let distMap = new Map()
       let distObj = { total:1, loaded:0, names:[school]}
@@ -30,7 +31,6 @@ let buildMap = ( p ) => {
       m.set(county_id, distMap)
     }
   })
-  // console.log(m)
   return m 
 }
 
@@ -62,7 +62,6 @@ export default new Vuex.Store({
     splitInto: 20,
     totalGroup: Math.floor(schools.length / 20),
     circuitCnt:0,
-    colorMap:new Map()
   },
 
   mutations: {
@@ -71,14 +70,6 @@ export default new Vuex.Store({
       state.selectedCountyId = data.selectedCountyId
       state.selectedDistrict = data.selectedDistrict
       state.selectedDistrictId = data.selectedDistrictId
-    },
-    SET_PATH_COLOR(state, data){
-      let {county_id, district_id, total, loaded} = data 
-      if(district_id == null){
-        if(state.colorMap.has(county_id)){
-          let obj = state.colorMap
-        }
-      }
     },
     TOGGLE_COUNTY_ANIMATION_FLAG(state, data){
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
@@ -91,7 +82,7 @@ export default new Vuex.Store({
             if(index == state.schools.length ) break
             state.schools[index].loaded = true
           }
-        }, i * 1000)
+        }, i * 300)
       }
     },
     ADD_COUNTY_CIRCUIT_CNT(state, data){
@@ -117,7 +108,6 @@ export default new Vuex.Store({
     addCountyCircuitCnt({commit}, data){
       commit('ADD_COUNTY_CIRCUIT_CNT')
     },
-    setPathColor({commit}, data){ commit('SET_PATH_COLOR', data) }
   },
   getters:{
     getLoadedRecords: state => state.schools.filter( x => x.loaded == true).length,
