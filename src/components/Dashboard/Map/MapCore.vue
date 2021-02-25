@@ -3,6 +3,10 @@
     <p>
       <!-- {{ getLoadedRecordsDistrictLevel }} -->
     </p>
+    <div id="tooltipla" v-show="tooltip" class="border absolute top-36 bg-gray-500 ">
+      tooltip la
+      {{ cnt }}
+    </div>
     <svg id="geo-map"></svg>
   </div>
 </template>
@@ -27,7 +31,9 @@ export default {
       originColor:null,
       originOpacity:null,
       paths: null,
-      selectedD: null
+      selectedD: null,
+      tooltip:null,
+      cnt:0
     }
   },
   watch:{
@@ -149,7 +155,28 @@ export default {
       this.fillColor()
  
       paths
+      .on('mousemove', d => {
+        let position = d3.mouse(event.currentTarget)
+        let tooltip = d3.select('#tooltipla')
+          tooltip
+          .transition()
+          .duration(100)
+          .style("left", `${position[0] + 20}px`)
+          .style("top", `${position[1] + 80}px`)
+      })
       .on('mouseover', (d) => {
+        this.tooltip = true
+        this.cnt = `${d.properties.district ? d.properties.district : d.properties.county }`
+
+        let position = d3.mouse(event.currentTarget)
+
+        let tooltip = d3.select('#tooltipla')
+          tooltip
+          .transition()
+          .duration(100)
+          .style("left", `${position[0] + 20}px`)
+          .style("top", `${position[1] + 80}px`)
+
         let area = d3.select(event.currentTarget)
         // vm.originColor = area.attr('fill')
         // vm.originOpacity = area.attr('fill-opacity')
@@ -160,20 +187,12 @@ export default {
         
       })
       .on('mouseout', (d) => {
+        this.tooltip = false
         let area = d3.select(event.currentTarget)
         area
         // .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
         .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
       })
-      .append('title')
-      .html( d => `
-      <div style="color:blue">
-      ${ d.properties.district ? d.properties.district : d.properties.county}
-      data1
-      data2
-      </div>
-
-      `)
       paths.on('click',clicked)
     }
 
