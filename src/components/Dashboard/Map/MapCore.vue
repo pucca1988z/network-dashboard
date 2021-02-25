@@ -16,8 +16,8 @@ export default {
     return {
       svg: null,
       selectedCounty:null,
-      width:400,
-      height:600,
+      width:600,
+      height:800,
       transitionDuration: 500,
       path:null,
       g:null, 
@@ -139,16 +139,14 @@ export default {
       .enter().append('path')
       .attr('d',vm.pathGenerator)
       .attr('class','boundary')
-      .attr("stroke-width", 1.2).attr("stroke", "white")
+      .attr("stroke-width", 0.2).attr("stroke", "white")
       .attr("fill", vm.hintColor.get('noData'))
       .attr('id', d => {
         return `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`
       })
 
       // fill color
-      setTimeout(()=>{
-        this.fillColor()
-      },0)
+      this.fillColor()
  
       paths
       .on('mouseover', (d) => {
@@ -165,7 +163,7 @@ export default {
         let area = d3.select(event.currentTarget)
         area
         // .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
-        .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 1.2)
+        .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
       })
       .append('title')
       .html( d => `
@@ -195,7 +193,7 @@ export default {
 
     //clicked
     const clicked = d => {
-      d3.json('twTown.json')
+      d3.json('twTown2.json')
       .then(json =>{
         zoomToBoundingBox(d);
         const { county_id, county, district, district_id } = {...d.properties}
@@ -216,7 +214,7 @@ export default {
       })
     }
 
-    d3.json('twCountry.json')
+    d3.json('twCountry2.json')
     .then(json =>{
       makemap(json.features)
       d3.select('#zoomOutToCountry')
@@ -233,10 +231,9 @@ export default {
     vm.svg.attr('width', this.width).attr('height', this.height)
 
     vm.mercator = d3.geoMercator()
-    .scale(8000)
+    .scale(11000)
     .translate([this.width/2, this.height/2])
     .center([120.5,23.5]);
-
     vm.pathGenerator = d3.geoPath().projection(vm.mercator);
   }
 }
