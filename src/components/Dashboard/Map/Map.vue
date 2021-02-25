@@ -55,9 +55,7 @@
     <main>
       <MapCore></MapCore>
     </main>
-    <footer>
-      <ColorHint></ColorHint>
-    </footer>
+    <ColorHint></ColorHint>
   </div>
 </template>
 

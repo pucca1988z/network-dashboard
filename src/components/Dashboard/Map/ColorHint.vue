@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 pb-4 -mt-32 md:-mt-0">
+  <div class="px-6 pb-4 -mt-36">
     <div class=" font-bold text-gray-700 ">圖示說明</div>
     <div class=" text-xs space-y-1">
       <div class="flex space-x-2">
