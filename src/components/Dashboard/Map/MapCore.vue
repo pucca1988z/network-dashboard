@@ -3,6 +3,20 @@
     <p>
       <!-- {{ getLoadedRecordsDistrictLevel }} -->
     </p>
+    <div id="tooltipla" 
+      v-show="tooltip" 
+      class="border absolute bg-gray-500 w-48 h-32 rounded-md text-sm"
+      style="background: rgba(220, 220, 220, 0.5);"  
+    >
+      <div class=" text-center pt-2">
+        {{ cnt }}
+      </div>
+      <div class=" border-t border-black space-y-2 pt-2 px-2">
+        <div>電路層監測：1</div>
+        <div>頻寬量測：2</div>
+        <div>資安通報：3</div>
+      </div>
+    </div>
     <svg id="geo-map"></svg>
   </div>
 </template>
@@ -16,8 +30,8 @@ export default {
     return {
       svg: null,
       selectedCounty:null,
-      width:400,
-      height:600,
+      width:600,
+      height:800,
       transitionDuration: 500,
       path:null,
       g:null, 
@@ -27,7 +41,9 @@ export default {
       originColor:null,
       originOpacity:null,
       paths: null,
-      selectedD: null
+      selectedD: null,
+      tooltip:null,
+      cnt:0
     }
   },
   watch:{
@@ -85,6 +101,9 @@ export default {
     })
   },
   methods:{
+    mousePosition(event){
+      return [event.clientX, event.clientY]
+    },
     loadData:function(){
       this.$store.dispatch('loadData',{ county_id:'09007' })
     },
@@ -139,19 +158,40 @@ export default {
       .enter().append('path')
       .attr('d',vm.pathGenerator)
       .attr('class','boundary')
-      .attr("stroke-width", 1.2).attr("stroke", "white")
+      .attr("stroke-width", 0.2).attr("stroke", "white")
       .attr("fill", vm.hintColor.get('noData'))
       .attr('id', d => {
         return `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`
       })
 
       // fill color
-      setTimeout(()=>{
-        this.fillColor()
-      },0)
+      this.fillColor()
  
       paths
+      .on('mousemove', d => {
+        let position = this.mousePosition(event)
+        console.log(position)
+
+        let tooltip = d3.select('#tooltipla')
+          tooltip
+          // .transition()
+          // .duration(100)
+          .style("left", `${position[0] >= 420 ? position[0] -220 : position[0] }px`)
+          .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+      })
       .on('mouseover', (d) => {
+        
+        this.tooltip = true
+        this.cnt = `${d.properties.district ? d.properties.district : d.properties.county }`
+        let position = this.mousePosition(event)
+
+        let tooltip = d3.select('#tooltipla')
+          tooltip
+          // .transition()
+          // .duration(100)
+          .style("left", `${position[0] }px`)
+          .style("top", `${position[1] }px`)
+
         let area = d3.select(event.currentTarget)
         // vm.originColor = area.attr('fill')
         // vm.originOpacity = area.attr('fill-opacity')
@@ -162,20 +202,12 @@ export default {
         
       })
       .on('mouseout', (d) => {
+        this.tooltip = false
         let area = d3.select(event.currentTarget)
         area
         // .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
-        .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 1.2)
+        .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
       })
-      .append('title')
-      .html( d => `
-      <div style="color:blue">
-      ${ d.properties.district ? d.properties.district : d.properties.county}
-      data1
-      data2
-      </div>
-
-      `)
       paths.on('click',clicked)
     }
 
@@ -195,7 +227,7 @@ export default {
 
     //clicked
     const clicked = d => {
-      d3.json('twTown.json')
+      d3.json('twTown2.json')
       .then(json =>{
         zoomToBoundingBox(d);
         const { county_id, county, district, district_id } = {...d.properties}
@@ -216,7 +248,7 @@ export default {
       })
     }
 
-    d3.json('twCountry.json')
+    d3.json('twCountry2.json')
     .then(json =>{
       makemap(json.features)
       d3.select('#zoomOutToCountry')
@@ -233,10 +265,9 @@ export default {
     vm.svg.attr('width', this.width).attr('height', this.height)
 
     vm.mercator = d3.geoMercator()
-    .scale(8000)
+    .scale(11000)
     .translate([this.width/2, this.height/2])
     .center([120.5,23.5]);
-
     vm.pathGenerator = d3.geoPath().projection(vm.mercator);
   }
 }

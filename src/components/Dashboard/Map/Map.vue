@@ -11,30 +11,30 @@
         <div 
           id="zoomOutToCountry"
           class="cursor-pointer"
-          :class="{'underline': this.selectedCountyName}"
+          :class="{'underline': selectedCountyName}"
           @click="zoomOut">
           全縣市
         </div>
 
-        <div v-if="this.selectedCountyName">
+        <div v-if="selectedCountyName">
           / 
         </div>
         <div 
           id="zoomOutToCounty"
-          v-if="this.selectedCountyName" 
+          v-if="selectedCountyName" 
           :class="{ 
-            'cursor-pointer' : this.selectedDistrict, 
-            'underline' : this.selectedDistrict 
+            'cursor-pointer' : selectedDistrict, 
+            'underline' : selectedDistrict 
           }"
         >
-          {{ this.selectedCountyName }} 
+          {{ selectedCountyName }} 
         </div>
 
-        <div v-if="this.selectedDistrict">
+        <div v-if="selectedDistrict">
           / 
         </div>
-        <div v-if="this.selectedDistrict">
-          {{ this.selectedDistrict }} 
+        <div v-if="selectedDistrict">
+          {{ selectedDistrict }} 
         </div>
 
       </div>
@@ -55,9 +55,7 @@
     <main>
       <MapCore></MapCore>
     </main>
-    <footer>
-      <ColorHint></ColorHint>
-    </footer>
+    <ColorHint></ColorHint>
   </div>
 </template>
 
