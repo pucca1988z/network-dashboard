@@ -59,9 +59,9 @@ export default new Vuex.Store({
     changedData:null,
     countySet,
     districtSet,
-    splitInto: 20,
-    totalGroup: Math.floor(schools.length / 20),
-    // circuitCnt:0,
+    splitInto: 2,
+    totalGroup: Math.floor(schools.length / 2),
+    abnormalPage:0,
   },
 
   mutations: {
@@ -85,15 +85,6 @@ export default new Vuex.Store({
         }, i * 300)
       }
     },
-    // ADD_COUNTY_CIRCUIT_CNT(state, data){
-    //   let i = 0 
-    //   countySet.forEach( s =>{
-    //     i++
-    //     setTimeout( ()=>{ 
-    //       state.circuitCnt = state.circuitCnt + 1 
-    //     }, i*1000)
-    //   })
-    // }
   },
   actions: {
     setSelectedPathData({commit}, data){
@@ -105,9 +96,6 @@ export default new Vuex.Store({
     loadData({commit}, data){
       commit('LOAD_DATA', data)
     },
-    // addCountyCircuitCnt({commit}, data){
-    //   commit('ADD_COUNTY_CIRCUIT_CNT')
-    // },
   },
   getters:{
     getCountiesLoadingRecord: state => {
@@ -155,6 +143,9 @@ export default new Vuex.Store({
     },
     getLoadedSchoolsByCountyId: (state, getters) => countyId => {
       return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].loaded      // return 'xxxxx'
+    },
+    getRawDataByCountyId: state => countyId => {
+      return state.schools.filter( x => x.county_id == countyId).filter( x => x.loaded == true)
     }
   },
   modules: {
