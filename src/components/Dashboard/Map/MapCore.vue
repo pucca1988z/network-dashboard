@@ -9,12 +9,12 @@
       style="background: rgba(220, 220, 220, 0.5);"  
     >
       <div class=" text-center pt-2">
-        {{ cnt }}
+        {{ hoverPathName }}
       </div>
       <div class=" border-t border-black space-y-2 pt-2 px-2">
-        <div>電路層監測：{{ hoverCountyId ? getLoadedSchoolsByCountyId(hoverCountyId) : 0 }} </div>
-        <div>頻寬量測：{{ hoverCountyId ? getLoadedSchoolsByCountyId(hoverCountyId) : 0 }} </div>
-        <div>資安通報：{{ hoverCountyId ? getLoadedSchoolsByCountyId(hoverCountyId) : 0 }} </div>
+        <div>電路層監測：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
+        <div>頻寬量測：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
+        <div>資安通報：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
       </div>
     </div>
     <svg id="geo-map"></svg>
@@ -43,8 +43,8 @@ export default {
       paths: null,
       selectedD: null,
       tooltip:null,
-      cnt:0,
-      hoverCountyId: null
+      hoverPathId: null,
+      hoverPathName:null
     }
   },
   watch:{
@@ -170,9 +170,9 @@ export default {
           .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
       })
       .on('mouseover', (d) => {
-        this.hoverCountyId = d.properties.county_id
+        this.hoverPathId = d.properties.county_id
         this.tooltip = true
-        this.cnt = `${d.properties.district ? d.properties.district : d.properties.county }`
+        this.hoverPathName = `${d.properties.district ? d.properties.district : d.properties.county }`
         let position = this.mousePosition(event)
 
         let tooltip = d3.select('#tooltipla')
