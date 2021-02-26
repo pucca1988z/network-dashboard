@@ -61,7 +61,7 @@ export default new Vuex.Store({
     districtSet,
     splitInto: 20,
     totalGroup: Math.floor(schools.length / 20),
-    circuitCnt:0,
+    // circuitCnt:0,
   },
 
   mutations: {
@@ -85,15 +85,15 @@ export default new Vuex.Store({
         }, i * 300)
       }
     },
-    ADD_COUNTY_CIRCUIT_CNT(state, data){
-      let i = 0 
-      countySet.forEach( s =>{
-        i++
-        setTimeout( ()=>{ 
-          state.circuitCnt = state.circuitCnt + 1 
-        }, i*1000)
-      })
-    }
+    // ADD_COUNTY_CIRCUIT_CNT(state, data){
+    //   let i = 0 
+    //   countySet.forEach( s =>{
+    //     i++
+    //     setTimeout( ()=>{ 
+    //       state.circuitCnt = state.circuitCnt + 1 
+    //     }, i*1000)
+    //   })
+    // }
   },
   actions: {
     setSelectedPathData({commit}, data){
@@ -105,13 +105,12 @@ export default new Vuex.Store({
     loadData({commit}, data){
       commit('LOAD_DATA', data)
     },
-    addCountyCircuitCnt({commit}, data){
-      commit('ADD_COUNTY_CIRCUIT_CNT')
-    },
+    // addCountyCircuitCnt({commit}, data){
+    //   commit('ADD_COUNTY_CIRCUIT_CNT')
+    // },
   },
   getters:{
-    getLoadedRecords: state => state.schools.filter( x => x.loaded == true).length,
-    getLoadedRecordsCountyLevel: state => {
+    getCountiesLoadingRecord: state => {
       let res = []
       for(let key of countySet.values()){
         let county = state.schools.filter( x => x.county_id == key)
@@ -123,6 +122,13 @@ export default new Vuex.Store({
         res.push(obj)
       }
       return res
+    },
+    getLoadedCountiesCnt: (state, getters)  => {
+      let cnt = 0
+      getters.getCountiesLoadingRecord.forEach( county => {
+        if(county.loaded == county.total) cnt++
+      })
+      return cnt 
     },
     getLoadedRecordsDistrictLevel: state => {
       if(state.selectedCountyId == null) return
@@ -144,8 +150,11 @@ export default new Vuex.Store({
       })
       return res
     },
-    getCircuitNormalRecordsCountyLevel: state => {
-      return state.circuitCnt
+    getTotalSchoolsByCountyId: (state,getters) => (countyId) => {
+      return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].total
+    },
+    getLoadedSchoolsByCountyId: (state, getters) => countyId => {
+      return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].loaded      // return 'xxxxx'
     }
   },
   modules: {

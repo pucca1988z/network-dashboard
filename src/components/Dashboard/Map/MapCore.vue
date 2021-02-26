@@ -12,9 +12,9 @@
         {{ cnt }}
       </div>
       <div class=" border-t border-black space-y-2 pt-2 px-2">
-        <div>電路層監測：1</div>
-        <div>頻寬量測：2</div>
-        <div>資安通報：3</div>
+        <div>電路層監測：{{ hoverCountyId ? getLoadedSchoolsByCountyId(hoverCountyId) : 0 }} </div>
+        <div>頻寬量測：{{ hoverCountyId ? getLoadedSchoolsByCountyId(hoverCountyId) : 0 }} </div>
+        <div>資安通報：{{ hoverCountyId ? getLoadedSchoolsByCountyId(hoverCountyId) : 0 }} </div>
       </div>
     </div>
     <svg id="geo-map"></svg>
@@ -23,7 +23,7 @@
 
 <script>
 import * as d3 from 'd3'
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 export default {
   components:{},
   data(){
@@ -43,11 +43,12 @@ export default {
       paths: null,
       selectedD: null,
       tooltip:null,
-      cnt:0
+      cnt:0,
+      hoverCountyId: null
     }
   },
   watch:{
-    getLoadedRecordsCountyLevel:function(newVal){
+    getCountiesLoadingRecord:function(newVal){
       if(this.$store.state.selectedCountyId != null ) return 
       newVal.forEach( a => {
         let p = d3.select(`#id_${a.county_id}`)
@@ -79,18 +80,11 @@ export default {
     }
   },
   computed:{
-    getLoadedRecordsCountyLevel(){
-      return this.$store.getters.getLoadedRecordsCountyLevel
-    },
-    getLoadedRecordsDistrictLevel(){
-      return this.$store.getters.getLoadedRecordsDistrictLevel
-    },
-    getTotalRecords(){
-      return this.$store.getters.getTotalRecords
-    },
-    getLoadedRecords(){ 
-      return this.$store.getters.getLoadedRecords
-     },
+    ...mapGetters({
+      getCountiesLoadingRecord:'getCountiesLoadingRecord',
+      getLoadedRecordsDistrictLevel: 'getLoadedRecordsDistrictLevel',
+      getLoadedSchoolsByCountyId:'getLoadedSchoolsByCountyId'
+    }),
     ...mapState({
       hintColor: state => state.hintColor,
       isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish,
@@ -130,7 +124,7 @@ export default {
       const {selectedCountyId, selectedDistrictId} = {...this.$store.state}
       let arr
       selectedCountyId == null ? 
-      arr = this.getLoadedRecordsCountyLevel : 
+      arr = this.getCountiesLoadingRecord : 
       arr = this.getLoadedRecordsDistrictLevel
       arr.forEach( a => {
         let {county_id, district_id, total, loaded} = a 
@@ -170,34 +164,25 @@ export default {
       paths
       .on('mousemove', d => {
         let position = this.mousePosition(event)
-        console.log(position)
-
         let tooltip = d3.select('#tooltipla')
           tooltip
-          // .transition()
-          // .duration(100)
           .style("left", `${position[0] >= 420 ? position[0] -220 : position[0] }px`)
           .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
       })
       .on('mouseover', (d) => {
-        
+        this.hoverCountyId = d.properties.county_id
         this.tooltip = true
         this.cnt = `${d.properties.district ? d.properties.district : d.properties.county }`
         let position = this.mousePosition(event)
 
         let tooltip = d3.select('#tooltipla')
           tooltip
-          // .transition()
-          // .duration(100)
           .style("left", `${position[0] }px`)
           .style("top", `${position[1] }px`)
 
         let area = d3.select(event.currentTarget)
-        // vm.originColor = area.attr('fill')
-        // vm.originOpacity = area.attr('fill-opacity')
         area
         .style('cursor', 'pointer')
-        // .attr("fill", vm.hintColor.get('selected'))
         .attr('stroke','gray').attr('stroke-opacity', 0.3).attr("stroke-width", 0.2)
         
       })
@@ -205,7 +190,6 @@ export default {
         this.tooltip = false
         let area = d3.select(event.currentTarget)
         area
-        // .attr("fill", vm.originColor).attr('fill-opacity',vm.originOpacity)
         .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
       })
       paths.on('click',clicked)
