@@ -1,7 +1,7 @@
 <template>
   <div class=" grid md:grid-cols-6 md:grid-rows-3 gap-5">
     <Map 
-      data-aos="flip-left" 
+      data-aos="fade-right" 
       data-aos-duration="1300"
       data-aos-once="true"
       class=" md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-4 shadow-lg rounded-lg ">

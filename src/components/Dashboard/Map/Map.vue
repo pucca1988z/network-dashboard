@@ -95,6 +95,7 @@ export default {
         selectedDistrict: null, 
         selectedDistrictId: null,
       })
+      this.$store.dispatch('setAbnormalPage', {abnormalPage: 0 })
     }
   }
 }

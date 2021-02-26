@@ -71,6 +71,9 @@ export default new Vuex.Store({
       state.selectedDistrict = data.selectedDistrict
       state.selectedDistrictId = data.selectedDistrictId
     },
+    SET_ABNORMAL_PAGE(state, data){
+      state.abnormalPage = data.abnormalPage
+    },
     TOGGLE_COUNTY_ANIMATION_FLAG(state, data){
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
     },
@@ -89,6 +92,9 @@ export default new Vuex.Store({
   actions: {
     setSelectedPathData({commit}, data){
       commit('SET_SELECTED_PATH_DATA', data)
+    },
+    setAbnormalPage({commit}, data){
+      commit('SET_ABNORMAL_PAGE', data)
     },
     toggleCountyLoadAnimationFlag({commit}, data){
       commit('TOGGLE_COUNTY_ANIMATION_FLAG', data)

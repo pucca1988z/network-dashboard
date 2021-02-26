@@ -9,12 +9,13 @@
     </div>
     <div 
       class="border-gray-400 border-4 h-36 border-dashed text-center pt-14 text-gray-400 text-3xl font-extrabold"
-      v-if="!selectedCountyId"
+      v-if="!selectedCountyId || getRawDataByCountyId(selectedCountyId).length == 0"
     >
       尚無資料
     </div>
     <div 
       class="flex flex-row  border-gray-400 border-b "
+      data-aos="fade-left"
       v-else
       v-for="(data, key) in getRawDataByCountyId(selectedCountyId).slice(abnormalPage * 5, abnormalPage * 5 + 5)" :key="key"
     >
