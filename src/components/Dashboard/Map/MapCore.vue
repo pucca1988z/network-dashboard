@@ -9,7 +9,7 @@
       style="background: rgba(220, 220, 220, 0.5);"  
     >
       <div class=" text-center pt-2">
-        {{ cnt }}
+        {{ hoverPathName }}
       </div>
       <div class=" border-t border-black space-y-2 pt-2 px-2">
         <div>電路層監測：1</div>
@@ -43,7 +43,7 @@ export default {
       paths: null,
       selectedD: null,
       tooltip:null,
-      cnt:0
+      hoverPathName:0
     }
   },
   watch:{
@@ -182,7 +182,7 @@ export default {
       .on('mouseover', (d) => {
         
         this.tooltip = true
-        this.cnt = `${d.properties.district ? d.properties.district : d.properties.county }`
+        this.hoverPathName = `${d.properties.district ? d.properties.district : d.properties.county }`
         let position = this.mousePosition(event)
 
         let tooltip = d3.select('#tooltipla')
