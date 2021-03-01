@@ -38,7 +38,7 @@ export default {
   },
   computed:{
     ...mapGetters({
-      getRawDataByCountyId:'getRawDataByCountyId'
+      getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId'
     }),
     ...mapState({
       selectedCountyName: state => state.selectedCountyName,

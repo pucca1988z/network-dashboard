@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 const github = { template: '<div>github</div>'}
@@ -13,8 +12,7 @@ const routes = [
   {
     path:'/opening',
     name:'Opening',
-    // component:() => import('@/views/Opening.vue')
-    beforeEnter() {location.href = 'http://localhost:8080/opening.html'},
+    beforeEnter() {location.href = '/opening.html'},
   },
   {
     path: '/about',
