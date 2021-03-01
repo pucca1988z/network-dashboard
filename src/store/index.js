@@ -59,8 +59,8 @@ export default new Vuex.Store({
     changedData:null,
     countySet,
     districtSet,
-    splitInto: 2,
-    totalGroup: Math.floor(schools.length / 2),
+    splitInto: 30,
+    totalGroup: Math.floor(schools.length / 30),
     abnormalPage:0,
   },
 
@@ -78,15 +78,26 @@ export default new Vuex.Store({
       state.isCountyLoadAnimationFinish = !state.isCountyLoadAnimationFinish
     },
     LOAD_DATA(state, data){
-      for(let i = 0 ; i <= state.totalGroup ; i++){
-        setTimeout( () =>{
-          for(let j = 0 ; j < state.splitInto ; j++){
-            let index = i * state.splitInto + j
-            if(index == state.schools.length ) break
-            state.schools[index].loaded = true
+      let loaded = 0
+      let interval = setInterval( () => {
+        let randomCnt = Math.ceil(Math.random()*10)+15, target = loaded + randomCnt // 16~25
+        for(loaded ; loaded <= target ; loaded++){
+          if( loaded == state.schools.length){
+            clearInterval(interval)
+            break
           }
-        }, i * 300)
-      }
+          state.schools[loaded].loaded = true
+        }
+      }, 1000)
+      // for(let i = 0 ; i <= state.totalGroup ; i++){
+      //   setTimeout( () =>{
+      //     for(let j = 0 ; j < state.splitInto ; j++){
+      //       let index = i * state.splitInto + j
+      //       if(index == state.schools.length ) break
+      //       state.schools[index].loaded = true
+      //     }
+      //   }, i * 1000)
+      // }
     },
   },
   actions: {
@@ -144,13 +155,21 @@ export default new Vuex.Store({
       })
       return res
     },
+    isPathLoadedCompleted:(state) => (id) =>{
+      let rtn = false, total = 0, loaded = 0, 
+      objKey = id.length == 5 ? 'county_id' : 'district_id'
+      total = state.schools.filter( x => x[objKey] == id).length, 
+      loaded = state.schools.filter( x => x[objKey] == id).filter( x => x.loaded == true).length
+      total == loaded ? rtn = true : null 
+      return rtn
+    },
     getTotalSchoolsByCountyId: (state,getters) => (countyId) => {
       return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].total
     },
     getLoadedSchoolsByCountyId: (state, getters) => countyId => {
-      return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].loaded      // return 'xxxxx'
+      return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].loaded     
     },
-    getRawDataByCountyId: state => countyId => {
+    getLoadedRawDataByCountyId: state => countyId => {
       return state.schools.filter( x => x.county_id == countyId).filter( x => x.loaded == true)
     }
   },

@@ -1,21 +1,31 @@
 <template>
   <div>
-    <p>
-      <!-- {{ getLoadedRecordsDistrictLevel }} -->
-    </p>
-    <div id="tooltipla" 
-      v-show="tooltip" 
-      class="border absolute bg-gray-500 w-48 h-32 rounded-md text-sm"
-      style="background: rgba(220, 220, 220, 0.5);"  
+    <div id="tooltip" 
+      v-show="showTooltip" 
+      class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+      style="background: rgba(220, 220, 220, 0.8);"  
     >
-      <div class=" text-center pt-2">
+      <div class=" text-center py-2">
         {{ hoverPathName }}
       </div>
-      <div class=" border-t border-black space-y-2 pt-2 px-2">
+      <div 
+        class=" border-t  border-normal-green text-normal-green space-y-2 pt-2 px-2 text-center text-3xl"
+        v-if="this.hoverPathId ? isPathLoadedCompleted(this.hoverPathId) : null"
+      >
+        正常
+      </div>
+      <div 
+        class=" border-t border-black space-y-2 pt-2 px-2 text-center text-3xl"
+        v-else
+      >
+        無資料
+        <!-- 
         <div>電路層監測：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
         <div>頻寬量測：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
-        <div>資安通報：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
+        <div>資安通報：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div> 
+        -->
       </div>
+
     </div>
     <svg id="geo-map"></svg>
   </div>
@@ -29,7 +39,7 @@ export default {
   data(){
     return {
       svg: null,
-      selectedCounty:null,
+      // selectedCounty:null,
       width:600,
       height:800,
       transitionDuration: 500,
@@ -42,14 +52,15 @@ export default {
       originOpacity:null,
       paths: null,
       selectedD: null,
-      tooltip:null,
+      showTooltip: null,
       hoverPathId: null,
+      hoverDistrictId:null,
       hoverPathName:null
     }
   },
   watch:{
     getCountiesLoadingRecord:function(newVal){
-      if(this.$store.state.selectedCountyId != null ) return 
+      if( this.selectedCountyId != null ) return 
       newVal.forEach( a => {
         let p = d3.select(`#id_${a.county_id}`)
         if(a.loaded == 0){}
@@ -64,7 +75,7 @@ export default {
       })
     },
     getLoadedRecordsDistrictLevel: function(newVal){
-      if(this.$store.state.selectedCountyId == null ) return
+      if( this.selectedCountyId == null ) return
       newVal.forEach( a => {
         let p = d3.select(`#id_${a.district_id}`)
         if(a.loaded == 0){}
@@ -77,19 +88,22 @@ export default {
             .transition().duration(300).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
         }
       })
-    }
+    }, 
   },
   computed:{
     ...mapGetters({
       getCountiesLoadingRecord:'getCountiesLoadingRecord',
       getLoadedRecordsDistrictLevel: 'getLoadedRecordsDistrictLevel',
-      getLoadedSchoolsByCountyId:'getLoadedSchoolsByCountyId'
+      getLoadedSchoolsByCountyId:'getLoadedSchoolsByCountyId',
+      getTotalSchoolsByCountyId:'getTotalSchoolsByCountyId',
+      isPathLoadedCompleted:'isPathLoadedCompleted'
     }),
     ...mapState({
       hintColor: state => state.hintColor,
       isCountyLoadAnimationFinish: state => state.isCountyLoadAnimationFinish,
       countySet: state => state.countySet,
       districtSet: state => state.districtSet,
+      selectedCountyId: state => state.selectedCountyId,
       schools: state =>  state.schools,
       schoolsMap: state => state.schoolsMap, 
     })
@@ -97,6 +111,35 @@ export default {
   methods:{
     mousePosition(event){
       return [event.clientX, event.clientY]
+    },
+    onMouseMove(d){
+      let position = this.mousePosition(event)
+      d3.select('#tooltip')
+      .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] }px`)
+      .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+    },
+    onMouseOver(d){
+      this.hoverPathId = d.properties.district_id ? d.properties.district_id : d.properties.county_id
+      if(this.selectedCountyId) this.hoverDistrictId = d.properties.district_id
+      this.showTooltip = true
+      this.hoverPathName = `${d.properties.district ? d.properties.district : d.properties.county }`
+      let position = this.mousePosition(event)
+
+      d3.select('#tooltip')
+      .style("left", `${position[0] }px`)
+      .style("top", `${position[1] }px`)
+
+      let area = d3.select(event.currentTarget)
+      area
+      .style('cursor', 'pointer')
+      .attr('stroke','gray').attr('stroke-opacity', 0.3).attr("stroke-width", 0.2)
+    },
+    onMouseOut(d){
+      this.showTooltip = null
+
+      let area = d3.select(event.currentTarget)
+      area
+      .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
     },
     loadData:function(){
       this.$store.dispatch('loadData',{ county_id:'09007' })
@@ -124,8 +167,8 @@ export default {
       const {selectedCountyId, selectedDistrictId} = {...this.$store.state}
       let arr
       selectedCountyId == null ? 
-      arr = this.getCountiesLoadingRecord : 
-      arr = this.getLoadedRecordsDistrictLevel
+        arr = this.getCountiesLoadingRecord : 
+        arr = this.getLoadedRecordsDistrictLevel
       arr.forEach( a => {
         let {county_id, district_id, total, loaded} = a 
         let p = d3.select(`#id_${ district_id ? district_id : county_id }`)
@@ -135,8 +178,8 @@ export default {
         else if(total == loaded){
           p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
         }else{
-          p.transition().duration(100).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
-          .transition().duration(100).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
+          p.transition().duration(500).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (loaded / total))
+          .transition().duration(500).attr('fill', this.hintColor.get('noData')).attr('fill-opacity',1)
         }
       })
     }
@@ -162,36 +205,9 @@ export default {
       this.fillColor()
  
       paths
-      .on('mousemove', d => {
-        let position = this.mousePosition(event)
-        let tooltip = d3.select('#tooltipla')
-          tooltip
-          .style("left", `${position[0] >= 420 ? position[0] -220 : position[0] }px`)
-          .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
-      })
-      .on('mouseover', (d) => {
-        this.hoverPathId = d.properties.county_id
-        this.tooltip = true
-        this.hoverPathName = `${d.properties.district ? d.properties.district : d.properties.county }`
-        let position = this.mousePosition(event)
-
-        let tooltip = d3.select('#tooltipla')
-          tooltip
-          .style("left", `${position[0] }px`)
-          .style("top", `${position[1] }px`)
-
-        let area = d3.select(event.currentTarget)
-        area
-        .style('cursor', 'pointer')
-        .attr('stroke','gray').attr('stroke-opacity', 0.3).attr("stroke-width", 0.2)
-        
-      })
-      .on('mouseout', (d) => {
-        this.tooltip = false
-        let area = d3.select(event.currentTarget)
-        area
-        .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
-      })
+      .on('mousemove', d => this.onMouseMove(d))
+      .on('mouseover', (d) => this.onMouseOver(d))
+      .on('mouseout', (d) => this.onMouseOut(d))
       paths.on('click',clicked)
     }
 

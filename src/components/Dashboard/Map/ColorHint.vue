@@ -21,7 +21,7 @@
           class="w-4 h-4 border border-gray-400"
           :style="{'background-color':hintColor.get('warning')}"        
         ></div>
-        <div>告緊</div>
+        <div>告警</div>
       </div>
       <div class="flex space-x-2">
         <div 

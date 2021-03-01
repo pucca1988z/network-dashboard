@@ -9,7 +9,7 @@
     </div>
     <div 
       class="border-gray-400 border-4 h-36 border-dashed text-center pt-14 text-gray-400 text-3xl font-extrabold"
-      v-if="!selectedCountyId || getRawDataByCountyId(selectedCountyId).length == 0"
+      v-if="!selectedCountyId || getLoadedRawDataByCountyId(selectedCountyId).length == 0"
     >
       尚無資料
     </div>
@@ -17,7 +17,7 @@
       class="flex flex-row  border-gray-400 border-b "
       data-aos="fade-left"
       v-else
-      v-for="(data, key) in getRawDataByCountyId(selectedCountyId).slice(abnormalPage * 5, abnormalPage * 5 + 5)" :key="key"
+      v-for="(data, key) in getLoadedRawDataByCountyId(selectedCountyId).slice(abnormalPage * 5, abnormalPage * 5 + 5)" :key="key"
     >
       <div class="flex-1 border  border-gray-400 px-2">{{ data.county }}</div>
       <div class="flex-1 border  border-gray-400 px-2">{{ data.district }}</div>
@@ -34,7 +34,7 @@ import { mapState, mapGetters } from "vuex";
 export default {
   computed:{
     ...mapGetters({
-      getRawDataByCountyId:'getRawDataByCountyId'
+      getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId'
     }),
     ...mapState({
       selectedCountyName: state => state.selectedCountyName,
