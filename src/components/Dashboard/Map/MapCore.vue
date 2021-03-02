@@ -108,11 +108,13 @@ export default {
     })
   },
   methods:{
-    makeSvgDefs(){
+    makeSvgDefs(hoverPathid){
+      let radius = hoverPathid.length == 5 ? 1 : 0.2
+      this.svg.selectAll('defs').remove()
       let defs = this.svg.append('defs')
       let filter = defs.append('filter')
       filter.attr('id','innerStroke').attr('x',0).attr('y',0).attr('width',1).attr('height',1)
-      filter.append('feMorphology').attr('operator','erode').attr('in','SourceGraphic').attr('radius',2).attr('result', 'erode')
+      filter.append('feMorphology').attr('operator','erode').attr('in','SourceGraphic').attr('result', 'erode').attr('radius',radius)
       filter.append('feColorMatrix').attr('type','matrix').attr('in','SourceGraphic').attr('result', 'color').attr('values','0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0')
       let feMerge = filter.append("feMerge");
       feMerge.append("feMergeNode").attr("in", "color")
@@ -134,7 +136,7 @@ export default {
       this.hoverPathName = `${d.properties.district ? d.properties.district : d.properties.county }`
       let position = this.mousePosition(event)
 
-      this.makeSvgDefs()
+      this.makeSvgDefs(this.hoverPathId)
 
       d3.select('#tooltip').style("left", `${position[0] }px`).style("top", `${position[1] }px`)
 
