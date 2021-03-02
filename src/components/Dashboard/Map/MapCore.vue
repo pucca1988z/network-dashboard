@@ -27,7 +27,22 @@
       </div>
 
     </div>
-    <svg id="geo-map"></svg>
+    <svg id="geo-map">
+        <defs>
+    <filter id="innerStroke" x="0" y="0" width="1" height="1">
+      <feMorphology operator="erode" in="SourceGraphic" radius="2" result="erode"/>
+      <feColorMatrix type="matrix" in="SourceGraphic" result="color"
+                     values="0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode in="color"/>
+        <feMergeNode in="erode"/>
+      </feMerge>
+    </filter>
+  </defs>
+    </svg>
   </div>
 </template>
 
@@ -119,6 +134,10 @@ export default {
       .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
     },
     onMouseOver(d){
+
+
+
+
       this.hoverPathId = d.properties.district_id ? d.properties.district_id : d.properties.county_id
       if(this.selectedCountyId) this.hoverDistrictId = d.properties.district_id
       this.showTooltip = true
@@ -132,7 +151,10 @@ export default {
       let area = d3.select(event.currentTarget)
       area
       .style('cursor', 'pointer')
-      .attr('stroke','gray').attr('stroke-opacity', 0.3).attr("stroke-width", 0.2)
+      .attr('stroke','gray')
+      .attr('stroke-opacity', 0.3)
+      .attr("stroke-width", 0.2)
+      .style("filter", "url(#innerStroke)")
     },
     onMouseOut(d){
       this.showTooltip = null
@@ -140,6 +162,7 @@ export default {
       let area = d3.select(event.currentTarget)
       area
       .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+      .style("filter", "")
     },
     loadData:function(){
       this.$store.dispatch('loadData',{ county_id:'09007' })
@@ -191,6 +214,9 @@ export default {
     let zzoom = d3.zoom().scaleExtent([1, 2]).on("zoom", vm.zoomed);
     //makemap
     const makemap = (geojson) => {
+
+
+
       let paths = vm.g.selectAll('path').data(geojson)
       .enter().append('path')
       .attr('d',vm.pathGenerator)
@@ -200,6 +226,7 @@ export default {
       .attr('id', d => {
         return `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`
       })
+      // .style("filter", "url(#drop-shadow)")
 
       // fill color
       this.fillColor()
