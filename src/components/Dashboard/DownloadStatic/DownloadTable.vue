@@ -1,14 +1,14 @@
 <template>
   <div class="py-2 px-4 flex flex-col content-center ">
-    <div class="flex flex-row  border-gray-400 border bg-indigo-400 font-bold text-center">
-      <div class="w-20 border  border-gray-400">排名</div>
-      <div class="w-80 border  border-gray-400">IP</div>
-      <div class="w-40 border  border-gray-400">下載流量</div>
-      <div class="w-40 border  border-gray-400">國家</div>
-      <div class="flex-1 border  border-gray-400">備註</div>
+    <div class="flex flex-row  bg-custPurpleForHeader text-center">
+      <div class="w-20 border  border-black border-opacity-20">排名</div>
+      <div class="w-80 border  border-black border-opacity-20">IP</div>
+      <div class="w-40 border  border-black border-opacity-20">下載流量</div>
+      <div class="w-40 border  border-black border-opacity-20">國家</div>
+      <div class="flex-1 border  border-black border-opacity-20">備註</div>
     </div>
     <div 
-      class="border-gray-400 border-4 h-36 border-dashed text-center pt-14 text-gray-400 text-3xl font-extrabold"
+      class="border-gray-300 border h-44 text-center pt-14 text-pink-500 text-3xl font-normal"
       v-if="getCountiesLoadingRecord.length != getLoadedCountiesCnt"
     >
       尚無資料
@@ -18,13 +18,13 @@
       data-aos="fade-left"
     >
       <div 
-        class="flex flex-row  border-gray-400 border-b "
+        class="flex flex-row  border-black border-opacity-20 h-9 "
         v-for="(d, key) of downloadData" :key="key"
       >
-        <div class="w-20 border  border-gray-400 px-2">{{ key+1 }}</div>
-        <div class="w-80 border  border-gray-400 px-2">{{ d.IP }}</div>
-        <div class="w-40 border  border-gray-400 px-2">{{ `${d.DL_CAPACITY} ${d.UNIT}` }}</div>
-        <div class="w-40 border  border-gray-400 px-2 flex space-x-2">
+        <div class="w-20 border  border-black border-opacity-20 px-2 py-1">{{ key+1 }}</div>
+        <div class="w-80 border  border-black border-opacity-20 px-2 py-1">{{ d.IP }}</div>
+        <div class="w-40 border  border-black border-opacity-20 px-2 py-1">{{ `${d.DL_CAPACITY} ${d.UNIT}` }}</div>
+        <div class="w-40 border  border-black border-opacity-20 px-2 py-1 flex space-x-2">
           <svg class="h-6 w-6" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
           <rect y="85.337" style="fill:#D80027;" width="512" height="341.326"/>
           <rect y="85.337" style="fill:#0052B4;" width="256" height="170.663"/>
@@ -37,7 +37,7 @@
           </svg>
           <div>{{ d.COUNTRY }}</div>
         </div>
-        <div class="flex-1 border  border-gray-400 px-2">{{ d.NOTES }}</div>
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ d.NOTES }}</div>
       </div>
     </div>
     

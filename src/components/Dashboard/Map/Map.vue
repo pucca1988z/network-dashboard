@@ -10,7 +10,7 @@
         </svg>
         <div 
           id="zoomOutToCountry"
-          class="cursor-pointer"
+          class="cursor-pointer text-sm"
           :class="{'underline': selectedCountyName}"
           @click="zoomOut">
           全縣市
@@ -48,7 +48,7 @@
     <nav class="grid grid-cols-4 gap-4 text-center py-2 px-4">
       <div 
         v-for="(btn,ind) of btns" :key="ind" 
-        class="blue-btn ">
+        class="blue-btn">
         {{ btn.text }}
       </div>
     </nav>
