@@ -27,22 +27,7 @@
       </div>
 
     </div>
-    <svg id="geo-map">
-        <defs>
-    <filter id="innerStroke" x="0" y="0" width="1" height="1">
-      <feMorphology operator="erode" in="SourceGraphic" radius="2" result="erode"/>
-      <feColorMatrix type="matrix" in="SourceGraphic" result="color"
-                     values="0 0 0 0 0
-                            0 0 0 0 0
-                            0 0 0 0 0
-                            0 0 0 1 0"/>
-      <feMerge>
-        <feMergeNode in="color"/>
-        <feMergeNode in="erode"/>
-      </feMerge>
-    </filter>
-  </defs>
-    </svg>
+    <svg id="geo-map"></svg>
   </div>
 </template>
 
@@ -54,7 +39,6 @@ export default {
   data(){
     return {
       svg: null,
-      // selectedCounty:null,
       width:600,
       height:800,
       transitionDuration: 500,
@@ -124,6 +108,16 @@ export default {
     })
   },
   methods:{
+    makeSvgDefs(){
+      let defs = this.svg.append('defs')
+      let filter = defs.append('filter')
+      filter.attr('id','innerStroke').attr('x',0).attr('y',0).attr('width',1).attr('height',1)
+      filter.append('feMorphology').attr('operator','erode').attr('in','SourceGraphic').attr('radius',2).attr('result', 'erode')
+      filter.append('feColorMatrix').attr('type','matrix').attr('in','SourceGraphic').attr('result', 'color').attr('values','0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0')
+      let feMerge = filter.append("feMerge");
+      feMerge.append("feMergeNode").attr("in", "color")
+      feMerge.append("feMergeNode").attr("in", "erode")
+    },
     mousePosition(event){
       return [event.clientX, event.clientY]
     },
@@ -134,19 +128,15 @@ export default {
       .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
     },
     onMouseOver(d){
-
-
-
-
       this.hoverPathId = d.properties.district_id ? d.properties.district_id : d.properties.county_id
       if(this.selectedCountyId) this.hoverDistrictId = d.properties.district_id
       this.showTooltip = true
       this.hoverPathName = `${d.properties.district ? d.properties.district : d.properties.county }`
       let position = this.mousePosition(event)
 
-      d3.select('#tooltip')
-      .style("left", `${position[0] }px`)
-      .style("top", `${position[1] }px`)
+      this.makeSvgDefs()
+
+      d3.select('#tooltip').style("left", `${position[0] }px`).style("top", `${position[1] }px`)
 
       let area = d3.select(event.currentTarget)
       area
@@ -214,20 +204,13 @@ export default {
     let zzoom = d3.zoom().scaleExtent([1, 2]).on("zoom", vm.zoomed);
     //makemap
     const makemap = (geojson) => {
-
-
-
       let paths = vm.g.selectAll('path').data(geojson)
       .enter().append('path')
       .attr('d',vm.pathGenerator)
       .attr('class','boundary')
       .attr("stroke-width", 0.2).attr("stroke", "white")
       .attr("fill", vm.hintColor.get('noData'))
-      .attr('id', d => {
-        return `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`
-      })
-      // .style("filter", "url(#drop-shadow)")
-
+      .attr('id', d => `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`)
       // fill color
       this.fillColor()
  
