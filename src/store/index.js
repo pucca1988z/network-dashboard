@@ -89,15 +89,6 @@ export default new Vuex.Store({
           state.schools[loaded].loaded = true
         }
       }, 1000)
-      // for(let i = 0 ; i <= state.totalGroup ; i++){
-      //   setTimeout( () =>{
-      //     for(let j = 0 ; j < state.splitInto ; j++){
-      //       let index = i * state.splitInto + j
-      //       if(index == state.schools.length ) break
-      //       state.schools[index].loaded = true
-      //     }
-      //   }, i * 1000)
-      // }
     },
   },
   actions: {

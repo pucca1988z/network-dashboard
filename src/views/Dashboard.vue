@@ -19,6 +19,7 @@
       class="md:col-span-4 shadow-lg rounded-lg">
     </Abnormal>
     <DownloadStatic 
+      v-if="!selectedCountyId"
       :data-aos="fadeUpLeft"
       data-aos-duration="1300"
       data-aos-once="true"
@@ -28,6 +29,8 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from "vuex";
+
 import Map from '@/components/Dashboard/Map/Map'
 import Static from '@/components/Dashboard/Static/Static'
 import Abnormal from '@/components/Dashboard/Abnormal/Abnormal'
@@ -60,6 +63,11 @@ export default {
     resizeHandler(e){
       window.innerWidth < 768 ? this.removeAnimation() : this.recoverAnimation()
     }
+  },
+  computed:{
+    ...mapState({
+      selectedCountyId: state => state.selectedCountyId
+    })
   },
   created(){
     window.addEventListener('resize', this.resizeHandler)
