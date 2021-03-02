@@ -109,7 +109,7 @@ export default {
   },
   methods:{
     makeSvgDefs(hoverPathid){
-      let radius = hoverPathid.length == 5 ? 1 : 0.2
+      let radius = hoverPathid.length == 5 ? 1 : 0.3
       this.svg.selectAll('defs').remove()
       let defs = this.svg.append('defs')
       let filter = defs.append('filter')
