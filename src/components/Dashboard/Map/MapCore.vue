@@ -260,7 +260,7 @@ export default {
       })
     }
 
-    d3.json('twCountry2.json')
+    d3.json('twCountry3.json')
     .then(json =>{
       makemap(json.features)
       d3.select('#zoomOutToCountry')

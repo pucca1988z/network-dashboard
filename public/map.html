@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <title>Map</title>
+</head>
+<body>
+  <div id="tooltip" 
+    class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+    style="background: rgba(220, 220, 220, 0.8);display: none;"  
+  >
+    <div id="tooltipHoverName" class=" text-center py-2">
+      縣市名稱
+    </div>
+    <div 
+      class=" border-t  border-normal-green text-normal-green space-y-2 pt-2 px-2 text-center text-3xl"
+      id="tooltipNormal"
+    >
+      正常
+    </div>
+    <div 
+      class=" border-t border-watch text-watch space-y-2 pt-2 px-2 text-center text-3xl"
+      id="tooltipWatch"
+    >
+      注意
+    </div>
+    <div 
+      class=" border-t border-warning text-warning space-y-2 pt-2 px-2 text-center text-3xl"
+      id="tooltipWarning"
+    >
+      告警
+    </div>
+    <div 
+      class=" border-t border-black space-y-2 pt-2 px-2 text-center text-3xl"
+      id="tooltipNoData"
+    >
+      無資料
+    </div>
+
+  </div>
+  <div class="flex space-x-2">
+    <div>全縣市</div>
+    <div>/</div>
+    <div>selectedCounty</div>
+    <div>/</div>
+    <div>selectedDistrict</div>
+  </div>
+  <svg id="geo-map"></svg>
+  <script  type="module" src="./mapCore/index.js"></script>
+</body>
+</html>
