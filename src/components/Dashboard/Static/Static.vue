@@ -8,8 +8,21 @@
           <div>縣市統計資料</div>
         </div>
       </div>
+
       <div 
-        v-else
+        v-else-if="selectedDistrict"
+        class="flex-1"
+      >
+        <div class="flex flex-row space-x-2 text-2xl">
+          <div class=""> {{ selectedDistrict }} </div>
+          <div>共</div>
+          <div class="text-blue-400" > {{ getDistrictsLoadingRecord.length }} </div>
+          <div>所學校統計資料</div>
+        </div>
+      </div>
+
+      <div 
+        v-else-if="selectedCountyName"
         class="flex-1"
       >
         <div class="flex flex-row space-x-2 text-2xl">
@@ -41,12 +54,19 @@
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">電路層監測</div>
           <div 
+            v-if="!selectedDistrictId"
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
           >
           {{ selectedCountyId ? 
             getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId) : 
             getCountiesLoadingRecord.length - getLoadedCountiesCnt
           }}
+          </div>
+          <div
+            class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
+            v-else
+          >
+            {{ getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length }}
           </div>
         </header>
         <main 
@@ -134,7 +154,8 @@ export default {
       getLoadedCountiesCnt:'getLoadedCountiesCnt',
       getCountiesLoadingRecord:'getCountiesLoadingRecord',
       getLoadedSchoolsByCountyId:'getLoadedSchoolsByCountyId',
-      getTotalSchoolsByCountyId:'getTotalSchoolsByCountyId'
+      getTotalSchoolsByCountyId:'getTotalSchoolsByCountyId',
+      getDistrictsLoadingRecord:'getDistrictsLoadingRecord'
     }),
     ...mapState({
       selectedCountyName: state => state.selectedCountyName,

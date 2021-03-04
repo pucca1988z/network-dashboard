@@ -143,7 +143,16 @@ export default new Vuex.Store({
           res.push(obj)
         }
       })
+      console.log(res)
       return res
+    },
+    getDistrictsLoadingRecord: state => {
+      if(state.selectedDistrictId === null) return
+      let res = []
+      let districtId = state.selectedDistrictId
+      let distArr = state.schools.filter( x => x.district_id == districtId)
+      return distArr
+      
     },
     isPathLoadedCompleted:(state) => (id) =>{
       let rtn = false, total = 0, loaded = 0, 
@@ -153,6 +162,9 @@ export default new Vuex.Store({
       total == loaded ? rtn = true : null 
       return rtn
     },
+    // getTotalSchoolsByDistrictId: (state, getters) => districtId => {
+    //   return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].total
+    // },
     getTotalSchoolsByCountyId: (state,getters) => (countyId) => {
       return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].total
     },
