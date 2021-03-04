@@ -137,22 +137,9 @@ const clicked = d => {
     g.selectAll("*").remove();
     makeMap(selectedJson)
 
-    if(d.id.length === 5){
-      d3.select('#zoomOutToCounty').text( `> ${d.properties.county}`).style('display','block')
-      // let distArr = twTown.features.filter( j => j.properties.county_id == d.id)
-      // distArr.forEach( (a,i) => {
-      //   const { county_id, county, district, district_id } = {...a.properties}
-      //   let status = districtStatusMap.get(district_id)
-      //   let color = '#fd3995'
-      //   if(status == 0 ) color = '#909090'
-      //   else if( status == 1) color = '#1dc9b7'
-      //   else if( status == 2) color = '#ffc241'
-      //   d3.select(`#id_${district_id}`).attr("fill",color)
-      // })
-    }else{
-      d3.select('#selectedDistrict')
-      .text( `> ${d.properties.district}`).style('display','block')
-    }
+    d.id.length === 5 ?
+      d3.select('#zoomOutToCounty').text( `> ${d.properties.county}`).style('display','block') :
+      d3.select('#selectedDistrict').text( `> ${d.properties.district}`).style('display','block')
 
 
     d3.select('#zoomOutToCounty').on('click', () => { 
@@ -162,8 +149,6 @@ const clicked = d => {
       zoomToBoundingBox(selectedD);
       makeMap(selectedJson);
     })
-
-  // })
 }
 
 makeMap(twCountry.features)
