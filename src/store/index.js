@@ -46,7 +46,6 @@ export default new Vuex.Store({
     selectedDistrictId:null,
     hintColor:new Map([
       ['normal','#1dc9b7'],
-      // ['normal','#059669'],
       ['watch','#ffc241'],
       ['warning','#fd3995'],
       ['noData','#909090'], 

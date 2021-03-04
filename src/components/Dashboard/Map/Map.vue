@@ -22,6 +22,7 @@
         <div 
           id="zoomOutToCounty"
           v-if="selectedCountyName" 
+          class="cursor-pointer text-sm"
           :class="{ 
             'cursor-pointer' : selectedDistrict, 
             'underline' : selectedDistrict 
@@ -33,7 +34,10 @@
         <div v-if="selectedDistrict">
           / 
         </div>
-        <div v-if="selectedDistrict">
+        <div 
+          v-if="selectedDistrict"
+          class="cursor-pointer text-sm"
+        >
           {{ selectedDistrict }} 
         </div>
 
