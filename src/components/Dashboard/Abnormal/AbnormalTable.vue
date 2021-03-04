@@ -9,7 +9,7 @@
     </div>
     <div 
       class="border-gray-300 border h-44 text-center pt-14 text-pink-500 text-3xl font-normal"
-      v-if="!selectedCountyId || getLoadedRawDataByCountyId(selectedCountyId).length == 0"
+      v-if="!selectedCountyId || getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0"
     >
       尚無資料
     </div>
@@ -17,7 +17,7 @@
       class="flex flex-row  border-gray-400 h-9 "
       data-aos="fade-left"
       v-else
-      v-for="(data, key) in getLoadedRawDataByCountyId(selectedCountyId).slice(abnormalPage * 5, abnormalPage * 5 + 5)" :key="key"
+      v-for="(data, key) in getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).slice(abnormalPage * pagingSize, abnormalPage * pagingSize + pagingSize)" :key="key"
     >
       <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.county }}</div>
       <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.district }}</div>
@@ -41,7 +41,8 @@ export default {
       selectedCountyId: state => state.selectedCountyId,
       selectedDistrict: state => state.selectedDistrict, 
       selectedDistrictId: state => state.selectedDistrictId,
-      abnormalPage: state => state.abnormalPage
+      abnormalPage: state => state.abnormalPage,
+      pagingSize: state => state.pagingSize
     })
   }
 }

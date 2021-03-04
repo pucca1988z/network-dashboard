@@ -61,6 +61,7 @@ export default new Vuex.Store({
     splitInto: 30,
     totalGroup: Math.floor(schools.length / 30),
     abnormalPage:0,
+    pagingSize:12
   },
 
   mutations: {
@@ -143,7 +144,6 @@ export default new Vuex.Store({
           res.push(obj)
         }
       })
-      console.log(res)
       return res
     },
     getDistrictsLoadingRecord: state => {
@@ -162,17 +162,16 @@ export default new Vuex.Store({
       total == loaded ? rtn = true : null 
       return rtn
     },
-    // getTotalSchoolsByDistrictId: (state, getters) => districtId => {
-    //   return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].total
-    // },
     getTotalSchoolsByCountyId: (state,getters) => (countyId) => {
       return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].total
     },
     getLoadedSchoolsByCountyId: (state, getters) => countyId => {
       return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].loaded     
     },
-    getLoadedRawDataByCountyId: state => countyId => {
-      return state.schools.filter( x => x.county_id == countyId).filter( x => x.loaded == true)
+    getLoadedRawDataByCountyId: state => (countyId, districtId = null) => {
+      let arr = state.schools.filter( x => x.county_id == countyId)
+      if(districtId) arr = arr.filter( x => x.district_id == districtId )
+      return arr.filter( x => x.loaded == true)
     }
   },
   modules: {

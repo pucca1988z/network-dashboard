@@ -14,7 +14,13 @@
         上一頁
       </div>
       <div 
-        class="px-4 py-1 rounded-lg border-2 text-custPurple text-sm cursor-pointer bg-custPurpleForHeader"
+        class="px-4 py-1 rounded-lg border-2 text-custPurple text-sm"
+        :class="{
+          'cursor-not-allowed': getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length <= pagingSize ,
+          'cursor-pointer': getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length > pagingSize ,
+          'bg-gray-300': getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length <= pagingSize ,
+          'bg-custPurpleForHeader':getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length > pagingSize ,
+        }"
         @click="nextPage"
       >
         下一頁
@@ -28,6 +34,7 @@ import { mapState, mapGetters } from "vuex";
 export default {
   methods:{
     nextPage:function(){
+      if(this.$store.state.abnormalPage +1 * this.pagingSize >= this.getLoadedRawDataByCountyId(this.selectedCountyId, this.selectedDistrictId).length) return
       this.$store.state.abnormalPage ++
     },
     previousPage:function(){
@@ -45,7 +52,8 @@ export default {
       selectedCountyId: state => state.selectedCountyId,
       selectedDistrict: state => state.selectedDistrict, 
       selectedDistrictId: state => state.selectedDistrictId,
-      abnormalPage: state => state.abnormalPage
+      abnormalPage: state => state.abnormalPage, 
+      pagingSize: state => state.pagingSize
     })
   }
 }

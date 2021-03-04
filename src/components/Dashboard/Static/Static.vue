@@ -10,28 +10,17 @@
       </div>
 
       <div 
-        v-else-if="selectedDistrict"
+        v-else
         class="flex-1"
       >
         <div class="flex flex-row space-x-2 text-2xl">
-          <div class=""> {{ selectedDistrict }} </div>
+          <div class=""> {{ selectedDistrict ? selectedDistrict : selectedCountyName }} </div>
           <div>共</div>
-          <div class="text-blue-400" > {{ getDistrictsLoadingRecord.length }} </div>
+          <div class="text-blue-400" > {{ selectedDistrict ? getDistrictsLoadingRecord.length :  getTotalSchoolsByCountyId(selectedCountyId) }} </div>
           <div>所學校統計資料</div>
         </div>
       </div>
 
-      <div 
-        v-else-if="selectedCountyName"
-        class="flex-1"
-      >
-        <div class="flex flex-row space-x-2 text-2xl">
-          <div class=""> {{ selectedCountyName }} </div>
-          <div>共</div>
-          <div class="text-blue-400" > {{ getTotalSchoolsByCountyId(selectedCountyId) }} </div>
-          <div>所學校統計資料</div>
-        </div>
-      </div>
       <div class="flex space-x-2">
         <svg 
           class="h-5 w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,34 +28,26 @@
         </svg>
       </div>
     </header>
-
-    <!-- 
-    <div class="flex justify-end pr-5 py-3">
-      <div class="flex flex-row">
-        <div>更新時間：</div>
-        <div>{{ new Date().toLocaleString() }}</div>
-      </div>
-    </div> 
-    -->
     
     <main class="grid grid-cols-3 space-x-6 px-4 py-2 ">
       <div class="">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">電路層監測</div>
           <div 
-            v-if="!selectedDistrictId"
+            v-if="!selectedCountyName"
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
           >
-          {{ selectedCountyId ? 
-            getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId) : 
-            getCountiesLoadingRecord.length - getLoadedCountiesCnt
-          }}
+          {{ getCountiesLoadingRecord.length - getLoadedCountiesCnt }}
           </div>
           <div
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
             v-else
           >
-            {{ getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length }}
+          {{
+            selectedDistrict ? 
+            getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length :
+            getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId)
+          }}
           </div>
         </header>
         <main 
@@ -74,9 +55,7 @@
         >
           <CircleInfo 
             circleType="normal" 
-            :circuitCnt="selectedCountyId ? 
-              getLoadedSchoolsByCountyId(selectedCountyId) : 
-              getLoadedCountiesCnt"
+            :circuitCnt="getCircleCnt()"
           >
           </CircleInfo>
           <CircleInfo circleType="watch" :circuitCnt="0"></CircleInfo>
@@ -88,12 +67,20 @@
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">頻寬量測</div>
           <div 
+            v-if="!selectedCountyName"
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
           >
-            {{ selectedCountyId ? 
-              getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId) : 
-              getCountiesLoadingRecord.length - getLoadedCountiesCnt
-            }}
+          {{ getCountiesLoadingRecord.length - getLoadedCountiesCnt }}
+          </div>
+          <div
+            class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
+            v-else
+          >
+          {{
+            selectedDistrict ? 
+            getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length :
+            getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId)
+          }}
           </div>
         </header>
         <main 
@@ -101,9 +88,7 @@
         >
           <CircleInfo 
             circleType="normal" 
-            :circuitCnt="selectedCountyId ? 
-              getLoadedSchoolsByCountyId(selectedCountyId) : 
-              getLoadedCountiesCnt"
+            :circuitCnt="getCircleCnt()"
           >
           </CircleInfo>
           <CircleInfo circleType="watch" :circuitCnt="0"></CircleInfo>
@@ -115,12 +100,20 @@
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">資安通報</div>
           <div 
+            v-if="!selectedCountyName"
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
           >
-            {{ selectedCountyId ? 
-              getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId) : 
-              getCountiesLoadingRecord.length - getLoadedCountiesCnt
-            }}
+          {{ getCountiesLoadingRecord.length - getLoadedCountiesCnt }}
+          </div>
+          <div
+            class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
+            v-else
+          >
+          {{
+            selectedDistrict ? 
+            getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length :
+            getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId)
+          }}
           </div>
         </header>
         <main 
@@ -128,9 +121,7 @@
         >
           <CircleInfo 
             circleType="normal" 
-            :circuitCnt="selectedCountyId ? 
-              getLoadedSchoolsByCountyId(selectedCountyId) : 
-              getLoadedCountiesCnt"
+            :circuitCnt="getCircleCnt()"
           >
           </CircleInfo>
           <CircleInfo circleType="watch" :circuitCnt="0"></CircleInfo>
@@ -146,6 +137,17 @@
 import CircleInfo from "@/components/Dashboard/Static/CircleInfo.vue";
 import { mapState, mapGetters } from "vuex";
 export default {
+  methods:{
+    getCircleCnt(){
+      if(this.selectedCountyId == null && this.selectedDistrictId == null){
+        return this.getLoadedCountiesCnt
+      }else if(this.selectedCountyId != null && this.selectedDistrictId == null){
+        return this.getLoadedSchoolsByCountyId(this.selectedCountyId)
+      }else{
+        return this.getDistrictsLoadingRecord.filter( x => x.loaded == true).length
+      }
+    }
+  },
   components:{
     CircleInfo
   },

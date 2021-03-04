@@ -241,6 +241,7 @@ export default {
 
     //clicked
     const clicked = d => {
+      this.$store.dispatch('setAbnormalPage', {abnormalPage: 0 })
       d3.json('twTown2.json')
       .then(json =>{
         zoomToBoundingBox(d);

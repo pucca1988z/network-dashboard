@@ -30,7 +30,6 @@
         ></div>
         <div>無資料/資料異常</div>
       </div>
-      <!-- 
       <div class="flex space-x-2">
         <div 
           class="w-4 h-4 border border-gray-400"
@@ -38,7 +37,6 @@
         ></div>
         <div>選取區域</div>
       </div> 
-      -->
 
     </div>
   </div>
