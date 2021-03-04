@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="./mapCore//styles//styles.css">
   <title>Map</title>
+  <script  src="./mapCore/twCountry3.js"></script>
+  <script  src="./mapCore/twTown2.js"></script>
+  <script  src="./mapCore/data.js"></script>
 </head>
 <body>
   <div id="tooltip" 
@@ -43,7 +46,7 @@
 
   </div>
 
-  <div id="tooltipGroup">
+  <div id="tooltipGroup" style="display: none;">
     <div id="tooltipA" 
       class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
       style="background: rgba(220, 220, 220, 0.8);top:400px; left:450px"  
@@ -112,6 +115,7 @@
     <div id="selectedDistrict" class="cursor-pointer" style="display: none;" >selectedDistrict</div>
   </div>
   <svg id="geo-map"></svg>
-  <script  type="module" src="./mapCore/index.js"></script>
+  <script  src="./mapCore/index.js"></script>
+  
 </body>
 </html>
