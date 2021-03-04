@@ -40,7 +40,7 @@ function makeSvgDefs(d){
 function onMouseMove(d){
   position = mousePosition(event)
   tooltip
-  .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] }px`)
+  .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
   .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
 }
 function onMouseOver(d){
@@ -94,20 +94,20 @@ const makeMap = (geojson) => {
   .on('mousemove', d => onMouseMove(d) )
   .on('mouseout', d => onMouseOut(d) )
 
-  svg.selectAll('text').remove();
-  let texts = svg.selectAll('text').data(geojson).enter().append('text')
-  .style("opacity", 0)
-  .text( d => {
-    if(d.properties.district) return 
-    return d.properties.district ? d.properties.district : d.properties.county
-  })
-  .attr("dx", d => {
-    return pathGenerator.centroid(d)[0]
-  })
-  .attr("dy", d => {
-    return pathGenerator.centroid(d)[1]
-  })
-  .transition().duration(1000).ease(d3.easeLinear).style("opacity", 1)
+  // svg.selectAll('text').remove();
+  // let texts = svg.selectAll('text').data(geojson).enter().append('text')
+  // .style("opacity", 0)
+  // .text( d => {
+  //   if(d.properties.district) return 
+  //   return d.properties.district ? d.properties.district : d.properties.county
+  // })
+  // .attr("dx", d => {
+  //   return pathGenerator.centroid(d)[0]
+  // })
+  // .attr("dy", d => {
+  //   return pathGenerator.centroid(d)[1]
+  // })
+  // .transition().duration(1000).ease(d3.easeLinear).style("opacity", 1)
 
 }
 
