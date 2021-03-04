@@ -42,12 +42,74 @@
     </div>
 
   </div>
+
+  <div id="tooltipGroup">
+    <div id="tooltipA" 
+      class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+      style="background: rgba(220, 220, 220, 0.8);top:400px; left:450px"  
+    >
+      <div id="tooltipHoverNameA" class=" text-center py-2">
+        新北市
+      </div>
+      <div 
+        class=" border-t  border-normal-green text-normal-green space-y-2 pt-2 px-2 text-center text-3xl"
+        id="tooltipNormalA"
+      >
+        正常
+      </div>
+    </div>
+  
+    <div id="tooltipB" 
+      class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+      style="background: rgba(220, 220, 220, 0.8);top:400px; left:600px"  
+    >
+      <div id="tooltipHoverNameB" class=" text-center py-2">
+        桃園市
+      </div>
+      <div 
+        class=" border-t border-watch text-watch space-y-2 pt-2 px-2 text-center text-3xl"
+        id="tooltipWatchB"
+      >
+        注意
+      </div>
+    </div>
+  
+    <div id="tooltipC" 
+      class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+      style="background: rgba(220, 220, 220, 0.8);top:500px; left:450px"  
+    >
+      <div id="tooltipHoverNameC" class=" text-center py-2">
+        新竹縣
+      </div>
+      <div 
+        class=" border-t border-warning text-warning space-y-2 pt-2 px-2 text-center text-3xl"
+        id="tooltipWarningC"
+      >
+        告警
+      </div>
+    </div>
+  
+    <div id="tooltipD" 
+      class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+      style="background: rgba(220, 220, 220, 0.8);top:500px; left:600px"  
+    >
+      <div id="tooltipHoverNameD" class=" text-center py-2">
+        宜蘭縣
+      </div>
+      <div 
+        class=" border-t border-black space-y-2 pt-2 px-2 text-center text-3xl"
+        id="tooltipWarningD"
+      >
+        無資料
+      </div>
+    </div>
+  </div>
+
+
   <div class="flex space-x-2">
-    <div>全縣市</div>
-    <div>/</div>
-    <div>selectedCounty</div>
-    <div>/</div>
-    <div>selectedDistrict</div>
+    <div id="zoomOutToCountry" class="cursor-pointer">全縣市</div>
+    <div id="zoomOutToCounty"  class="cursor-pointer" style="display: none;" >selectedCounty</div>
+    <div id="selectedDistrict" class="cursor-pointer" style="display: none;" >selectedDistrict</div>
   </div>
   <svg id="geo-map"></svg>
   <script  type="module" src="./mapCore/index.js"></script>

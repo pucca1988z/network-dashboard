@@ -44,14 +44,16 @@ function onMouseMove(d){
 }
 function onMouseOver(d){
   makeSvgDefs(d)
-  console.log(d)
-  tooltip.style("display", "block")
-  tooltip.selectAll('#tooltipHoverName').text(`${d.properties.district ? d.properties.district : d.properties.county  }`)
-  let arr = ['tooltipNormal', 'tooltipWatch', 'tooltipWarning', 'tooltipNoData']
-  arr.forEach( a => tooltip.select(`#${a}`).style("display", "none"))
-  // hint: 判斷顯示 正常 注意 告警 無資料 的條件
-  if(true){  
-    tooltip.select(`#${arr[ Math.floor(Math.random(10)*4) ]}`).style("display", "block")
+  // hover and show tooltip
+  if(false){
+    tooltip.style("display", "block")
+    tooltip.selectAll('#tooltipHoverName').text(`${d.properties.district ? d.properties.district : d.properties.county  }`)
+    let arr = ['tooltipNormal', 'tooltipWatch', 'tooltipWarning', 'tooltipNoData']
+    arr.forEach( a => tooltip.select(`#${a}`).style("display", "none"))
+    // hint: 判斷顯示 正常 注意 告警 無資料 的條件
+    if(true){  
+      tooltip.select(`#${arr[ Math.floor(Math.random()*4) ]}`).style("display", "block")
+    }
   }
 
   let area = d3.select(event.currentTarget)
@@ -77,14 +79,25 @@ const makemap = (geojson) => {
   .attr('class','boundary')
   .attr("stroke-width", 0.2).attr("stroke", "white")
   // .attr("fill", vm.hintColor.get('noData'))
-  .attr("fill", '#909090')
   .attr('id', d => `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`)
+  // .attr("fill", '#909090')
+  .attr("fill", d => {
+    if(d.id == '65000') return '#1dc9b7'
+    else if( d.id == '10003') return '#ffc241'
+    else if( d.id == '10004') return '#fd3995'
+    else return '#909090'
+  })
 
   paths
   .on('click', clicked)
   .on('mouseover', d => onMouseOver(d) )
   .on('mousemove', d => onMouseMove(d) )
   .on('mouseout', d => onMouseOut(d) )
+
+  // svg.selectAll('text').data(geojson).enter().append('text')
+  // .text( d => d.properties.district ? d.properties.district : d.properties.county)
+  // .attr("x", d => d.geometry.coordinates[0][0][0])
+  // .attr("y", d => d.geometry.coordinates[0][0][1])
 
 }
 
@@ -110,6 +123,7 @@ function selectMap(geojson,location){
 const clicked = d => {
   d3.json('twTown2.json')
   .then(json =>{
+    console.log(d)
     zoomToBoundingBox(d);
     const { county_id, county, district, district_id } = {...d.properties}
     // this.setSelectedPathData( d.properties )
@@ -117,12 +131,43 @@ const clicked = d => {
     g.selectAll("*").remove();
     makemap(selectedjson)
 
+    if(true){
+      if(d.id.length === 5){
+        d3.select('#zoomOutToCounty')
+        .text( `> ${d.properties.county}`).style('display','block')
+        let distArr = json.features.filter( j => j.properties.county_id == d.id)
+        distArr.forEach( (a,i) => {
+          const { county_id, county, district, district_id } = {...a.properties}
+          if(i == 0){
+            d3.select('#tooltipHoverNameA').text(district)
+            d3.select(`#id_${district_id}`).attr("fill",'#1dc9b7')
+          }
+          else if(i == 1){ 
+            d3.select('#tooltipHoverNameB').text(district) 
+            d3.select(`#id_${district_id}`).attr("fill",'#ffc241')
+          } 
+          else if(i == 2){ 
+            d3.select('#tooltipHoverNameC').text(district) 
+            d3.select(`#id_${district_id}`).attr("fill",'#fd3995')
+          } 
+          else if(i == 3){ 
+            d3.select('#tooltipHoverNameD').text(district) 
+          } 
+        })
+      }else{
+        d3.select('#selectedDistrict')
+        .text( `> ${d.properties.district}`).style('display','block')
+      }
+    }
+
+
     d3.select('#zoomOutToCounty').on('click', () => { 
+      d3.select('#selectedDistrict').style('display','none')
       d.properties.district_id = null, d.properties.district = null
       // this.setSelectedPathData( d.properties )
-      vm.g.selectAll("*").remove();
-      vm.svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
-      // zoomToBoundingBox(vm.selectedD);
+      g.selectAll("*").remove();
+      svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
+      // zoomToBoundingBox(d);
       makemap(selectedjson);
     })
 
@@ -134,9 +179,22 @@ d3.json('twCountry3.json')
   makemap(json.features)
   d3.select('#zoomOutToCountry')
   .on('click',function(){
-    vm.selectedD = null
-    vm.g.selectAll("*").remove();
-    vm.svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
+    // vm.selectedD = null
+    d3.select('#zoomOutToCounty').style('display','none')
+    d3.select('#selectedDistrict').style('display','none')
+
+    g.selectAll("*").remove();
+    svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
     makemap(json.features);
+
+    if(true){
+      d3.select('#tooltipHoverNameA').text('新北市')
+      d3.select('#tooltipHoverNameB').text('桃園市')
+      d3.select('#tooltipHoverNameC').text('新竹縣')
+      d3.select('#tooltipHoverNameD').text('宜蘭縣')
+    }
+
   })
 })
+
+
