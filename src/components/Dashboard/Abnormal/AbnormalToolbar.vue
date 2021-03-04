@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-end ">
-    <div class="flex flex-row space-x-5 pt-1 pr-4">
+    <div class="flex flex-row space-x-2 py-2 pr-4">
       <div 
         class=" px-4 py-1 rounded-lg border-2 text-custPurple text-sm"
         @click="previousPage"
