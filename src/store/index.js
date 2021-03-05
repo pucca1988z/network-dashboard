@@ -46,7 +46,6 @@ export default new Vuex.Store({
     selectedDistrictId:null,
     hintColor:new Map([
       ['normal','#1dc9b7'],
-      // ['normal','#059669'],
       ['watch','#ffc241'],
       ['warning','#fd3995'],
       ['noData','#909090'], 
@@ -62,6 +61,7 @@ export default new Vuex.Store({
     splitInto: 30,
     totalGroup: Math.floor(schools.length / 30),
     abnormalPage:0,
+    pagingSize:12
   },
 
   mutations: {
@@ -146,6 +146,14 @@ export default new Vuex.Store({
       })
       return res
     },
+    getDistrictsLoadingRecord: state => {
+      if(state.selectedDistrictId === null) return
+      let res = []
+      let districtId = state.selectedDistrictId
+      let distArr = state.schools.filter( x => x.district_id == districtId)
+      return distArr
+      
+    },
     isPathLoadedCompleted:(state) => (id) =>{
       let rtn = false, total = 0, loaded = 0, 
       objKey = id.length == 5 ? 'county_id' : 'district_id'
@@ -160,8 +168,10 @@ export default new Vuex.Store({
     getLoadedSchoolsByCountyId: (state, getters) => countyId => {
       return getters.getCountiesLoadingRecord.filter( x => x.county_id == countyId)[0].loaded     
     },
-    getLoadedRawDataByCountyId: state => countyId => {
-      return state.schools.filter( x => x.county_id == countyId).filter( x => x.loaded == true)
+    getLoadedRawDataByCountyId: state => (countyId, districtId = null) => {
+      let arr = state.schools.filter( x => x.county_id == countyId)
+      if(districtId) arr = arr.filter( x => x.district_id == districtId )
+      return arr.filter( x => x.loaded == true)
     }
   },
   modules: {

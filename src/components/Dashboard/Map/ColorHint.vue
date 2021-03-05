@@ -36,7 +36,7 @@
           :style="{'background-color':hintColor.get('selected')}"        
         ></div>
         <div>選取區域</div>
-      </div>
+      </div> 
 
     </div>
   </div>

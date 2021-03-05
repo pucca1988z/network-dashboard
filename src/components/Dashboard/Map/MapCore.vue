@@ -205,7 +205,7 @@ export default {
     //Zoom
     let zzoom = d3.zoom().scaleExtent([1, 2]).on("zoom", vm.zoomed);
     //makemap
-    const makemap = (geojson) => {
+    const makemap = (geojson, fn) => {
       let paths = vm.g.selectAll('path').data(geojson)
       .enter().append('path')
       .attr('d',vm.pathGenerator)
@@ -215,12 +215,14 @@ export default {
       .attr('id', d => `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`)
       // fill color
       this.fillColor()
- 
       paths
       .on('mousemove', d => this.onMouseMove(d))
       .on('mouseover', (d) => this.onMouseOver(d))
       .on('mouseout', (d) => this.onMouseOut(d))
       paths.on('click',clicked)
+      if(fn != null ) setTimeout(()=>{
+        fn()
+      }, 510)
     }
 
     //zoomToBoundingBox
@@ -239,6 +241,7 @@ export default {
 
     //clicked
     const clicked = d => {
+      this.$store.dispatch('setAbnormalPage', {abnormalPage: 0 })
       d3.json('twTown2.json')
       .then(json =>{
         zoomToBoundingBox(d);
@@ -246,8 +249,10 @@ export default {
         this.setSelectedPathData( d.properties )
         let selectedjson = this.selectMap(json.features, county_id);
         vm.g.selectAll("*").remove();
-        makemap(selectedjson)
-
+        makemap(selectedjson, function(){
+          d3.select(`#id_${d.id}`).attr('fill',vm.hintColor.get('selected'))
+        })
+        
         d3.select('#zoomOutToCounty').on('click', () => { 
           d.properties.district_id = null, d.properties.district = null
           this.setSelectedPathData( d.properties )
@@ -256,7 +261,7 @@ export default {
           zoomToBoundingBox(vm.selectedD);
           makemap(selectedjson);
         })
-
+        
       })
     }
 

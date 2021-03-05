@@ -4,7 +4,7 @@
       class="border rounded-t-lg h-12 purple-to-green-header flex items-center flex-row px-4">
       <div class="flex-1 flex space-x-2">
         <div>
-          近期異常事件
+          {{ selectedCountyId ? '近期事件' : '近期異常事件' }}
         </div>
         <button class=" border border-blue-600 w-28 rounded-xl bg-blue-600 hover:bg-blue-700 duration-300">
           歷史紀錄
@@ -25,9 +25,19 @@
 <script>
 import AbnormalTable from "@/components/Dashboard/Abnormal/AbnormalTable.vue";
 import AbnormalToolbar from "@/components/Dashboard/Abnormal/AbnormalToolbar.vue";
+
+import { mapState } from 'vuex'
 export default {
   components:{
     AbnormalTable, AbnormalToolbar
+  },
+  computed:{
+    ...mapState({
+      selectedCountyName: state => state.selectedCountyName,
+      selectedCountyId: state => state.selectedCountyId,
+      selectedDistrict: state => state.selectedDistrict, 
+      selectedDistrictId: state => state.selectedDistrictId
+    })
   }
 }
 </script>
