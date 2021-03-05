@@ -70,7 +70,7 @@ function onMouseOut(d){
   .style("filter", "")
 }
 
-const makeMap = (geojson) => {
+const makeMap = (geojson, fn) => {
   let paths = g.selectAll('path').data(geojson)
   .enter().append('path')
   .attr('d',pathGenerator)
@@ -93,6 +93,10 @@ const makeMap = (geojson) => {
   .on('mouseover', d => onMouseOver(d) )
   .on('mousemove', d => onMouseMove(d) )
   .on('mouseout', d => onMouseOut(d) )
+
+  if(fn) setTimeout(()=>{
+    fn()
+  }, 510)
 
   // svg.selectAll('text').remove();
   // let texts = svg.selectAll('text').data(geojson).enter().append('text')
@@ -135,7 +139,9 @@ const clicked = d => {
     const { county_id, county, district, district_id } = {...d.properties}
     let selectedJson = selectMap(twTown.features, county_id);
     g.selectAll("*").remove();
-    makeMap(selectedJson)
+    makeMap(selectedJson, function(){
+      d3.select(`#id_${d.id}`).attr('fill','#9acffa')
+    })
 
     d.id.length === 5 ?
       d3.select('#zoomOutToCounty').text( `> ${d.properties.county}`).style('display','block') :
