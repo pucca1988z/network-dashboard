@@ -1,5 +1,5 @@
 let svgWidth = 600, svgHeight = 800, transitionDuration = 500, position = []
-let selectedD = null
+let selectedD = null, sss = 1 
 
 let svg = d3.select('#geo-map')
 let tooltip = d3.select('#tooltip')
@@ -98,20 +98,20 @@ const makeMap = (geojson, fn) => {
     fn()
   }, 510)
 
-  // svg.selectAll('text').remove();
-  // let texts = svg.selectAll('text').data(geojson).enter().append('text')
-  // .style("opacity", 0)
-  // .text( d => {
-  //   if(d.properties.district) return 
-  //   return d.properties.district ? d.properties.district : d.properties.county
-  // })
-  // .attr("dx", d => {
-  //   return pathGenerator.centroid(d)[0]
-  // })
-  // .attr("dy", d => {
-  //   return pathGenerator.centroid(d)[1]
-  // })
-  // .transition().duration(1000).ease(d3.easeLinear).style("opacity", 1)
+  g.selectAll('text').remove();
+  let texts = g.selectAll('text').data(geojson).enter().append('text').style('cursor', 'default')
+  .text( d => {
+    return d.properties.district ? d.properties.district : d.properties.county
+  })
+  .attr("x", d => {
+    return pathGenerator.centroid(d)[0]
+  })
+  .attr("y", d => {
+    return pathGenerator.centroid(d)[1]
+  })
+  .style("font-size", d => {
+    return d.id.length === 5 ? 15 : `${(4 * sss)}px`
+  })
 
 }
 
@@ -124,9 +124,9 @@ const zoomToBoundingBox = d => {
     x = (bounds[0][0] + bounds[1][0]) / 2,
     y = (bounds[0][1] + bounds[1][1]) / 2,
     scale = Math.max(1, Math.min(10, .81/ Math.max(dx / svgWidth, dy / svgHeight))),
+    sss = scale
     translate = [svgWidth / 2 - scale * x, svgHeight / 2 - scale * y];
-    svg.transition().duration(transitionDuration).call(zzoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale)
-  ); 
+    svg.transition().duration(transitionDuration).call(zzoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale)); 
 }
 
 function selectMap(geojson,location){
