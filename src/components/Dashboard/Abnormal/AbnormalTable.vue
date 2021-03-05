@@ -8,7 +8,7 @@
       <div class="flex-1 border  border-black border-opacity-20">事件內容</div>
     </div>
     <div 
-      class="border-gray-300 border h-44 text-center pt-14 text-pink-500 text-3xl font-normal"
+      class="h-44 text-center pt-14 text-pink-500 text-3xl font-normal"
       v-if="!selectedCountyId || getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0"
     >
       尚無資料
