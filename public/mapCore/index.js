@@ -1,5 +1,5 @@
 let svgWidth = 600, svgHeight = 800, transitionDuration = 500, position = []
-let selectedD = null, sss = 1 
+let selectedD = null, textScale = 1, selectedId = null 
 
 let svg = d3.select('#geo-map')
 let tooltip = d3.select('#tooltip')
@@ -103,53 +103,34 @@ const makeMap = (geojson, fn) => {
 
   paths.selectAll('text').remove();
   let texts = g.selectAll('text').data(geojson).enter().append('text').style('cursor', 'default')
-  .text( d => {
-    return d.properties.district ? d.properties.district : d.properties.county
-  })
+  texts.text( d => d.properties.district ? d.properties.district : d.properties.county)
   .attr("text-anchor","middle")
-  .attr("x", d => {
-    return d.properties.coor ? mercator(d.properties.coor)[0] : pathGenerator.centroid(d)[0]
-  })
-  .attr("y", d => {
-    return d.properties.coor ? mercator(d.properties.coor)[1] :pathGenerator.centroid(d)[1]
-  })
-  .style("font-size", d => {
-    return d.id.length === 5 ? 15 : `${(4 * sss)}px`
-  })
+  .attr("x", d => d.properties.coor ? mercator(d.properties.coor)[0] : pathGenerator.centroid(d)[0] )
+  .attr("y", d => d.properties.coor ? mercator(d.properties.coor)[1] :pathGenerator.centroid(d)[1])
+  .style("font-size", d => d.id.length === 5 ? 15 : `${(4 * textScale)}px`)
   .style('cursor', 'pointer')
   .on('click', clicked)
 
   // draw school point
   if(fn == null) return
-  let schoolMakers = g.selectAll('circle').data(schools.filter( x => x.coor != null)).enter().append('circle')
-  schoolMakers
-  .attr("cx", d => {
-    return mercator(d.coor)[0]
-  })
-  .attr("cy", d => {
-    return mercator(d.coor)[1]
-  })
+  let sg = g.selectAll('g')
+  .data(schools.filter( x => x.coor != null).filter( x => selectedId.length !== 5 ? x.district_id == selectedId : x.county_id == selectedId))
+  .enter().append('g')
+  sg.append('circle')
+  .style('cursor', 'pointer')
+  .attr("cx", d => mercator(d.coor)[0])
+  .attr("cy", d => mercator(d.coor)[1])
   .attr('r','1px')
   .attr('fill','red')
-  console.log(schools.filter( x => x.coor != null).length)
-  let schoolsTexts = g.selectAll('text').data(schools.filter( x => x.coor != null)).enter().append('text').style('cursor', 'default')
-  schoolsTexts.attr("text-anchor","middle")
-  .text( d => {
-    console.log(d)
-    return 'xxff'
-  })
-  .attr("x", d => {
-    return mercator(d.coor)[0]
-  })
-  .attr("y", d => {
-    return mercator(d.coor)[1]
-  })
-  .style("font-size", d => {
-    return d.id.length === 5 ? 15 : `${(4 * sss)}px`
-  })
 
-  // let schoolTexts = g.selectAll('text').data(schools.filter( x => x.coor != null)).enter().append('text')
-  // schoolTexts.text('xxxx').attr('x','50%').attr('y','50%').attr('fill','black').style('cursor', 'pointer')
+  // make school label
+  sg.append('text')
+  .style('cursor', 'pointer')
+  .text( d => d.name)
+  .attr("x", d => mercator(d.coor)[0])
+  .attr("y", d => mercator(d.coor)[1])
+  .attr('dx','2px')
+  .style("font-size", d => `${(3 * textScale)}px`)
 }
 
 //zoomToBoundingBox
@@ -161,7 +142,7 @@ const zoomToBoundingBox = d => {
     x = (bounds[0][0] + bounds[1][0]) / 2,
     y = (bounds[0][1] + bounds[1][1]) / 2,
     scale = Math.max(1, Math.min(10, .81/ Math.max(dx / svgWidth, dy / svgHeight)))*1.2,
-    sss = scale
+    textScale = scale
     translate = [svgWidth / 2 - scale * x, svgHeight / 2 - scale * y];
     svg.transition().duration(transitionDuration).call(zzoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale)); 
 }
@@ -172,6 +153,7 @@ function selectMap(geojson,location){
 
 //clicked
 const clicked = d => {
+    selectedId = d.id
     zoomToBoundingBox(d);
     const { county_id, county, district, district_id } = {...d.properties}
     let selectedJson = selectMap(twTown.features, county_id);
