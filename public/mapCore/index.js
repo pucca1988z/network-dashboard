@@ -122,6 +122,7 @@ const makeMap = (geojson, fn) => {
   .attr("cy", d => mercator(d.coor)[1])
   .attr('r','1px')
   .attr('fill','red')
+  .attr('fill-opacity', 0.6)
 
   // make school label
   sg.append('text')
