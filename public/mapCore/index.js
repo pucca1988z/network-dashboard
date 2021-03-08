@@ -72,7 +72,8 @@ function onMouseOut(d){
 
 const makeMap = (geojson, fn) => {
   let paths = g.selectAll('path').data(geojson)
-  .enter().append('path')
+  .enter()
+  .append('path')
   .attr('d',pathGenerator)
   .attr('class','boundary')
   .attr("stroke-width", 0.2).attr("stroke", "white")
@@ -88,6 +89,7 @@ const makeMap = (geojson, fn) => {
     return color
   })
 
+
   paths
   .on('click', clicked)
   .on('mouseover', d => onMouseOver(d) )
@@ -98,21 +100,56 @@ const makeMap = (geojson, fn) => {
     fn()
   }, 510)
 
-  g.selectAll('text').remove();
+
+  paths.selectAll('text').remove();
   let texts = g.selectAll('text').data(geojson).enter().append('text').style('cursor', 'default')
   .text( d => {
     return d.properties.district ? d.properties.district : d.properties.county
   })
+  .attr("text-anchor","middle")
   .attr("x", d => {
-    return pathGenerator.centroid(d)[0]
+    return d.properties.coor ? mercator(d.properties.coor)[0] : pathGenerator.centroid(d)[0]
   })
   .attr("y", d => {
-    return pathGenerator.centroid(d)[1]
+    return d.properties.coor ? mercator(d.properties.coor)[1] :pathGenerator.centroid(d)[1]
+  })
+  .style("font-size", d => {
+    return d.id.length === 5 ? 15 : `${(4 * sss)}px`
+  })
+  .style('cursor', 'pointer')
+  .on('click', clicked)
+
+  // draw school point
+  if(fn == null) return
+  let schoolMakers = g.selectAll('circle').data(schools.filter( x => x.coor != null)).enter().append('circle')
+  schoolMakers
+  .attr("cx", d => {
+    return mercator(d.coor)[0]
+  })
+  .attr("cy", d => {
+    return mercator(d.coor)[1]
+  })
+  .attr('r','1px')
+  .attr('fill','red')
+  console.log(schools.filter( x => x.coor != null).length)
+  let schoolsTexts = g.selectAll('text').data(schools.filter( x => x.coor != null)).enter().append('text').style('cursor', 'default')
+  schoolsTexts.attr("text-anchor","middle")
+  .text( d => {
+    console.log(d)
+    return 'xxff'
+  })
+  .attr("x", d => {
+    return mercator(d.coor)[0]
+  })
+  .attr("y", d => {
+    return mercator(d.coor)[1]
   })
   .style("font-size", d => {
     return d.id.length === 5 ? 15 : `${(4 * sss)}px`
   })
 
+  // let schoolTexts = g.selectAll('text').data(schools.filter( x => x.coor != null)).enter().append('text')
+  // schoolTexts.text('xxxx').attr('x','50%').attr('y','50%').attr('fill','black').style('cursor', 'pointer')
 }
 
 //zoomToBoundingBox
@@ -123,7 +160,7 @@ const zoomToBoundingBox = d => {
     dy = bounds[1][1] - bounds[0][1],
     x = (bounds[0][0] + bounds[1][0]) / 2,
     y = (bounds[0][1] + bounds[1][1]) / 2,
-    scale = Math.max(1, Math.min(10, .81/ Math.max(dx / svgWidth, dy / svgHeight))),
+    scale = Math.max(1, Math.min(10, .81/ Math.max(dx / svgWidth, dy / svgHeight)))*1.2,
     sss = scale
     translate = [svgWidth / 2 - scale * x, svgHeight / 2 - scale * y];
     svg.transition().duration(transitionDuration).call(zzoom.transform, d3.zoomIdentity.translate(translate[0],translate[1]).scale(scale)); 
@@ -167,14 +204,6 @@ d3.select('#zoomOutToCountry')
   g.selectAll("*").remove();
   svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
   makeMap(twCountry.features);
-
-  if(true){
-    d3.select('#tooltipHoverNameA').text('新北市')
-    d3.select('#tooltipHoverNameB').text('桃園市')
-    d3.select('#tooltipHoverNameC').text('新竹縣')
-    d3.select('#tooltipHoverNameD').text('宜蘭縣')
-  }
-
 })
 
 

@@ -12704,6 +12704,7 @@ let twCountry = {
       },
       "properties": {
         "county": "基隆市",
+        "coor":[121.8, 25.2],
         "county_id": "10017",
         "area": 132530553.82,
         "sort": 18
