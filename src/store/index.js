@@ -80,7 +80,7 @@ export default new Vuex.Store({
     LOAD_DATA(state, data){
       let loaded = 0
       let interval = setInterval( () => {
-        let randomCnt = Math.ceil(Math.random()*10)+15, target = loaded + randomCnt // 16~25
+        let randomCnt = Math.ceil(Math.random()*20)+15, target = loaded + randomCnt // 16~35
         for(loaded ; loaded <= target ; loaded++){
           if( loaded == state.schools.length){
             clearInterval(interval)
@@ -88,7 +88,7 @@ export default new Vuex.Store({
           }
           state.schools[loaded].loaded = true
         }
-      }, 1000)
+      }, 750)
     },
   },
   actions: {

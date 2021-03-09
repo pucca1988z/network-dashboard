@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 export default {
   props:{
     circleType:String,

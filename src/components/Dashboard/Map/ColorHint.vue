@@ -43,7 +43,6 @@
 </template>
 
 <script>
-import * as d3 from 'd3'
 import { mapState } from "vuex";
 export default {
   mounted(){
