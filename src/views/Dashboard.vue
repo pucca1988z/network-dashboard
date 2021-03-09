@@ -1,33 +1,35 @@
 <template>
   <!-- <div class=" grid md:grid-cols-6 md:grid-rows-3 gap-5"> -->
-  <div class="flex space-x-4">
-    <Map 
-      data-aos="fade-right" 
-      data-aos-duration="1300"
-      data-aos-once="true"
-      class=" shadow-lg rounded-lg ">
-    </Map>
-    <div class="flex flex-col flex-1 space-y-4">
-      <Static 
-        :data-aos="fadeDownLeft"
+  <div>
+    <CrossHeader></CrossHeader>
+    <div class="flex space-x-4">
+      <Map 
+        data-aos="fade-right" 
         data-aos-duration="1300"
         data-aos-once="true"
-        class=" pb-4 shadow-lg rounded-lg">
-      </Static>
-      <Abnormal 
-        :data-aos="fadeLeft" 
-        data-aos-duration="1300"
-        data-aos-once="true"
-        class="shadow-lg rounded-lg flex-1">
-      </Abnormal>
-      <DownloadStatic 
-        v-if="!selectedCountyId"
-        :data-aos="fadeUpLeft"
-        data-aos-duration="1300"
-        data-aos-once="true"
-        class="shadow-lg rounded-lg flex-1">
-      </DownloadStatic>
-
+        class=" shadow-lg rounded-lg ">
+      </Map>
+      <div class="flex flex-col flex-1 space-y-4">
+        <Static 
+          :data-aos="fadeDownLeft"
+          data-aos-duration="1300"
+          data-aos-once="true"
+          class=" pb-4 shadow-lg rounded-lg">
+        </Static>
+        <Abnormal 
+          :data-aos="fadeLeft" 
+          data-aos-duration="1300"
+          data-aos-once="true"
+          class="shadow-lg rounded-lg flex-1">
+        </Abnormal>
+        <DownloadStatic 
+          v-if="!selectedCountyId"
+          :data-aos="fadeUpLeft"
+          data-aos-duration="1300"
+          data-aos-once="true"
+          class="shadow-lg rounded-lg flex-1">
+        </DownloadStatic>
+      </div>
     </div>
   </div>
 </template>
@@ -39,12 +41,14 @@ import Map from '@/components/Dashboard/Map/Map'
 import Static from '@/components/Dashboard/Static/Static'
 import Abnormal from '@/components/Dashboard/Abnormal/Abnormal'
 import DownloadStatic from '@/components/Dashboard/DownloadStatic/DownloadStatic'
+import CrossHeader from '@/components/Dashboard/CrossHeader'
 export default {
   components:{
     Map,
     Static,
     Abnormal,
-    DownloadStatic
+    DownloadStatic,
+    CrossHeader
   },
   data(){
     return{

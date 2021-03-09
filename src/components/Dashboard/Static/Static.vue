@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 
     <header 
       class="border rounded-t-lg h-12 purple-to-green-header flex items-center flex-row px-4">
       <div v-if="!selectedCountyName" class="flex-1 flex space-x-2">
@@ -22,17 +23,20 @@
       </div>
 
       <div class="flex space-x-2">
+        
         <svg 
           class="h-5 w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-        </svg>
+        </svg> 
+        
       </div>
     </header>
-    
+    -->
     <main class="grid grid-cols-3 space-x-6 px-4 py-2 ">
       <div class="">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">電路層監測</div>
+          <!-- 
           <div 
             v-if="!selectedCountyName"
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
@@ -48,7 +52,8 @@
             getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length :
             getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId)
           }}
-          </div>
+          </div> 
+          -->
         </header>
         <main 
           class="grid md:grid-cols-3 md:grid-rows-1 gap-x-2 pt-4  px-4 justify-items-center"
@@ -66,6 +71,7 @@
       <div class="">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">頻寬量測</div>
+          <!-- 
           <div 
             v-if="!selectedCountyName"
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
@@ -81,7 +87,8 @@
             getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length :
             getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId)
           }}
-          </div>
+          </div> 
+          -->
         </header>
         <main 
           class="grid md:grid-cols-3 md:grid-rows-1 gap-x-2 pt-4  px-4 justify-items-center"
@@ -99,6 +106,7 @@
       <div class="">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">資安通報</div>
+          <!-- 
           <div 
             v-if="!selectedCountyName"
             class="-mt-1 rounded-full h-8 w-8 border-4 flex justify-center bg-white text-gray-400 "
@@ -114,7 +122,8 @@
             getDistrictsLoadingRecord.length - getDistrictsLoadingRecord.filter( x => x.loaded == true).length :
             getTotalSchoolsByCountyId(selectedCountyId) - getLoadedSchoolsByCountyId(selectedCountyId)
           }}
-          </div>
+          </div> 
+          -->
         </header>
         <main 
           class="grid md:grid-cols-3 md:grid-rows-1 gap-x-2 pt-4  px-4 justify-items-center"

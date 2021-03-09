@@ -1,5 +1,6 @@
 <template>
   <div class="">
+    <!-- 
     <header 
       class="border rounded-t-lg h-12 purple-to-green-header flex items-center flex-row px-4">
       <div class="flex-1 flex space-x-2">
@@ -13,7 +14,7 @@
           class="cursor-pointer text-sm"
           :class="{'underline': selectedCountyName}"
           @click="zoomOut">
-          全縣市
+          全國
         </div>
 
         <div v-if="selectedCountyName">
@@ -43,19 +44,22 @@
 
       </div>
       <div class="flex space-x-2">
+        
         <svg 
           class="h-5 w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-        </svg>
+        </svg> 
+       
       </div>
     </header>
-    <nav class="grid grid-cols-4 gap-4 text-center py-2 px-4">
+     -->
+    <!-- <nav class="grid grid-cols-4 gap-4 text-center py-2 px-4">
       <div 
         v-for="(btn,ind) of btns" :key="ind" 
         class="blue-btn">
         {{ btn.text }}
       </div>
-    </nav>
+    </nav> -->
     <main>
       <MapCore></MapCore>
     </main>
@@ -75,10 +79,10 @@ export default {
   data(){
     return{
       btns:[
-        {text:'總覽', clicked:false},
-        {text:'電路層監測', clicked:false},
-        {text:'頻寬量測', clicked:false},
-        {text:'資安通報', clicked:false}
+        // {text:'總覽', clicked:false},
+        // {text:'電路層監測', clicked:false},
+        // {text:'頻寬量測', clicked:false},
+        // {text:'資安通報', clicked:false}
       ]
     }
   },
