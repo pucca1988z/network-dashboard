@@ -14,7 +14,7 @@
           :data-aos="fadeDownLeft"
           data-aos-duration="1300"
           data-aos-once="true"
-          class=" pb-4 shadow-lg rounded-lg">
+          class=" pb-4 rounded-lg">
         </Static>
         <Abnormal 
           :data-aos="fadeLeft" 

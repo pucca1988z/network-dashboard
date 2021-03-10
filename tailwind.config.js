@@ -23,9 +23,9 @@ module.exports = {
     },
     extend: {
       colors:{
-        'normal-green':'#1dc9b7',
-        'watch':'#ffc241',
-        'warning':'#fd3995',
+        'normal-green':'#01B552',
+        'watch':'#F6C35A',
+        'warning':'#FF0000',
         'noData':'#909090', 
         'selected':'#9acffa',
         'custPurple':'#6d4f9e',

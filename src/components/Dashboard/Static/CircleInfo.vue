@@ -1,16 +1,14 @@
 <template>
   <div 
-    class="rounded-full h-24 w-24 border-12 flex items-center justify-center  "
+    class="rounded-full h-24 w-24 border flex items-center justify-center  "
     :class="{ 
-      'border-normal-green' : classObj.normal,
-      'border-watch': classObj.watch, 
-      'border-warning':classObj.warning,
-      'text-normal-green' : classObj.normal,
-      'text-watch': classObj.watch, 
-      'text-warning':classObj.warning
+      'bg-normal-green' : classObj.normal,
+      'bg-watch': classObj.watch, 
+      'bg-warning':classObj.warning,
+
     }"
   >
-    <div class="text-3xl ">
+    <div class="text-3xl text-white ">
       {{ circuitCnt }}
     </div>
   </div>
