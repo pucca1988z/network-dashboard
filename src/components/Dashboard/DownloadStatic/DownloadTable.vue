@@ -1,5 +1,5 @@
 <template>
-  <div class="py-2 px-4 flex flex-col content-center ">
+  <div class="py-2 px-4 flex flex-col content-center  shadow-lg ">
     <div class="flex flex-row  bg-custPurpleForHeader text-center">
       <div class="w-20 border  border-black border-opacity-20">排名</div>
       <div class="w-80 border  border-black border-opacity-20">IP</div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-2 px-4 flex flex-col content-center ">
+  <div class="py-2 px-4 flex flex-col content-center shadow-lg ">
     <div class="flex flex-row bg-custPurpleForHeader text-center">
       <div class="flex-1 border  border-black border-opacity-20">縣市</div>
       <div class="flex-1 border  border-black border-opacity-20">行政區</div>
@@ -8,7 +8,7 @@
       <div class="flex-1 border  border-black border-opacity-20">事件內容</div>
     </div>
     <div 
-      class="h-44 text-center pt-14 text-pink-500 text-3xl font-normal"
+      class=" h-52 text-center pt-14 text-pink-500 text-3xl font-normal"
       v-if="!selectedCountyId || getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0"
     >
       尚無資料

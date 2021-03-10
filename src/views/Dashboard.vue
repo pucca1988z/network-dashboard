@@ -2,32 +2,32 @@
   <!-- <div class=" grid md:grid-cols-6 md:grid-rows-3 gap-5"> -->
   <div>
     <CrossHeader></CrossHeader>
-    <div class="flex space-x-4">
+    <div class="flex space-x-2 border-l border-b border-r border-gray-300 pt-4 pb-10">
       <Map 
         data-aos="fade-right" 
         data-aos-duration="1300"
         data-aos-once="true"
-        class=" shadow-lg rounded-lg ">
+        class="rounded-lg ">
       </Map>
       <div class="flex flex-col flex-1 space-y-4">
         <Static 
           :data-aos="fadeDownLeft"
           data-aos-duration="1300"
           data-aos-once="true"
-          class=" pb-4 rounded-lg">
+          class="rounded-lg">
         </Static>
         <Abnormal 
           :data-aos="fadeLeft" 
           data-aos-duration="1300"
           data-aos-once="true"
-          class="shadow-lg rounded-lg flex-1">
+          class="rounded-lg px-4 flex-1">
         </Abnormal>
         <DownloadStatic 
           v-if="!selectedCountyId"
           :data-aos="fadeUpLeft"
           data-aos-duration="1300"
           data-aos-once="true"
-          class="shadow-lg rounded-lg flex-1">
+          class="rounded-lg px-4">
         </DownloadStatic>
       </div>
     </div>

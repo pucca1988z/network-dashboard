@@ -32,7 +32,7 @@
       </div>
     </header>
     -->
-    <main class="grid grid-cols-3 space-x-6 px-4 pt-4">
+    <main class="grid grid-cols-3 space-x-6 px-4">
       <div class="shadow-lg h-44">
         <header class="rounded-t-lg h-12 purple-to-green-header pt-3 px-4 flex flex-row space-x-2">
           <div class="text-2xl">電路層監測</div>

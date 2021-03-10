@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="h-screen">
-    <router-view class=" px-0 py-0 md:px-4 md:py-4 min-h-screen "/>
+    <router-view class=" px-0 py-0 md:px-4 md:py-4 min-h-screen overflow-x-hidden overflow-y-hidden "/>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <div id="tooltip" 
       v-show="showTooltip" 
       class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
@@ -27,7 +27,9 @@
       </div>
 
     </div>
-    <svg id="geo-map"></svg>
+    <svg 
+    class="shadow-lg ml-4"
+    id="geo-map"></svg>
   </div>
 </template>
 
