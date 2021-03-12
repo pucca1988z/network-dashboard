@@ -2,7 +2,7 @@
   <div >
     <div id="tooltip" 
       v-show="showTooltip" 
-      class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+      class="border absolute bg-gray-500 w-36 h-24 rounded-md text-sm"
       style="background: rgba(220, 220, 220, 0.8);"  
     >
       <div class=" text-center py-2">
@@ -42,7 +42,7 @@ export default {
     return {
       svg: null,
       width:600,
-      height:800,
+      height:796,
       transitionDuration: 500,
       path:null,
       g:null, 

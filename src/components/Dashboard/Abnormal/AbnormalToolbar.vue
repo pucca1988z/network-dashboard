@@ -6,9 +6,9 @@
         @click="previousPage"
         :class="{
           'cursor-pointer': abnormalPage > 0 ,
-          'cursor-not-allowed': abnormalPage == 0,
+          'cursor-not-allowed': abnormalPage == 0 || getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0,
           'bg-custPurpleForHeader': abnormalPage > 0, 
-          'bg-gray-300': abnormalPage == 0
+          'bg-gray-300': abnormalPage == 0 || getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0
         }"
       >
         上一頁
@@ -16,10 +16,10 @@
       <div 
         class="px-4 py-1 rounded-lg border-2 text-custPurple text-sm"
         :class="{
-          'cursor-not-allowed': getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length <= pagingSize ,
-          'cursor-pointer': getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length > pagingSize ,
-          'bg-gray-300': getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length <= pagingSize ,
-          'bg-custPurpleForHeader':getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length > pagingSize ,
+          'cursor-not-allowed': getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length <= pagingSize ,
+          'cursor-pointer': getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length > pagingSize ,
+          'bg-gray-300': getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length <= pagingSize ,
+          'bg-custPurpleForHeader':getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length > pagingSize ,
         }"
         @click="nextPage"
       >
@@ -34,7 +34,7 @@ import { mapState, mapGetters } from "vuex";
 export default {
   methods:{
     nextPage:function(){
-      if(this.$store.state.abnormalPage +1 * this.pagingSize >= this.getLoadedRawDataByCountyId(this.selectedCountyId, this.selectedDistrictId).length) return
+      if( (this.$store.state.abnormalPage+1) * this.pagingSize >= this.getUnloadRawDataByCountyId(this.selectedCountyId, this.selectedDistrictId).length) return
       this.$store.state.abnormalPage ++
     },
     previousPage:function(){
@@ -45,7 +45,8 @@ export default {
   },
   computed:{
     ...mapGetters({
-      getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId'
+      getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId',
+      getUnloadRawDataByCountyId:'getUnloadRawDataByCountyId'
     }),
     ...mapState({
       selectedCountyName: state => state.selectedCountyName,

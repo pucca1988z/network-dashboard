@@ -23,7 +23,7 @@
       </div>
     </header>
     <AbnormalTable></AbnormalTable>
-    <AbnormalToolbar></AbnormalToolbar>
+    <AbnormalToolbar v-if="getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length != 0"></AbnormalToolbar>
   </div>
 </template>
 
@@ -31,12 +31,17 @@
 import AbnormalTable from "@/components/Dashboard/Abnormal/AbnormalTable.vue";
 import AbnormalToolbar from "@/components/Dashboard/Abnormal/AbnormalToolbar.vue";
 
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
   components:{
     AbnormalTable, AbnormalToolbar
   },
+  
   computed:{
+    ...mapGetters({
+      getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId',
+      getUnloadRawDataByCountyId:'getUnloadRawDataByCountyId'
+    }),
     ...mapState({
       selectedCountyName: state => state.selectedCountyName,
       selectedCountyId: state => state.selectedCountyId,

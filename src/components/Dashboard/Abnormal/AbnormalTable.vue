@@ -1,7 +1,7 @@
 <template>
   <div class="py-2 px-4 flex flex-col content-center shadow-lg ">
     <div class="flex flex-row bg-custPurpleForHeader text-center">
-      <div class="flex-1 border  border-black border-opacity-20">縣市</div>
+      <div v-if="!selectedCountyId" class="flex-1 border  border-black border-opacity-20">縣市</div>
       <div class="flex-1 border  border-black border-opacity-20">行政區</div>
       <div class="flex-1 border  border-black border-opacity-20">單位</div>
       <div class="flex-1 border  border-black border-opacity-20">事件類別</div>
@@ -9,21 +9,27 @@
     </div>
     <div 
       class=" h-52 text-center pt-14 text-pink-500 text-3xl font-normal"
-      v-if="!selectedCountyId || getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0"
+      v-if="!selectedCountyId || getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0 "
     >
       尚無資料
     </div>
-    <div 
-      class="flex flex-row  border-gray-400 h-9 "
-      data-aos="fade-left"
+    <div
       v-else
-      v-for="(data, key) in getLoadedRawDataByCountyId(selectedCountyId, selectedDistrictId).slice(abnormalPage * pagingSize, abnormalPage * pagingSize + pagingSize)" :key="key"
+      class="h-40"
     >
-      <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.county }}</div>
-      <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.district }}</div>
-      <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-purple">{{ data.name }}</div>
-      <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">連線狀態</div>
-      <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-normal-green">已連線</div>
+      <div 
+        class="flex flex-row  border-gray-400 h-8 "
+        data-aos="fade-left"
+        v-for="(data, key) in getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).slice(abnormalPage * pagingSize, abnormalPage * pagingSize + pagingSize)" :key="key"
+      >
+        <div v-if="!selectedCountyId" class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.county }}</div>
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.district }}</div>
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-purple">{{ data.name }}</div>
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">連線狀態</div>
+        <!-- <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-normal-green">已連線</div> -->
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-warning">未連線</div>
+      </div>
+
     </div>
     
   </div>
@@ -32,9 +38,11 @@
 <script>
 import { mapState, mapGetters } from "vuex";
 export default {
+
   computed:{
     ...mapGetters({
-      getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId'
+      getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId',
+      getUnloadRawDataByCountyId:'getUnloadRawDataByCountyId'
     }),
     ...mapState({
       selectedCountyName: state => state.selectedCountyName,

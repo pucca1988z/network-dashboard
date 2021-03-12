@@ -1,0 +1,779 @@
+{
+  "65000": [
+    {
+      "NOTES": "TANet",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "2001:288:e202::a31c:508",
+      "DL_CAPACITY": "11.4"
+    },
+    {
+      "NOTES": "Computer Center, Ministry of Education",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "2001:288:2000:2001::d",
+      "DL_CAPACITY": "7.4"
+    },
+    {
+      "NOTES": "Computer Center, Ministry of Education",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "2001:288:2000:2001::e",
+      "DL_CAPACITY": "6.3"
+    },
+    {
+      "NOTES": "TANet(download.microsoft.com)",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.224.147",
+      "DL_CAPACITY": "6.3"
+    },
+    {
+      "NOTES": "Apple",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.202",
+      "DL_CAPACITY": "6.1"
+    }
+  ],
+  "66000": [
+    {
+      "NOTES": "ANS Communications, Inc (ANS)",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "152.195.11.6",
+      "DL_CAPACITY": "4.2"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "210.65.144.177",
+      "DL_CAPACITY": "3.3"
+    },
+    {
+      "NOTES": "TANet(microsoft.com/filestreamingservice)",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.25",
+      "DL_CAPACITY": "3.2"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "3"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.136",
+      "DL_CAPACITY": "2.8"
+    }
+  ],
+  "63000": [
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.18.13",
+      "DL_CAPACITY": "9.2"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.18.14",
+      "DL_CAPACITY": "8.2"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.18.12",
+      "DL_CAPACITY": "7.7"
+    },
+    {
+      "NOTES": "Apple",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.202",
+      "DL_CAPACITY": "4.9"
+    },
+    {
+      "NOTES": "Google LLC (GOGL)",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "173.194.51.234",
+      "DL_CAPACITY": "3.3"
+    }
+  ],
+  "64000": [
+    {
+      "NOTES": "Academia Sinica",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "202.169.175.78",
+      "DL_CAPACITY": "2.6"
+    },
+    {
+      "NOTES": "Google LLC (GOGL)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "172.217.24.10",
+      "DL_CAPACITY": "696"
+    },
+    {
+      "NOTES": "Google",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "216.58.200.234",
+      "DL_CAPACITY": "583.6"
+    },
+    {
+      "NOTES": "Amazon.com, Inc. (AMAZON-4)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "13.35.36.231",
+      "DL_CAPACITY": "359"
+    },
+    {
+      "NOTES": "TANet(download.microsoft.com)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.224.147",
+      "DL_CAPACITY": "311"
+    }
+  ],
+  "10020": [
+    {
+      "NOTES": "Academia Sinica",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "202.169.173.205",
+      "DL_CAPACITY": "201.2"
+    },
+    {
+      "NOTES": "TANet(download.microsoft.com)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.224.147",
+      "DL_CAPACITY": "200.6"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.225.111",
+      "DL_CAPACITY": "74.5"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.224.158",
+      "DL_CAPACITY": "66.1"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "218.32.116.184",
+      "DL_CAPACITY": "62"
+    }
+  ],
+  "0": [
+    {
+      "NOTES": "TANet(download.microsoft.com)",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.224.147",
+      "DL_CAPACITY": "13.1"
+    },
+    {
+      "NOTES": "TANet",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "2001:288:e202::a31c:508",
+      "DL_CAPACITY": "12"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "11.4"
+    },
+    {
+      "NOTES": "Apple",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.202",
+      "DL_CAPACITY": "11.3"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.18.13",
+      "DL_CAPACITY": "9.2"
+    }
+  ],
+  "10018": [
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.136",
+      "DL_CAPACITY": "3.2"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "2.1"
+    },
+    {
+      "NOTES": "Apple",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.201",
+      "DL_CAPACITY": "1.2"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.121",
+      "DL_CAPACITY": "1.1"
+    },
+    {
+      "NOTES": "Academia Sinica",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "202.169.173.205",
+      "DL_CAPACITY": "837.7"
+    }
+  ],
+  "10007": [
+    {
+      "NOTES": "Google LLC (GOGL)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "108.177.125.132",
+      "DL_CAPACITY": "720.6"
+    },
+    {
+      "NOTES": "Academia Sinica",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "202.169.173.205",
+      "DL_CAPACITY": "690.5"
+    },
+    {
+      "NOTES": "Academia Sinica",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "202.169.173.207",
+      "DL_CAPACITY": "400.9"
+    },
+    {
+      "NOTES": "139.162.0.0/16",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "139.162.71.178",
+      "DL_CAPACITY": "397"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.224.158",
+      "DL_CAPACITY": "366"
+    }
+  ],
+  "10009": [
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "3.6"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.130",
+      "DL_CAPACITY": "2.7"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.121",
+      "DL_CAPACITY": "2.6"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.136",
+      "DL_CAPACITY": "2.1"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.225.111",
+      "DL_CAPACITY": "1.2"
+    }
+  ],
+  "10010": [
+    {
+      "NOTES": "Apple",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.201",
+      "DL_CAPACITY": "775.5"
+    },
+    {
+      "NOTES": "Apple",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.202",
+      "DL_CAPACITY": "615.7"
+    },
+    {
+      "NOTES": "Google",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "172.217.160.74",
+      "DL_CAPACITY": "420.1"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.11.114",
+      "DL_CAPACITY": "409"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.130",
+      "DL_CAPACITY": "251.1"
+    }
+  ],
+  "10013": [
+    {
+      "NOTES": "TANet(googlevideo)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.38.13",
+      "DL_CAPACITY": "718.3"
+    },
+    {
+      "NOTES": "TANet(googlevideo)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.38.12",
+      "DL_CAPACITY": "701.3"
+    },
+    {
+      "NOTES": "TANet(googlevideo)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.38.14",
+      "DL_CAPACITY": "692.3"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "429.4"
+    },
+    {
+      "NOTES": "Amazon.com, Inc. (AMAZON-4)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "13.35.35.64",
+      "DL_CAPACITY": "416.7"
+    }
+  ],
+  "10002": [
+    {
+      "NOTES": "HiNet Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "2001:b034:1:700::cb45:514b",
+      "DL_CAPACITY": "3.2"
+    },
+    {
+      "NOTES": "HiNet Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "2001:b034:1:700::cb45:5160",
+      "DL_CAPACITY": "2.7"
+    },
+    {
+      "NOTES": "Computer Center, Ministry of Education",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "2001:288:e202::a31c:538",
+      "DL_CAPACITY": "1.7"
+    },
+    {
+      "NOTES": "Google IPv6 address block in AP",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "2404:6800:4008:803::200e",
+      "DL_CAPACITY": "1.2"
+    },
+    {
+      "NOTES": "Google",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "172.217.27.138",
+      "DL_CAPACITY": "1.1"
+    }
+  ],
+  "09020": [
+    {
+      "NOTES": "Google LLC (GOGL)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "173.194.51.233",
+      "DL_CAPACITY": "892.8"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.130.14",
+      "DL_CAPACITY": "502.7"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.130.13",
+      "DL_CAPACITY": "381.1"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.130.12",
+      "DL_CAPACITY": "249.5"
+    },
+    {
+      "NOTES": "Amazon.com, Inc. (AMAZON-4)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "13.35.159.69",
+      "DL_CAPACITY": "218.4"
+    }
+  ],
+  "10004": [
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.136",
+      "DL_CAPACITY": "5.6"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.130",
+      "DL_CAPACITY": "3.1"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "203.74.140.153",
+      "DL_CAPACITY": "2.9"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "203.74.140.210",
+      "DL_CAPACITY": "2.7"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "210.65.144.177",
+      "DL_CAPACITY": "2.6"
+    }
+  ],
+  "10015": [
+    {
+      "NOTES": "Apple",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.201",
+      "DL_CAPACITY": "1"
+    },
+    {
+      "NOTES": "Apple",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "17.253.117.202",
+      "DL_CAPACITY": "801.4"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "210.17.84.200",
+      "DL_CAPACITY": "774.9"
+    },
+    {
+      "NOTES": "Google LLC (GOGL)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "172.217.160.97",
+      "DL_CAPACITY": "759.3"
+    },
+    {
+      "NOTES": "Google LLC (GOGL)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "216.58.200.48",
+      "DL_CAPACITY": "744.7"
+    }
+  ],
+  "10003": [
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.136",
+      "DL_CAPACITY": "4.9"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "3.6"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.130",
+      "DL_CAPACITY": "2.1"
+    },
+    {
+      "NOTES": "International connection maintained by Academia Si",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "202.169.175.81",
+      "DL_CAPACITY": "1.7"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.121",
+      "DL_CAPACITY": "1.4"
+    }
+  ],
+  "67000": [
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "210.65.144.177",
+      "DL_CAPACITY": "3.8"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "210.65.144.168",
+      "DL_CAPACITY": "3"
+    },
+    {
+      "NOTES": "ANS Communications, Inc (ANS)",
+      "UNIT": "GB",
+      "COUNTRY": "US",
+      "IP": "152.195.11.6",
+      "DL_CAPACITY": "1.9"
+    },
+    {
+      "NOTES": "TANet(microsoft.com/filestreamingservice)",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.17",
+      "DL_CAPACITY": "1.9"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.136",
+      "DL_CAPACITY": "1.9"
+    }
+  ],
+  "10014": [
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "203.69.138.230",
+      "DL_CAPACITY": "419.1"
+    },
+    {
+      "NOTES": "TANet(download.microsoft.com)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.224.147",
+      "DL_CAPACITY": "353.4"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.128",
+      "DL_CAPACITY": "236.8"
+    },
+    {
+      "NOTES": "EdgeCast Networks Asia Pacific Network",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "117.18.232.240",
+      "DL_CAPACITY": "197.4"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.225.111",
+      "DL_CAPACITY": "194.9"
+    }
+  ],
+  "10017": [
+    {
+      "NOTES": "TANet(googlevideo)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.38.13",
+      "DL_CAPACITY": "718.3"
+    },
+    {
+      "NOTES": "TANet(googlevideo)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.38.12",
+      "DL_CAPACITY": "701.3"
+    },
+    {
+      "NOTES": "TANet(googlevideo)",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.38.14",
+      "DL_CAPACITY": "692.3"
+    },
+    {
+      "NOTES": "Taipei Taiwan",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "429.4"
+    },
+    {
+      "NOTES": "Amazon.com, Inc. (AMAZON-4)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "13.35.35.64",
+      "DL_CAPACITY": "416.7"
+    }
+  ],
+  "10005": [
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.122",
+      "DL_CAPACITY": "3.6"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.130",
+      "DL_CAPACITY": "2.7"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.121",
+      "DL_CAPACITY": "2.6"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.5.136",
+      "DL_CAPACITY": "2.1"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "GB",
+      "COUNTRY": "TW",
+      "IP": "163.28.225.111",
+      "DL_CAPACITY": "1.2"
+    }
+  ],
+  "10016": [
+    {
+      "NOTES": "Google LLC (GOGL)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "173.194.51.233",
+      "DL_CAPACITY": "890.7"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.130.13",
+      "DL_CAPACITY": "518.7"
+    },
+    {
+      "NOTES": "Amazon.com, Inc. (AMAZON-4)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "13.35.7.124",
+      "DL_CAPACITY": "343.1"
+    },
+    {
+      "NOTES": "Amazon.com, Inc. (AMAZON-4)",
+      "UNIT": "MB",
+      "COUNTRY": "US",
+      "IP": "13.35.7.120",
+      "DL_CAPACITY": "339.9"
+    },
+    {
+      "NOTES": "Ministry of Education Computer Center",
+      "UNIT": "MB",
+      "COUNTRY": "TW",
+      "IP": "163.28.130.12",
+      "DL_CAPACITY": "337.8"
+    }
+  ]
+}

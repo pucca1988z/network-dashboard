@@ -61,7 +61,8 @@ export default new Vuex.Store({
     splitInto: 30,
     totalGroup: Math.floor(schools.length / 30),
     abnormalPage:0,
-    pagingSize:13
+    pagingSize:5,
+    slowCountyId:["10008", "10002"]
   },
 
   mutations: {
@@ -80,12 +81,15 @@ export default new Vuex.Store({
     LOAD_DATA(state, data){
       let loaded = 0
       let interval = setInterval( () => {
+        let i = 0, limitCnt = Math.ceil(Math.random()*10)+5 //6~15 
         let randomCnt = Math.ceil(Math.random()*20)+15, target = loaded + randomCnt // 16~35
         for(loaded ; loaded <= target ; loaded++){
           if( loaded == state.schools.length){
             clearInterval(interval)
             break
           }
+          state.slowCountyId.includes(state.schools[loaded].county_id) ? i++ : null
+          if( i > limitCnt ) break
           state.schools[loaded].loaded = true
         }
       }, 750)
@@ -172,6 +176,13 @@ export default new Vuex.Store({
       let arr = state.schools.filter( x => x.county_id == countyId)
       if(districtId) arr = arr.filter( x => x.district_id == districtId )
       return arr.filter( x => x.loaded == true)
+    },
+    getUnloadRawDataByCountyId: state => (countyId, districtId = null) => {
+      let arr = state.schools.filter( x => x.county_id == countyId)
+      if(districtId) arr = arr.filter( x => x.district_id == districtId )
+      arr = arr.filter( x => x.loaded == false)
+      if(arr.length == 0) state.abnormalPage = 0 
+      return arr
     }
   },
   modules: {
