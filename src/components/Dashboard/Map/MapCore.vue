@@ -244,7 +244,8 @@ export default {
     //clicked
     const clicked = d => {
       this.$store.dispatch('setAbnormalPage', {abnormalPage: 0 })
-      d3.json('/oc/twTown.json')
+      // d3.json('/oc/twTown.json')
+      d3.json('/twTown.json')
       .then(json =>{
         zoomToBoundingBox(d);
         const { county_id, county, district, district_id } = {...d.properties}
@@ -267,7 +268,8 @@ export default {
       })
     }
 
-    d3.json('/oc/twCountry.json')
+    // d3.json('/oc/twCountry.json')
+    d3.json('/twCountry.json')
     .then(json =>{
       makemap(json.features)
       d3.select('#zoomOutToCountry')
