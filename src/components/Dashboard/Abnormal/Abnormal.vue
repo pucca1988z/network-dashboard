@@ -1,15 +1,17 @@
 <template>
   <div>
     <header 
-      class="border rounded-t-lg h-12 purple-to-green-header flex items-center flex-row px-4">
-      <div class="flex-1 flex space-x-2">
+      class="border rounded-t-lg h-12 purple-to-green-header-light flex items-center flex-row px-4">
+      <div class="flex-1 flex space-x-2 text-2xl">
         <div>
           <!-- {{ selectedCountyId ? '近期事件' : '近期異常事件' }} -->
           {{ selectedCountyId ? '近期事件' : '異常監測' }}
         </div>
+<!--
         <button class=" border border-blue-600 w-28 rounded-xl bg-blue-600 hover:bg-blue-700 duration-300">
           歷史紀錄
         </button>
+-->
       </div>
       <div class="flex space-x-2">
         <!-- 

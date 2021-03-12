@@ -62,7 +62,7 @@ export default {
     })
   },
   mounted(){
-    axios.get('/downloadTop5.json')
+    axios.get('/oc/downloadTop5.json')
     .then( res => this.downloadData = res.data)
     .catch( err => console.log( err ))
     

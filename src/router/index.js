@@ -12,7 +12,7 @@ const routes = [
   {
     path:'/opening',
     name:'Opening',
-    beforeEnter() {location.href = '/opening.html'},
+    beforeEnter() {location.href = '/oc/opening.html'},
   },
   {
     path: '/about',

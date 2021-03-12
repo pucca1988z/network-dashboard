@@ -18,7 +18,7 @@
         class=" border-t border-black space-y-2 pt-2 px-2 text-center text-3xl"
         v-else
       >
-        無資料
+        狀態未知
         <!-- 
         <div>電路層監測：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
         <div>頻寬量測：{{ hoverPathId ? getLoadedSchoolsByCountyId(hoverPathId) : 0 }} </div>
@@ -111,13 +111,13 @@ export default {
   },
   methods:{
     makeSvgDefs(hoverPathid){
-      let radius = hoverPathid.length == 5 ? 1 : 0.3
+      let radius = hoverPathid.length == 5 ? 1.3 : 0.6
       this.svg.selectAll('defs').remove()
       let defs = this.svg.append('defs')
       let filter = defs.append('filter')
       filter.attr('id','innerStroke').attr('x',0).attr('y',0).attr('width',1).attr('height',1)
       filter.append('feMorphology').attr('operator','erode').attr('in','SourceGraphic').attr('result', 'erode').attr('radius',radius)
-      filter.append('feColorMatrix').attr('type','matrix').attr('in','SourceGraphic').attr('result', 'color').attr('values','0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0')
+      filter.append('feColorMatrix').attr('type','matrix').attr('in','SourceGraphic').attr('result', 'color').attr('values','0.39 0 0 0 0 0 0.58 0 0 0 0 0 0.93 0 0 0 0 0 1 0')
       let feMerge = filter.append("feMerge");
       feMerge.append("feMergeNode").attr("in", "color")
       feMerge.append("feMergeNode").attr("in", "erode")
@@ -128,8 +128,8 @@ export default {
     onMouseMove(d){
       let position = this.mousePosition(event)
       d3.select('#tooltip')
-      .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] }px`)
-      .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+      .style("left", `${position[0] >= 420 ? position[0] -170 : position[0] }px`)
+      .style("top", `${position[1] >= 50 ? position[1] - 100 : position[1] }px`)
     },
     onMouseOver(d){
       this.hoverPathId = d.properties.district_id ? d.properties.district_id : d.properties.county_id
@@ -212,7 +212,7 @@ export default {
       .enter().append('path')
       .attr('d',vm.pathGenerator)
       .attr('class','boundary')
-      .attr("stroke-width", 0.2).attr("stroke", "white")
+      .attr("stroke-width", 0.5).attr("stroke", "white")
       .attr("fill", vm.hintColor.get('noData'))
       .attr('id', d => `id_${ d.properties.district_id ? d.properties.district_id : d.properties.county_id }`)
       // fill color
@@ -244,7 +244,7 @@ export default {
     //clicked
     const clicked = d => {
       this.$store.dispatch('setAbnormalPage', {abnormalPage: 0 })
-      d3.json('twTown.json')
+      d3.json('/oc/twTown.json')
       .then(json =>{
         zoomToBoundingBox(d);
         const { county_id, county, district, district_id } = {...d.properties}
@@ -267,7 +267,7 @@ export default {
       })
     }
 
-    d3.json('twCountry.json')
+    d3.json('/oc/twCountry.json')
     .then(json =>{
       makemap(json.features)
       d3.select('#zoomOutToCountry')

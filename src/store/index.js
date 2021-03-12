@@ -61,7 +61,7 @@ export default new Vuex.Store({
     splitInto: 30,
     totalGroup: Math.floor(schools.length / 30),
     abnormalPage:0,
-    pagingSize:12
+    pagingSize:13
   },
 
   mutations: {

@@ -21,7 +21,7 @@
     >
       <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.county }}</div>
       <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.district }}</div>
-      <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-normal-green">{{ data.name }}</div>
+      <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-purple">{{ data.name }}</div>
       <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">連線狀態</div>
       <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-normal-green">已連線</div>
     </div>

@@ -28,7 +28,7 @@
           class="w-4 h-4 border border-gray-400"
           :style="{'background-color':hintColor.get('noData')}"        
         ></div>
-        <div>無資料/資料異常</div>
+        <div>狀態未知</div>
       </div>
       <div class="flex space-x-2">
         <div 

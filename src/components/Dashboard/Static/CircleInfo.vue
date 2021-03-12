@@ -24,7 +24,7 @@
       <g>
         <circle cx="8" cy="8" r="8">
         </circle>
-        <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="6px" font-family="Arial" dy=".3em">
+        <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="6px" font-family="Arial" dx="0em" dy=".4em">
           {{ circuitCnt }}
         </text>
       </g>
