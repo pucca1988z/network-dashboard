@@ -1,7 +1,5 @@
 <template>
-  <!-- <div class=" grid md:grid-cols-6 md:grid-rows-3 gap-5"> -->
   <div>
-    <Loading></Loading>
     <CrossHeader v-if="isClickOpeningAnimation" ></CrossHeader>
     <div 
       class="flex space-x-2 border-l border-b border-r rounded-b-lg border-gray-300 pt-4 pb-10"
@@ -35,6 +33,10 @@
         </DownloadStatic>
       </div>
     </div>
+    <Loading></Loading>
+    <audio ref="loadedAudio">
+      <source src="/online.mp3" type="audio/mpeg">
+    </audio>
   </div>
 </template>
 
@@ -79,10 +81,18 @@ export default {
       window.innerWidth < 768 ? this.removeAnimation() : this.recoverAnimation()
     }
   },
+  watch:{
+    getLoadedCountiesCnt: function () {
+      this.$refs.loadedAudio.play()
+    }
+  },
   computed:{
     ...mapState({
       selectedCountyId: state => state.selectedCountyId,
       isClickOpeningAnimation: state => state.isClickOpeningAnimation
+    }),
+    ...mapGetters({
+      getLoadedCountiesCnt: 'getLoadedCountiesCnt'
     })
   },
   created(){
