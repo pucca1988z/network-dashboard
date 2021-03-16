@@ -67,7 +67,6 @@ export default {
   },
   watch:{
     loadedCounty:function(newVal){
-      console.log(this.loadedCounty[this.loadedCounty.length - 1])    
       Vue.$toast.open({
         message: `${this.loadedCounty[this.loadedCounty.length - 1]} 資料載入成功 !`,
         type: 'success',

@@ -83,7 +83,7 @@ export default {
   },
   watch:{
     getLoadedCountiesCnt: function () {
-      this.$refs.loadedAudio.play()
+      if(this.selectedCountyId == null) this.$refs.loadedAudio.play()
     }
   },
   computed:{

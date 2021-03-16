@@ -7,7 +7,7 @@
       'opacity-90': !isClickOpeningAnimation
     }"
   >
-    <div id="all" ref="all">
+    <div id="all" ref="all" class="cursor-pointer">
       <div id="loading_start" ref="loading_start" class="loading_start"></div>
       <div id="loading_dot" ref="loading_dot" class="loading_dot">
           <h2 id="loading_dot_text" ref="loading_dot_text">連線中</h2>
