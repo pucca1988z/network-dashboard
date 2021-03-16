@@ -62,7 +62,8 @@ export default new Vuex.Store({
     totalGroup: Math.floor(schools.length / 30),
     abnormalPage:0,
     pagingSize:5,
-    slowCountyId:["10008", "10002"]
+    slowCountyId:["10008", "10002"],
+    isClickOpeningAnimation: false
   },
 
   mutations: {
@@ -94,6 +95,9 @@ export default new Vuex.Store({
         }
       }, 750)
     },
+    CLICK_OPENING_ANIMATION (state, data) {
+      state.isClickOpeningAnimation = data
+    }
   },
   actions: {
     setSelectedPathData({commit}, data){
@@ -108,6 +112,9 @@ export default new Vuex.Store({
     loadData({commit}, data){
       commit('LOAD_DATA', data)
     },
+    clickOpeningAnimation( {commit}, data ){
+      commit('CLICK_OPENING_ANIMATION', data)
+    }
   },
   getters:{
     getCountiesLoadingRecord: state => {
@@ -116,6 +123,7 @@ export default new Vuex.Store({
         let county = state.schools.filter( x => x.county_id == key)
         let obj = {
           county_id:key, 
+          county: county[0].county, 
           total:county.length,
           loaded:county.filter( x => x.loaded == true).length
         }

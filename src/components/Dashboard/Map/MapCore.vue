@@ -34,6 +34,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueToast from 'vue-toast-notification'
+import 'vue-toast-notification/dist/theme-sugar.css'
+Vue.use(VueToast);
+
 import * as d3 from 'd3'
 import { mapState, mapGetters } from "vuex";
 export default {
@@ -56,10 +61,26 @@ export default {
       showTooltip: null,
       hoverPathId: null,
       hoverDistrictId:null,
-      hoverPathName:null
+      hoverPathName:null, 
+      loadedCounty:[]
     }
   },
   watch:{
+    loadedCounty:function(newVal){
+      console.log(this.loadedCounty[this.loadedCounty.length - 1])    
+      Vue.$toast.open({
+        message: `${this.loadedCounty[this.loadedCounty.length - 1]} 資料載入成功 !`,
+        type: 'success',
+        duration: 2000
+      });
+      if (this.loadedCounty.length === 22) {
+        Vue.$toast.open({
+          message: `全國資料已成功載入 !`,
+          type: 'success',
+          duration: 2000
+        });
+      }
+    },
     getCountiesLoadingRecord:function(newVal){
       if( this.selectedCountyId != null ) return 
       newVal.forEach( a => {
@@ -68,6 +89,9 @@ export default {
         else if(a.total == a.loaded){
           // animate to normal
             p.transition().duration(500).attr('fill',this.hintColor.get('normal')).attr('fill-opacity', 1)
+            if(!this.loadedCounty.includes(a.county)){
+              this.loadedCounty.push(a.county)
+            }
         }else{
           // keep animation
             p.transition().duration(300).attr('fill', this.hintColor.get('normal')).attr('fill-opacity',0.3 + (a.loaded / a.total))

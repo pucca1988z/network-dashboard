@@ -1,9 +1,14 @@
 <template>
   <!-- <div class=" grid md:grid-cols-6 md:grid-rows-3 gap-5"> -->
   <div>
-    <CrossHeader></CrossHeader>
-    <div class="flex space-x-2 border-l border-b border-r rounded-b-lg border-gray-300 pt-4 pb-10">
+    <Loading></Loading>
+    <CrossHeader v-if="isClickOpeningAnimation" ></CrossHeader>
+    <div 
+      class="flex space-x-2 border-l border-b border-r rounded-b-lg border-gray-300 pt-4 pb-10"
+      v-if="isClickOpeningAnimation"
+    >
       <Map 
+        v-if="isClickOpeningAnimation"
         data-aos="fade-right" 
         data-aos-duration="1300"
         data-aos-once="true"
@@ -41,13 +46,16 @@ import Static from '@/components/Dashboard/Static/Static'
 import Abnormal from '@/components/Dashboard/Abnormal/Abnormal'
 import DownloadStatic from '@/components/Dashboard/DownloadStatic/DownloadStatic'
 import CrossHeader from '@/components/Dashboard/CrossHeader'
+import Loading from '@/components/Dashboard/Loading/Loading'
+
 export default {
   components:{
     Map,
     Static,
     Abnormal,
     DownloadStatic,
-    CrossHeader
+    CrossHeader, 
+    Loading
   },
   data(){
     return{
@@ -73,7 +81,8 @@ export default {
   },
   computed:{
     ...mapState({
-      selectedCountyId: state => state.selectedCountyId
+      selectedCountyId: state => state.selectedCountyId,
+      isClickOpeningAnimation: state => state.isClickOpeningAnimation
     })
   },
   created(){
