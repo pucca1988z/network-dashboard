@@ -34,6 +34,13 @@
       </div>
     </div>
     <Loading></Loading>
+    <transition>
+      <Ending 
+        class="border absolute h-screen w-screen top-0 left-0 rounded-md text-sm"
+        v-if="isClickEndingAnimation!=null && !isClickEndingAnimation"
+      >
+      </Ending >
+    </transition>
     <audio ref="loadedAudio">
       <source src="/online.mp3" type="audio/mpeg">
     </audio>
@@ -49,6 +56,7 @@ import Abnormal from '@/components/Dashboard/Abnormal/Abnormal'
 import DownloadStatic from '@/components/Dashboard/DownloadStatic/DownloadStatic'
 import CrossHeader from '@/components/Dashboard/CrossHeader'
 import Loading from '@/components/Dashboard/Loading/Loading'
+import Ending from '@/components/Dashboard/Ending'
 
 export default {
   components:{
@@ -57,7 +65,8 @@ export default {
     Abnormal,
     DownloadStatic,
     CrossHeader, 
-    Loading
+    Loading,
+    Ending
   },
   data(){
     return{
@@ -67,6 +76,9 @@ export default {
     }
   },
   methods:{
+    test(){
+      alert('xxx')
+    },
     removeAnimation(){
       this.fadeUpLeft = ''
       this.fadeLeft = ''
@@ -83,13 +95,14 @@ export default {
   },
   watch:{
     getLoadedCountiesCnt: function () {
-      if(this.selectedCountyId == null) this.$refs.loadedAudio.play()
+      // if(this.selectedCountyId == null) this.$refs.loadedAudio.play()
     }
   },
   computed:{
     ...mapState({
       selectedCountyId: state => state.selectedCountyId,
-      isClickOpeningAnimation: state => state.isClickOpeningAnimation
+      isClickOpeningAnimation: state => state.isClickOpeningAnimation,
+      isClickEndingAnimation: state => state.isClickEndingAnimation
     }),
     ...mapGetters({
       getLoadedCountiesCnt: 'getLoadedCountiesCnt'
@@ -107,5 +120,22 @@ export default {
 </script>
 
 <style>
-
+  .v-leave {
+    opacity: 1;
+  }
+  .v-leave-active {
+    transition: opacity 0.5s;
+  }
+  .v-leave-to {
+    opacity: 0;
+  }
+  .v-enter {
+    opacity: 0;
+  }
+  .v-enter-active {
+    transition: opacity 0.5s;
+  }
+  .v-enter-to {
+    opacity: 1;
+  }
 </style>

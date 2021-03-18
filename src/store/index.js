@@ -63,7 +63,8 @@ export default new Vuex.Store({
     abnormalPage:0,
     pagingSize:5,
     slowCountyId:["10008", "10002"],
-    isClickOpeningAnimation: false
+    isClickOpeningAnimation: true,
+    isClickEndingAnimation: null
   },
 
   mutations: {
@@ -87,16 +88,20 @@ export default new Vuex.Store({
         for(loaded ; loaded <= target ; loaded++){
           if( loaded == state.schools.length){
             clearInterval(interval)
+            state.isClickEndingAnimation = false
             break
           }
           state.slowCountyId.includes(state.schools[loaded].county_id) ? i++ : null
           if( i > limitCnt ) break
           state.schools[loaded].loaded = true
         }
-      }, 750)
+      }, 30)
     },
     CLICK_OPENING_ANIMATION (state, data) {
       state.isClickOpeningAnimation = data
+    },
+    CLICK_ENDING_ANIMATION (state, data) {
+      state.isClickEndingAnimation = true
     }
   },
   actions: {
@@ -114,6 +119,9 @@ export default new Vuex.Store({
     },
     clickOpeningAnimation( {commit}, data ){
       commit('CLICK_OPENING_ANIMATION', data)
+    },
+    clickEndingAnimation( {commit}, data) {
+      commit('CLICK_ENDING_ANIMATION', data)
     }
   },
   getters:{
