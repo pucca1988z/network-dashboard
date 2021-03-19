@@ -88,21 +88,25 @@ export default new Vuex.Store({
         for(loaded ; loaded <= target ; loaded++){
           if( loaded == state.schools.length){
             clearInterval(interval)
-            state.isClickEndingAnimation = false
+            // state.isClickEndingAnimation = false
             break
           }
           state.slowCountyId.includes(state.schools[loaded].county_id) ? i++ : null
           if( i > limitCnt ) break
           state.schools[loaded].loaded = true
         }
-      }, 30)
+      }, 750)
     },
     CLICK_OPENING_ANIMATION (state, data) {
       state.isClickOpeningAnimation = data
     },
     CLICK_ENDING_ANIMATION (state, data) {
       state.isClickEndingAnimation = true
+    }, 
+    TRIGGER_ENDING_ANIMATION (state, data) {
+      state.isClickEndingAnimation = false
     }
+
   },
   actions: {
     setSelectedPathData({commit}, data){

@@ -36,7 +36,7 @@
     <Loading></Loading>
     <transition>
       <Ending 
-        class="border absolute h-screen w-screen top-0 left-0 rounded-md text-sm"
+        class="border absolute h-screen w-screen top-0 left-0 rounded-md text-sm overflow-y-hidden overflow-x-hidden"
         v-if="isClickEndingAnimation!=null && !isClickEndingAnimation"
       >
       </Ending >
@@ -76,9 +76,6 @@ export default {
     }
   },
   methods:{
-    test(){
-      alert('xxx')
-    },
     removeAnimation(){
       this.fadeUpLeft = ''
       this.fadeLeft = ''
