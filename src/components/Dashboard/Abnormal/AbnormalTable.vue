@@ -7,14 +7,16 @@
       <div class="flex-1 border  border-black border-opacity-20">事件類別</div>
       <div class="flex-1 border  border-black border-opacity-20">事件內容</div>
     </div>
-    <div 
+    <!-- <div 
       class=" h-52 text-center pt-14 text-pink-500 text-3xl font-normal"
       v-if="!selectedCountyId || getUnloadRawDataByCountyId(selectedCountyId, selectedDistrictId).length == 0 "
     >
       尚無資料
-    </div>
+    </div> -->
+
+    <!-- v-else -->
     <div
-      v-else
+      v-if="selectedCountyId"
       class="h-40"
     >
       <div 
@@ -29,8 +31,26 @@
         <!-- <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-normal-green">已連線</div> -->
         <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-warning">未連線</div>
       </div>
-
     </div>
+
+    <div
+      v-else
+      class="h-40"
+    >
+      <div 
+        class="flex flex-row  border-gray-400 h-8 "
+        data-aos="fade-left"
+        v-for="(data, key) in getUnloadRawDataByCountyId().slice(abnormalPage * pagingSize, abnormalPage * pagingSize + pagingSize)" :key="key"
+      >
+        <div v-if="!selectedCountyId" class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.county }}</div>
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">{{ data.district }}</div>
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-purple">{{ data.name }}</div>
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1">連線狀態</div>
+        <!-- <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-normal-green">已連線</div> -->
+        <div class="flex-1 border  border-black border-opacity-20 px-2 py-1 text-warning">未連線</div>
+      </div>
+    </div>
+    
     
   </div>
 </template>
@@ -42,7 +62,7 @@ export default {
   computed:{
     ...mapGetters({
       getLoadedRawDataByCountyId:'getLoadedRawDataByCountyId',
-      getUnloadRawDataByCountyId:'getUnloadRawDataByCountyId'
+      getUnloadRawDataByCountyId:'getUnloadRawDataByCountyId',
     }),
     ...mapState({
       selectedCountyName: state => state.selectedCountyName,

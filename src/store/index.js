@@ -197,8 +197,10 @@ export default new Vuex.Store({
       if(districtId) arr = arr.filter( x => x.district_id == districtId )
       return arr.filter( x => x.loaded == true)
     },
-    getUnloadRawDataByCountyId: state => (countyId, districtId = null) => {
-      let arr = state.schools.filter( x => x.county_id == countyId)
+    getUnloadRawDataByCountyId: state => (countyId = null, districtId = null) => {
+      let arr = countyId === null ? 
+        state.schools : 
+        state.schools.filter( x => x.county_id == countyId)
       if(districtId) arr = arr.filter( x => x.district_id == districtId )
       arr = arr.filter( x => x.loaded == false)
       if(arr.length == 0) state.abnormalPage = 0 
