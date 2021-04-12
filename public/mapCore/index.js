@@ -37,6 +37,15 @@ function makeSvgDefs(d){
 
 }
 
+const drawStroke = (area) => {
+  area
+  .style('cursor', 'pointer')
+  .attr('stroke','gray')
+  .attr('stroke-opacity', 0.3)
+  .attr("stroke-width", 0.2)
+  .style("filter", "url(#innerStroke)")
+}
+
 function onMouseMove(d){
   position = mousePosition(event)
   tooltip
@@ -54,13 +63,8 @@ function onMouseOver(d){
   let status = countyStatusMap.has(d.id) ? countyStatusMap.get(d.id) : districtStatusMap.get(d.id)
   tooltip.select(`#${arr[status]}`).style("display", "block")
 
-  let area = d3.select(event.currentTarget)
-  area
-  .style('cursor', 'pointer')
-  .attr('stroke','gray')
-  .attr('stroke-opacity', 0.3)
-  .attr("stroke-width", 0.2)
-  .style("filter", "url(#innerStroke)")
+  let path = d3.select(event.currentTarget)
+  drawStroke(path)
 }
 
 const onMouseOverText = (d) => {
@@ -77,6 +81,9 @@ const onMouseOverText = (d) => {
   // hint: 判斷顯示 正常 注意 告警 無資料 的條件
   let status = countyStatusMap.has(d.id) ? countyStatusMap.get(d.id) : districtStatusMap.get(d.id)
   tooltip.select(`#${arr[status]}`).style("display", "block")
+
+  let path = g.select(`#id_${d.id}`)
+  drawStroke(path)
 }
 
 const onMouseOutText = (d) => {
