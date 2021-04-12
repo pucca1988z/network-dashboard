@@ -62,6 +62,27 @@ function onMouseOver(d){
   .attr("stroke-width", 0.2)
   .style("filter", "url(#innerStroke)")
 }
+
+const onMouseOverText = (d) => {
+  position = mousePosition(event)
+  tooltip
+  .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
+  .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+
+  // hover and show tooltip
+  tooltip.style("display", "block")
+  tooltip.selectAll('#tooltipHoverName').text(`${d.properties.district ? d.properties.district : d.properties.county  }`)
+  let arr = ['tooltipNoData', 'tooltipNormal', 'tooltipWatch', 'tooltipWarning']
+  arr.forEach( a => tooltip.select(`#${a}`).style("display", "none"))
+  // hint: 判斷顯示 正常 注意 告警 無資料 的條件
+  let status = countyStatusMap.has(d.id) ? countyStatusMap.get(d.id) : districtStatusMap.get(d.id)
+  tooltip.select(`#${arr[status]}`).style("display", "block")
+}
+
+const onMouseOutText = (d) => {
+  tooltip.style("display", "none")
+}
+
 function onMouseOut(d){
   tooltip.style("display", "none")
   let area = d3.select(event.currentTarget)
@@ -110,9 +131,9 @@ const makeMap = (geojson, fn) => {
   .style("font-size", d => d.id.length === 5 ? 15 : `${(4 * textScale)}px`)
   .style('cursor', 'pointer')
   .on('click', clicked)
-  .on('mouseover', d => onMouseOver(d) )
+  .on('mouseover', d => onMouseOverText(d) )
   .on('mousemove', d => onMouseMove(d) )
-  .on('mouseout', d => onMouseOut(d) )
+  .on('mouseout', d => onMouseOutText(d) )
 
   // draw school point
   if(fn == null) return
