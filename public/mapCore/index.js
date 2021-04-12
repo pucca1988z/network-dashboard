@@ -110,6 +110,9 @@ const makeMap = (geojson, fn) => {
   .style("font-size", d => d.id.length === 5 ? 15 : `${(4 * textScale)}px`)
   .style('cursor', 'pointer')
   .on('click', clicked)
+  .on('mouseover', d => onMouseOver(d) )
+  .on('mousemove', d => onMouseMove(d) )
+  .on('mouseout', d => onMouseOut(d) )
 
   // draw school point
   if(fn == null) return
@@ -120,18 +123,18 @@ const makeMap = (geojson, fn) => {
   .style('cursor', 'pointer')
   .attr("cx", d => mercator(d.coor)[0])
   .attr("cy", d => mercator(d.coor)[1])
-  .attr('r','1px')
+  // .attr('r','1px')
   .attr('fill','red')
   .attr('fill-opacity', 0.6)
 
-  // make school label
-  sg.append('text')
-  .style('cursor', 'pointer')
-  .text( d => d.name)
-  .attr("x", d => mercator(d.coor)[0])
-  .attr("y", d => mercator(d.coor)[1])
-  .attr('dx','2px')
-  .style("font-size", d => `${(3 * textScale)}px`)
+  // // make school label
+  // sg.append('text')
+  // .style('cursor', 'pointer')
+  // .text( d => d.name)
+  // .attr("x", d => mercator(d.coor)[0])
+  // .attr("y", d => mercator(d.coor)[1])
+  // .attr('dx','2px')
+  // .style("font-size", d => `${(3 * textScale)}px`)
 }
 
 //zoomToBoundingBox
@@ -154,7 +157,9 @@ function selectMap(geojson,location){
 
 //clicked
 const clicked = d => {
+    
     selectedId = d.id
+    
     zoomToBoundingBox(d);
     const { county_id, county, district, district_id } = {...d.properties}
     let selectedJson = selectMap(twTown.features, county_id);
@@ -175,6 +180,20 @@ const clicked = d => {
       zoomToBoundingBox(selectedD);
       makeMap(selectedJson);
     })
+
+    
+    if(selectedId.length !== 8) return 
+    let sg = g.selectAll('g')
+    sg.selectAll('circle').attr('r','1px')
+
+      // make school label
+    sg.append('text')
+    .style('cursor', 'pointer')
+    .text( d => d.name)
+    .attr("x", d => mercator(d.coor)[0])
+    .attr("y", d => mercator(d.coor)[1])
+    .attr('dx','2px')
+    .style("font-size", d => `${(3 * textScale)}px`)
 }
 
 makeMap(twCountry.features)
