@@ -52,6 +52,7 @@ function onMouseMove(d){
   .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
   .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
 }
+
 function onMouseOver(d){
   makeSvgDefs(d)
   // hover and show tooltip
@@ -66,13 +67,23 @@ function onMouseOver(d){
   let path = d3.select(event.currentTarget)
   drawStroke(path)
 }
+function onMouseOut(d){
+  tooltip.style("display", "none")
+  let area = d3.select(event.currentTarget)
+  area
+  .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+  .style("filter", "")
+}
 
-const onMouseOverText = (d) => {
+const onMouseMoveText = (d) => {
   position = mousePosition(event)
   tooltip
   .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
   .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+}
 
+const onMouseOverText = (d) => {
+  makeSvgDefs(d)
   // hover and show tooltip
   tooltip.style("display", "block")
   tooltip.selectAll('#tooltipHoverName').text(`${d.properties.district ? d.properties.district : d.properties.county  }`)
@@ -88,15 +99,13 @@ const onMouseOverText = (d) => {
 
 const onMouseOutText = (d) => {
   tooltip.style("display", "none")
-}
-
-function onMouseOut(d){
-  tooltip.style("display", "none")
-  let area = d3.select(event.currentTarget)
+  let area = d3.select(`#id_${d.id}`)
   area
   .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
   .style("filter", "")
 }
+
+
 
 const makeMap = (geojson, fn) => {
   let paths = g.selectAll('path').data(geojson)
@@ -139,7 +148,7 @@ const makeMap = (geojson, fn) => {
   .style('cursor', 'pointer')
   .on('click', clicked)
   .on('mouseover', d => onMouseOverText(d) )
-  .on('mousemove', d => onMouseMove(d) )
+  .on('mousemove', d => onMouseMoveText(d) )
   .on('mouseout', d => onMouseOutText(d) )
 
   // draw school point
