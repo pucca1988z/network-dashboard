@@ -13,9 +13,21 @@
   <script  src="./mapCore/schools.js"></script>
 </head>
 <body>
+  <div 
+    id="schoolTooltip"
+    class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
+    style="background: rgba(220, 220, 220, 0.8);" 
+  >
+    <div
+      id="shcoolTooltipName" class=" text-center py-2"
+    >
+      SchoolName
+    </div>
+  </div>
+
   <div id="tooltip" 
     class="border absolute bg-gray-500 w-32 h-24 rounded-md text-sm"
-    style="background: rgba(220, 220, 220, 0.8);display: none;"  
+    style="background: rgba(220, 220, 220, 0.8);display:block ;"  
   >
     <div id="tooltipHoverName" class=" text-center py-2">
       縣市名稱

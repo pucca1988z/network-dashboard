@@ -3,6 +3,7 @@ let selectedD = null, textScale = 1, selectedId = null
 
 let svg = d3.select('#geo-map')
 let tooltip = d3.select('#tooltip')
+let schoolTooltip = d3.select('#schoolTooltip')
 svg.attr('width', svgWidth ).attr('height', svgHeight)
 let g = svg.append('g')
 let mercator = d3.geoMercator()
@@ -156,13 +157,17 @@ const makeMap = (geojson, fn) => {
   let sg = g.selectAll('g')
   .data(schools.filter( x => x.coor != null).filter( x => selectedId.length !== 5 ? x.district_id == selectedId : x.county_id == selectedId))
   .enter().append('g')
-  sg.append('circle')
+  
+  let circles = sg.append('circle')
   .style('cursor', 'pointer')
   .attr("cx", d => mercator(d.coor)[0])
   .attr("cy", d => mercator(d.coor)[1])
   // .attr('r','1px')
   .attr('fill','red')
   .attr('fill-opacity', 0.6)
+  .on("mouseover", (d) => {
+    schoolTooltip.text(d.name);
+  })
 
   // // make school label
   // sg.append('text')
@@ -224,13 +229,13 @@ const clicked = d => {
     sg.selectAll('circle').attr('r','1px')
 
       // make school label
-    sg.append('text')
-    .style('cursor', 'pointer')
-    .text( d => d.name)
-    .attr("x", d => mercator(d.coor)[0])
-    .attr("y", d => mercator(d.coor)[1])
-    .attr('dx','2px')
-    .style("font-size", d => `${(3 * textScale)}px`)
+    // sg.append('text')
+    // .style('cursor', 'pointer')
+    // .text( d => d.name)
+    // .attr("x", d => mercator(d.coor)[0])
+    // .attr("y", d => mercator(d.coor)[1])
+    // .attr('dx','2px')
+    // .style("font-size", d => `${(3 * textScale)}px`)
 }
 
 makeMap(twCountry.features)
