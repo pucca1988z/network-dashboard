@@ -76,6 +76,19 @@ function onMouseOut(d){
   .style("filter", "")
 }
 
+function onMouseOverSchool(d){
+  schoolTooltip.style("display", "block");
+  schoolTooltip.selectAll("#shcoolTooltipName").text(`${d.name}`)
+  
+  schoolTooltip
+  .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
+  .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+}
+
+function onMouseOutSchool(d){
+  schoolTooltip.style("display", "none");
+}
+
 const onMouseMoveText = (d) => {
   position = mousePosition(event)
   tooltip
@@ -153,9 +166,10 @@ const makeMap = (geojson, fn) => {
   .on('mouseout', d => onMouseOutText(d) )
 
   // draw school point
-  if(fn == null) return
+  // if(fn == null) return
   let sg = g.selectAll('g')
-  .data(schools.filter( x => x.coor != null).filter( x => selectedId.length !== 5 ? x.district_id == selectedId : x.county_id == selectedId))
+  // .data(schools.filter( x => x.coor != null).filter( x => selectedId.length !== 5 ? x.district_id == selectedId : x.county_id == selectedId))
+  .data(schools.filter( x => x.coor != null))//.filter( x => selectedId.length !== 5 ? x.district_id == selectedId : x.county_id == selectedId))
   .enter().append('g')
   
   let circles = sg.append('circle')
@@ -163,11 +177,14 @@ const makeMap = (geojson, fn) => {
   .attr("cx", d => mercator(d.coor)[0])
   .attr("cy", d => mercator(d.coor)[1])
   // .attr('r','1px')
+  .attr('r', (d) => {
+    if(selectedD == null) return '1px'
+    else if(d.county_id == selectedD.id) return '1px'
+  })
   .attr('fill','red')
   .attr('fill-opacity', 0.6)
-  .on("mouseover", (d) => {
-    schoolTooltip.text(d.name);
-  })
+  .on("mouseover", d => onMouseOverSchool(d))
+  .on("mouseout", d => onMouseOutSchool(d))
 
   // // make school label
   // sg.append('text')
