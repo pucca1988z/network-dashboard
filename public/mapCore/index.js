@@ -77,17 +77,25 @@ function onMouseOut(d){
 }
 
 function onMouseOverSchool(d){
-  if(selectedD == null) return ;
+  let area = g.select(`#id_${d.district_id}`)
+  drawStroke(area)
+  if(selectedId == null || selectedId.length == 5) return ;
   schoolTooltip.style("display", "block");
   schoolTooltip.selectAll("#shcoolTooltipName").text(`${d.name}`)
   
   schoolTooltip
   .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
   .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+  // add for draw area border on mouse over school
 }
 
 function onMouseOutSchool(d){
   schoolTooltip.style("display", "none");
+  // add for remove area border on mouse leave school
+  let area = d3.select(`#id_${d.district_id}`)
+  area
+  .attr('stroke','white').attr('stroke-opacity', 1).attr("stroke-width", 0.2)
+  .style("filter", "")
 }
 
 const onMouseMoveText = (d) => {
@@ -234,6 +242,8 @@ const clicked = d => {
 
 
     d3.select('#zoomOutToCounty').on('click', () => { 
+      selectedId = selectedId.substring(0,5); // modify Id from District to County
+
       d3.select('#selectedDistrict').style('display','none')
       g.selectAll("*").remove();
       svg.transition().duration(500).call( zzoom.transform, d3.zoomIdentity );
@@ -260,6 +270,7 @@ makeMap(twCountry.features)
 d3.select('#zoomOutToCountry')
 .on('click',function(){
   selectedD = null
+  selectedId = null 
   d3.select('#zoomOutToCounty').style('display','none')
   d3.select('#selectedDistrict').style('display','none')
 
