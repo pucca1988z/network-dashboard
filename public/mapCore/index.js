@@ -77,6 +77,7 @@ function onMouseOut(d){
 }
 
 function onMouseOverSchool(d){
+  if(selectedD == null) return ;
   schoolTooltip.style("display", "block");
   schoolTooltip.selectAll("#shcoolTooltipName").text(`${d.name}`)
   
