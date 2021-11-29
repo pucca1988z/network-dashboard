@@ -182,8 +182,8 @@ const makeMap = (geojson, fn) => {
     if(selectedD == null) return '1px'
     else if(d.county_id == selectedD.id) return '1px'
   })
-  .attr('fill','red')
-  .attr('fill-opacity', 0.6)
+  .attr('fill', d => d.color)
+  // .attr('fill-opacity', 0.6)
   .on("mouseover", d => onMouseOverSchool(d))
   .on("mouseout", d => onMouseOutSchool(d))
 
