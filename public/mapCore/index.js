@@ -194,6 +194,11 @@ const makeMap = (geojson, fn) => {
   // .attr('fill-opacity', 0.6)
   .on("mouseover", d => onMouseOverSchool(d))
   .on("mouseout", d => onMouseOutSchool(d))
+  .on("click",  (d) => {
+    if(selectedId == null ) return ;
+    var d = twTown.features.find( x => x.id == d.district_id)
+    clicked(d);
+  })
 
   // // make school label
   // sg.append('text')
