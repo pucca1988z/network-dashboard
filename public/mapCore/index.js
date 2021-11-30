@@ -77,6 +77,7 @@ function onMouseOut(d){
 }
 
 function onMouseOverSchool(d){
+  // add for draw area border on mouse over school
   let area = g.select(`#id_${d.district_id}`)
   drawStroke(area)
   if(selectedId == null || selectedId.length == 5) return ;
@@ -86,7 +87,6 @@ function onMouseOverSchool(d){
   schoolTooltip
   .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
   .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
-  // add for draw area border on mouse over school
 }
 
 function onMouseOutSchool(d){
