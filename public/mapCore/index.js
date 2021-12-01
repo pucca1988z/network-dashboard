@@ -80,13 +80,17 @@ function onMouseOverSchool(d){
   // add for draw area border on mouse over school
   let area = g.select(`#id_${d.district_id}`)
   drawStroke(area)
-  if(selectedId == null || selectedId.length == 5) return ;
-  schoolTooltip.style("display", "block");
-  schoolTooltip.selectAll("#shcoolTooltipName").text(`${d.name}`)
-  
-  schoolTooltip
-  .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
-  .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+  if(selectedId == null || selectedId.length == 5) {
+    tooltip.style("display", "block");
+  }
+  else {
+    schoolTooltip.style("display", "block");
+    schoolTooltip.selectAll("#shcoolTooltipName").text(`${d.name}`)
+    
+    schoolTooltip
+    .style("left", `${position[0] >= 420 ? position[0] -150 : position[0] + 30 }px`)
+    .style("top", `${position[1] >= 550 ? position[1] - 100 : position[1] }px`)
+  }
 }
 
 function onMouseOutSchool(d){
@@ -185,11 +189,7 @@ const makeMap = (geojson, fn) => {
   .style('cursor', 'pointer')
   .attr("cx", d => mercator(d.coor)[0])
   .attr("cy", d => mercator(d.coor)[1])
-  // .attr('r','1px')
-  .attr('r', (d) => {
-    if(selectedD == null) return '1px'
-    else if(d.county_id == selectedD.id) return '1px'
-  })
+  .attr('r','1px')
   .attr('fill', d => d.color)
   // .attr('fill-opacity', 0.6)
   .on("mouseover", d => onMouseOverSchool(d))
@@ -199,6 +199,7 @@ const makeMap = (geojson, fn) => {
     var d = twTown.features.find( x => x.id == d.district_id)
     clicked(d);
   })
+  .on("mousemove", d => onMouseMove(d))
 
   // // make school label
   // sg.append('text')
